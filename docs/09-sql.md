@@ -129,7 +129,7 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
    ```
 
    ![쿼리 입력 화면](../assets/screenshots/09-sql/04-write-query.png)
-   *SQL 편집기에 SELECT 쿼리를 입력한 화면 — samples.nyctaxi.trips에서 컬럼 4개를 LIMIT 20으로 조회하며, 상단에 "Run all" 실행 버튼이 있습니다.*
+   *SQL 편집기에 집계 SELECT 쿼리를 작성한 화면 — pickup_zip별로 GROUP BY 하여 운행 수(trip_count)·평균 요금·평균 거리를 계산합니다. 좌측 상단 "Run all"로 실행합니다.*
 
 2. **Run** 버튼을 클릭하거나 **Ctrl + Enter** (Mac: **Cmd + Enter**)를 눌러 쿼리를 실행합니다.
 
@@ -138,8 +138,8 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 
 3. 실행이 완료되면 하단에 결과가 표 형태로 나타납니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/06-query-result.png (쿼리 결과 표) -->
-   *📸 캡처 안내: 쿼리 실행 완료 후 하단 결과 영역에 pickup_zip, trip_count, avg_fare, avg_distance 컬럼이 있는 표가 보이도록 캡처합니다.*
+   ![쿼리 결과 표](../assets/screenshots/09-sql/06-query-result.png)
+   *쿼리 실행 결과 — pickup_zip별 trip_count·avg_fare·avg_distance가 표(20행)로 반환되고, 하단에 행 수·실행 시간이 표시됩니다.*
 
 ---
 
@@ -158,8 +158,8 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 3. **X Column**에 `pickup_zip`, **Y Column**에 `trip_count`를 설정합니다.
 4. 막대그래프가 표시됩니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/07-visualization.png (막대그래프 시각화) -->
-   *📸 캡처 안내: 막대그래프 시각화가 결과 영역에 표시된 화면을 캡처합니다. X축에 pickup_zip, Y축에 trip_count가 보여야 합니다.*
+   ![막대그래프 시각화](../assets/screenshots/09-sql/07-visualization.png)
+   *결과에 추가한 막대그래프(Visualization 1) — X축 pickup_zip, Y축 SUM(trip_count). "Table" 탭 옆 "+"로 시각화를 추가합니다.*
 
 ---
 

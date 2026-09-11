@@ -1,4 +1,4 @@
-⬅️ [이전: 테이블·Volume·RBAC/ABAC](./06-tables-volumes-rbac-abac.md) | 🏠 [목차](../README.md) | [다음: Lakeflow Connect로 S3 가져오기](./07b-lakeflow-connect-s3.md) ➡️
+⬅️ [이전: 테이블·Volume·RBAC/ABAC](./06-tables-volumes-rbac-abac.md) | 🏠 [목차](../README.md) | [다음: Lakeflow Connect로 S3 가져오기](./08-lakeflow-connect-s3.md) ➡️
 
 ---
 
@@ -175,7 +175,7 @@
 
 2. 셀을 실행합니다.
 
-   ![%sql 셀 실행 결과](../assets/screenshots/07-notebooks/08-sql-magic.png)
+   ![%sql 셀 실행 결과](../assets/screenshots/07-notebooks/09-sql-magic.png)
    *📸 캡처 안내: %sql 셀 실행 결과로 표 형태의 데이터가 출력된 화면을 캡처합니다.*
 
 > 💡 `samples.nyctaxi.trips`는 Databricks가 제공하는 **내장 샘플 테이블**입니다. Unity Catalog의 `samples` 카탈로그에 항상 존재하므로 별도 생성 없이 바로 쿼리할 수 있습니다.
@@ -350,4 +350,4 @@ display(df)
 
 ## 다음 단계 ➡️
 
-- [07b. Lakeflow Connect로 S3 데이터 가져오기](./07b-lakeflow-connect-s3.md) — 코드 없이 UI로 S3 파일을 Unity Catalog 테이블로 적재하는 관리형 인제스트를 배웁니다.
+- [08. Lakeflow Connect로 S3 데이터 가져오기](./08-lakeflow-connect-s3.md) — 코드 없이 UI로 S3 파일을 Unity Catalog 테이블로 적재하는 관리형 인제스트를 배웁니다.

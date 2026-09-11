@@ -87,6 +87,20 @@
   .curr-link-box a { color: var(--db-red); word-break: break-all; }
   .curr-link-box .lbl { font-weight: 700; color: var(--db-dark); display: block; margin-bottom: 4px; }
 
+  /* ── Screenshot in curriculum right column ── */
+  .curr-right { display:flex; flex-direction:column; gap:.5em; }
+  .curr-shot { width:100%; max-height:300px; object-fit:contain; border:1px solid var(--db-border); border-radius:6px; background:#fff; }
+  .shot-cap { font-size:.6em; color:var(--db-muted); text-align:center; }
+
+  /* ── Benchmark bar chart ── */
+  .bench-row { display:flex; align-items:center; gap:.5em; margin:.25em 0; font-size:.7em; }
+  .bench-row .lbl { width:120px; flex-shrink:0; text-align:right; font-weight:600; white-space:nowrap; }
+  .bench-row .bar { height:22px; border-radius:3px; }
+  .bench-row .val { font-size:.85em; color:var(--db-muted); }
+  .bench-db .bar { background:var(--db-red); }
+  .bench-sf .bar { background:#6B7280; }
+  .disclaimer { font-size:.6em; color:var(--db-muted); border-left:3px solid var(--db-red); padding:6px 10px; background:var(--db-light); margin-top:.6em; }
+
   /* ── YouTube card ── */
   .yt-card { display: flex; flex-direction: column; align-items: center; gap: .5em; }
   .yt-card a img { border-radius: 8px; max-width: 340px; border: 3px solid var(--db-red); }
@@ -142,13 +156,13 @@
     <li><span class="n">05</span>컴퓨트 유형</li>
     <li><span class="n">06</span>테이블·Volume·RBAC/ABAC</li>
     <li><span class="n">07</span>노트북 &amp; S3 데이터 읽기</li>
-    <li><span class="n">07b</span>Lakeflow Connect: S3 가져오기</li>
-    <li><span class="n">08</span>SQL 편집기 &amp; 스니펫</li>
-    <li><span class="n">09</span>Job &amp; 스케줄</li>
-    <li><span class="n">10</span>AI/BI 대시보드</li>
-    <li><span class="n">11</span>Databricks Apps</li>
-    <li><span class="n">12</span>Genie 데모 (시청)</li>
-    <li><span class="n">13</span>Snowflake vs Databricks Q&amp;A</li>
+    <li><span class="n">08</span>Lakeflow Connect: S3 가져오기</li>
+    <li><span class="n">09</span>SQL 편집기 &amp; 스니펫</li>
+    <li><span class="n">10</span>Job &amp; 스케줄</li>
+    <li><span class="n">11</span>AI/BI 대시보드</li>
+    <li><span class="n">12</span>Databricks Apps</li>
+    <li><span class="n">13</span>Genie 데모 (시청)</li>
+    <li><span class="n">14</span>Snowflake vs Databricks Q&amp;A</li>
   </ul>
   <aside class="notes">전체 커리큘럼을 보여 주며 오늘 다룰 주제를 예고합니다. 수강생이 미리 흐름을 파악할 수 있도록 잠깐 멈춰 질문을 받으세요.</aside>
 </section>
@@ -167,11 +181,12 @@
     <li><span class="yr">2013</span><span class="ev">Databricks 창업</span></li>
     <li><span class="yr">2018</span><span class="ev">MLflow 오픈소스 공개 — ML 실험 추적 표준화</span></li>
     <li><span class="yr">2019</span><span class="ev">Delta Lake 오픈소스 공개 — ACID 트랜잭션 레이크</span></li>
-    <li><span class="yr">2020</span><span class="ev"><strong>'레이크하우스'</strong> 아키텍처 개념 제창</span></li>
+    <li><span class="yr">2020</span><span class="ev"><strong>'레이크하우스'</strong> 아키텍처 개념 제창 · <strong>Redash 인수</strong> — SQL 시각화·대시보드(→ Databricks SQL 대시보드 기반)</span></li>
     <li><span class="yr">2021</span><span class="ev">Unity Catalog · Databricks SQL 출시</span></li>
-    <li><span class="yr">2023</span><span class="ev">MosaicML 인수 (~$1.3B) — 기업용 LLM 훈련 역량 확보</span></li>
-    <li><span class="yr">2024</span><span class="ev">DBRX 공개 · Unity Catalog 오픈소스화 · AI/BI (Genie) 출시</span></li>
-    <li><span class="yr">2025</span><span class="ev">Lakebase · Agent Bricks · Databricks One · Neon 인수 (~$1B)</span></li>
+    <li><span class="yr">2023</span><span class="ev"><strong>MosaicML 인수(~$1.3B)</strong> — 생성형 AI/LLM(→ Mosaic AI)</span></li>
+    <li><span class="yr">2024</span><span class="ev">DBRX 공개 · Unity Catalog 오픈소스화 · AI/BI(Genie) 출시 · <strong>Tabular 인수($1B+)</strong> — Apache Iceberg <strong>창시자</strong>들의 회사(Delta·Iceberg 통합)</span></li>
+    <li><span class="yr">2025</span><span class="ev">Lakebase · Agent Bricks · Databricks One · <strong>Neon 인수(~$1B)</strong> — 서버리스 Postgres(→ Lakebase)</span></li>
+    <li><span class="yr">2026</span><span class="ev"><strong>Panther 인수</strong> — AI 보안 SOC 플랫폼(→ Lakewatch 보안 레이크하우스) · Gartner AI/DSML Platforms MQ Leader</span></li>
   </ul>
   <p style="font-size:.72em;margin-top:.6em;background:var(--db-light);border-left:4px solid var(--db-red);padding:6px 12px;border-radius:3px;">
     <strong>레이크하우스</strong> = 데이터 레이크의 저렴함 + 웨어하우스의 편리함을 개방형 저장소 하나로 통합
@@ -191,7 +206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>2023-09</td><td>시리즈 I</td><td>—</td><td>~$43B</td>
+        <td>2023-09</td><td>시리즈 I</td><td>~$5억 (≈$500M)</td><td>~$43B</td>
       </tr>
       <tr>
         <td>2024-12</td><td>시리즈 J</td><td>~$100억 (≈$10B)</td><td>~$62B</td>
@@ -220,32 +235,12 @@
 ══════════════════════════════════════════════ -->
 <section>
   <h2>Databricks 소개 <span class="accent">③</span> Gartner Magic Quadrant</h2>
-  <p style="font-size:.82em;margin-bottom:.6em;">
-    <span class="tag">Cloud Database Management Systems</span> 부문
+  <p style="font-size:.85em;margin-bottom:.5em;">
+    Databricks = <strong class="accent">Leader</strong> (2년 연속 highest execution + furthest vision)
   </p>
-  <div class="mq-grid">
-    <div class="mq-cell leader">
-      <div class="qlabel">★ Leaders</div>
-      <p><strong>Databricks</strong> — 2025년판 <em>5년 연속</em>, 2024년판 <em>4년 연속</em> 선정<br>
-      (출처: Databricks 공식 블로그)</p>
-    </div>
-    <div class="mq-cell">
-      <div class="qlabel">Challengers</div>
-      <p>실행력 높음, 비전 미흡</p>
-    </div>
-    <div class="mq-cell">
-      <div class="qlabel">Visionaries</div>
-      <p>비전 높음, 실행력 미흡</p>
-    </div>
-    <div class="mq-cell">
-      <div class="qlabel">Niche Players</div>
-      <p>특정 세그먼트 집중</p>
-    </div>
-  </div>
-  <p style="font-size:.72em;color:var(--db-muted);margin-top:.5em;">
-    ✦ Data Science &amp; ML Platforms MQ에서도 Leader로 선정된 바 있음 (참고)
-  </p>
-  <aside class="notes">Gartner MQ의 4분면 개념을 간략히 설명하고, Leaders 사분면에 5년 연속 선정된 점이 엔터프라이즈 신뢰성의 지표임을 강조하세요.</aside>
+  <img class="curr-shot" style="max-height:440px" src="../assets/screenshots/01-intro/02-gartner-mq.png" alt="Gartner Magic Quadrant for AI Platforms for Data Science and Machine Learning, 2026년 6월">
+  <p class="shot-cap">출처: Gartner, Magic Quadrant for AI Platforms for Data Science and Machine Learning (2026년 6월) — Databricks 블로그 인용. Databricks는 Leaders 사분면에서 2년 연속 실행력 최상·비전 최우로 평가.</p>
+  <aside class="notes">Gartner MQ의 4분면(가로축=비전 완성도, 세로축=실행력) 개념을 간략히 설명하세요. AI Platforms for Data Science and ML 부문에서 Databricks가 Leaders 사분면에 2년 연속(실행력 최상·비전 최우) 선정된 점이 엔터프라이즈 신뢰성의 지표임을 강조하세요.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
@@ -260,15 +255,15 @@
     <ul class="curr-points">
       <li>워크스페이스 UI 전체 메뉴 둘러보기</li>
       <li><strong>메뉴 언어 한국어로 변경</strong> (설정 → 언어)</li>
-      <li>계정 콘솔(account.cloud.databricks.com) 소개 — 워크스페이스 관리</li>
+      <li>계정 콘솔(accounts.cloud.databricks.com) 소개 — 워크스페이스 관리</li>
       <li>워크스페이스 콘솔과 계정 콘솔의 역할 차이 이해</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/02-consoles/02-workspace-sidebar.png" alt="워크스페이스 홈·사이드바"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/02-consoles.md" target="_blank">
         docs/02-consoles.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">처음 로그인하는 수강생이 많으므로 화면을 천천히 클릭하며 설명하세요. 한국어 설정 변경은 직접 해보게 하면 효과적입니다.</aside>
 </section>
@@ -313,12 +308,12 @@
       <li>최소 권한 원칙: 개인 대신 그룹에 권한 부여 권장</li>
       <li>계정 수준 그룹 vs 워크스페이스 수준 그룹 구분</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/04-groups/01-account-console-groups-tab.png" alt="그룹 목록"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/04-groups.md" target="_blank">
         docs/04-groups.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">실제 운영 환경에서는 개인 계정에 직접 권한을 주기보다 그룹을 사용해야 관리가 편리하다는 점을 사례로 설명하세요.</aside>
 </section>
@@ -338,12 +333,12 @@
       <li><strong>서버리스(Serverless)</strong> — 즉시 시작, 인프라 관리 불필요</li>
       <li>용도별 올바른 컴퓨트 선택 기준 및 비용 비교</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/05-compute/02-compute-tabs.png" alt="컴퓨트 목록"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/05-compute.md" target="_blank">
         docs/05-compute.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">컴퓨트 선택이 비용에 직결됨을 강조하세요. 서버리스는 시작 시간이 거의 없어 소규모 작업에 유리하다는 점을 데모로 보여 주면 효과적입니다.</aside>
 </section>
@@ -363,12 +358,12 @@
       <li>Volume — 파일(비정형 데이터) 저장 관리 단위</li>
       <li>행 필터(Row Filter) · 열 마스킹(Column Masking) — ABAC 구현</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/06-tables-volumes/08-table-permissions-tab.png" alt="테이블 권한(RBAC) 탭"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/06-tables-volumes-rbac-abac.md" target="_blank">
         docs/06-tables-volumes-rbac-abac.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">Unity Catalog의 계층 구조를 칠판이나 슬라이드 그림으로 먼저 보여 주면 이해가 빠릅니다. 열 마스킹은 개인정보 보호 시나리오로 설명하면 실감납니다.</aside>
 </section>
@@ -388,22 +383,22 @@
       <li>DataFrame API로 Delta 테이블 생성 및 조회</li>
       <li>노트북 협업(공유·주석) 기능 소개</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/07-notebooks/06-run-cell.png" alt="노트북 편집기"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/07-notebooks.md" target="_blank">
         docs/07-notebooks.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">실제 S3 버킷을 미리 준비해 두고 데모 중 직접 파일을 읽는 모습을 보여 주세요. 에러가 날 경우를 대비해 샘플 데이터를 Unity Catalog 볼륨에도 복사해 두세요.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 11b · 07b Lakeflow Connect S3
+     슬라이드 11b · 08 Lakeflow Connect S3
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">07b</span>
+    <span class="curr-num">08</span>
     <h2 style="margin:0;">Lakeflow Connect: S3 데이터 가져오기</h2>
   </div>
   <div class="curr-body">
@@ -413,22 +408,22 @@
       <li>External Location(+Storage Credential) 기반 안전한 접근</li>
       <li>미리보기 후 카탈로그·스키마·테이블 지정하여 생성</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/08-lakeflow-connect/01-ingestion-add.png" alt="Add data - Amazon S3"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/07b-lakeflow-connect-s3.md" target="_blank">
-        docs/07b-lakeflow-connect-s3.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/08-lakeflow-connect-s3.md" target="_blank">
+        docs/08-lakeflow-connect-s3.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">07번(노트북 코드로 읽기)과 대비해, 코드 없이 관리형 UI로 테이블을 만드는 방법임을 강조하세요. 고객 환경에서는 대상 S3 버킷에 대한 Unity Catalog External Location이 미리 준비돼 있어야 합니다.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 12 · 08 SQL & 스니펫
+     슬라이드 12 · 09 SQL & 스니펫
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">08</span>
+    <span class="curr-num">09</span>
     <h2 style="margin:0;">SQL 편집기 &amp; 스니펫</h2>
   </div>
   <div class="curr-body">
@@ -438,22 +433,22 @@
       <li>스니펫(Snippets) 등록 — 자주 쓰는 SQL 템플릿 재사용</li>
       <li>쿼리 히스토리 및 실행 계획(EXPLAIN) 확인</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/09-sql/02-sql-editor-home.png" alt="SQL 편집기"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/08-sql.md" target="_blank">
-        docs/08-sql.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/09-sql.md" target="_blank">
+        docs/09-sql.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">스니펫은 팀 표준 쿼리를 공유하는 데 매우 유용합니다. 실습 중 수강생이 직접 스니펫을 만들어 보게 하면 기억에 남습니다.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 13 · 09 Job & 스케줄
+     슬라이드 13 · 10 Job & 스케줄
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">09</span>
+    <span class="curr-num">10</span>
     <h2 style="margin:0;">Job &amp; 스케줄 (Lakeflow Jobs)</h2>
   </div>
   <div class="curr-body">
@@ -463,22 +458,22 @@
       <li>이메일·Slack 알림 설정 및 재시도 정책</li>
       <li>작업 실행 로그 확인 및 오류 디버깅</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/10-jobs/02-jobs-list.png" alt="Jobs 목록"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/09-jobs.md" target="_blank">
-        docs/09-jobs.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/10-jobs.md" target="_blank">
+        docs/10-jobs.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">크론 표현식이 낯선 수강생을 위해 "매일 오전 9시" 같은 예시로 설명하면 이해가 쉽습니다. 알림 설정까지 데모로 직접 보여 주세요.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 14 · 10 대시보드
+     슬라이드 14 · 11 대시보드
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">10</span>
+    <span class="curr-num">11</span>
     <h2 style="margin:0;">AI/BI 대시보드</h2>
   </div>
   <div class="curr-body">
@@ -488,22 +483,22 @@
       <li>필터·파라미터로 인터랙티브 대시보드 제작</li>
       <li>게시(Publish) 후 외부 공유 링크 생성</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/11-dashboards/23-published.png" alt="게시된 AI/BI 대시보드"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/10-dashboards.md" target="_blank">
-        docs/10-dashboards.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/11-dashboards.md" target="_blank">
+        docs/11-dashboards.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">대시보드를 게시하면 비Databricks 사용자도 링크로 볼 수 있음을 강조하세요. 이 기능이 기존 BI 툴 대체 시나리오에서 핵심 셀링 포인트입니다.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 15 · 11 Databricks Apps
+     슬라이드 15 · 12 Databricks Apps
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">11</span>
+    <span class="curr-num">12</span>
     <h2 style="margin:0;">Databricks Apps</h2>
   </div>
   <div class="curr-body">
@@ -513,29 +508,29 @@
       <li>서비스 프린시펄로 데이터 접근 보안 설정</li>
       <li>앱 리소스(SQL Warehouse, Model Endpoint) 연결</li>
     </ul>
-    <div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/12-apps/06-running.png" alt="실행 중인 Databricks App"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/11-apps.md" target="_blank">
-        docs/11-apps.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/12-apps.md" target="_blank">
+        docs/12-apps.md
       </a>
-    </div>
+    </div></div>
   </div>
   <aside class="notes">Databricks Apps는 별도 서버 없이 플랫폼 안에서 앱을 배포할 수 있어 운영 부담이 크게 줄어든다는 점을 강조하세요.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 16 · 12 Streamlit→대시보드 Genie 데모
+     슬라이드 16 · 13 Streamlit→대시보드 Genie 데모
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">12</span>
+    <span class="curr-num">13</span>
     <h2 style="margin:0;">Genie 데모 <span class="tag" style="font-size:.6em;">시청용</span></h2>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1em;align-items:start;">
     <ul class="curr-points">
       <li>Genie — 자연어로 데이터 질의 (Text-to-SQL AI)</li>
       <li>고객 환경에서는 직접 사용 불가 — <strong>데모로 우수성 시연</strong></li>
-      <li>Streamlit 앱 → AI/BI Genie 연동 흐름 시연</li>
+      <li>Streamlit 앱 → Genie Agents 연동 흐름 시연</li>
       <li>영상 시청 후 질의응답</li>
     </ul>
     <div style="text-align:center;">
@@ -545,23 +540,23 @@
         </a>
         <span class="yt-lbl">▶ 유튜브 데모 영상 보기</span>
       </div>
-      <div class="curr-link-box" style="margin-top:.6em;text-align:left;">
+      <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/13-streamlit-genie/02-genie-agents.png" alt="Genie Agents"><div class="curr-link-box" style="margin-top:.6em;text-align:left;">
         <span class="lbl">📄 GitHub 튜토리얼</span>
-        <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/12-streamlit-genie-demo.md" target="_blank">
-          docs/12-streamlit-genie-demo.md
+        <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/13-streamlit-genie-demo.md" target="_blank">
+          docs/13-streamlit-genie-demo.md
         </a>
-      </div>
+      </div></div>
     </div>
   </div>
   <aside class="notes">Genie는 고객 계정에서 현재 제한될 수 있으므로 영상으로 기능의 우수성을 먼저 보여 주고, 이후 질문을 유도하세요.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
-     슬라이드 17 · 13 Snowflake vs Databricks Q&A
+     슬라이드 17 · 14 Snowflake vs Databricks Q&A
 ══════════════════════════════════════════════ -->
 <section>
   <div class="curr-header">
-    <span class="curr-num">13</span>
+    <span class="curr-num">14</span>
     <h2 style="margin:0;">Snowflake vs Databricks Q&amp;A</h2>
   </div>
   <div class="curr-body">
@@ -573,12 +568,47 @@
     </ul>
     <div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
-      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/13-snowflake-qa.md" target="_blank">
-        docs/13-snowflake-qa.md
+      <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/14-snowflake-qa.md" target="_blank">
+        docs/14-snowflake-qa.md
       </a>
     </div>
   </div>
   <aside class="notes">공격적인 비교보다 "각 도구가 어떤 경우에 더 적합한가"를 중립적으로 논의하는 방식이 수강생 신뢰도를 높입니다.</aside>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     슬라이드 · Databricks vs Snowflake 벤치마크
+══════════════════════════════════════════════ -->
+<section style="font-size:0.8em;">
+  <h2>Databricks vs Snowflake — 벤치마크 <span style="font-size:.55em;color:var(--db-muted);font-weight:400;">(공정하게 읽기)</span></h2>
+
+  <h3 style="margin-top:.2em;font-size:1.02em;">① TPC-DI ETL 벤치마크 (2025년 6월, 공개) — Databricks SQL Serverless 기준</h3>
+  <p style="font-size:.7em;color:var(--db-muted);margin:.1em 0 .35em;">Snowflake <strong>Gen2</strong> 대비 (SF10000 ≈ 1TB · Azure · dbt Core · 막대가 짧을수록 우수)</p>
+  <div class="bench-row bench-db"><span class="lbl">속도 · DBX</span><div class="bar" style="width:20%"></div><span class="val">1.0× (기준)</span></div>
+  <div class="bench-row bench-sf"><span class="lbl">속도 · SF</span><div class="bar" style="width:56%"></div><span class="val">2.8× 느림</span></div>
+  <div class="bench-row bench-db"><span class="lbl">비용 · DBX</span><div class="bar" style="width:18%"></div><span class="val">1.0× (기준)</span></div>
+  <div class="bench-row bench-sf"><span class="lbl">비용 · SF</span><div class="bar" style="width:65%"></div><span class="val">3.6× 비쌈</span></div>
+  <p class="shot-cap" style="text-align:left;margin-top:.25em;">Gen1 대비 4.3× 빠름·4.1× 저렴. ⚠ <strong>Databricks 자체 공개 벤치마크(자사 유리)</strong> · 커뮤니티 피드백 반영. 출처: DBSQL SME Engineering (Medium, 2025-06).</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2em;margin-top:.4em;">
+    <div>
+      <h3 style="font-size:.95em;margin-bottom:.2em;">② 독립 제3자 (중립)</h3>
+      <ul class="curr-points" style="font-size:.76em;">
+        <li>Fivetran·Brooklyn Data (2022, 1TB TPC-DS) — 동등 구성 시 <strong>거의 대등</strong></li>
+        <li>→ 출처·워크로드에 따라 결과가 달라짐</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:.95em;margin-bottom:.2em;">③ Databricks 공식 기록</h3>
+      <ul class="curr-points" style="font-size:.76em;">
+        <li>TPC-DS 100TB <strong>세계 기록</strong> (TPC 공식 감사, 32.9M QphDS)</li>
+        <li>Snowflake는 공식 TPC-DS 결과 <strong>미제출</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="disclaimer">벤치마크는 워크로드·구성에 따라 크게 달라집니다. ①의 TPC-DI 수치는 <strong>Databricks 엔지니어링 팀이 발표한 공개 벤치마크</strong>(자사에 유리, 커뮤니티 피드백 반영본)이며, 중립 제3자(②)에서는 거의 대등했습니다. 실제 의사결정 전 반드시 <strong>자체 워크로드로 직접 측정</strong>하세요.</p>
+  <aside class="notes">한쪽으로 단정하지 말 것 — "구성·워크로드에 따라 결과가 달라진다"를 강조하고, ①은 Databricks 자체 발표라 자사 유리함을 밝히세요. 출처 URL — ① TPC-DI(2025-06, DBSQL SME Engineering): https://medium.com/dbsql-sme-engineering/benchmarking-etl-with-the-tpc-di-snowflake-cb0a83aaad5b · ② 독립 제3자(Fivetran/Brooklyn Data): https://www.fivetran.com/blog/warehouse-benchmark · ③ TPC-DS 세계기록: https://www.databricks.com/blog/2021/11/02/databricks-sets-official-data-warehousing-performance-record.html</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════

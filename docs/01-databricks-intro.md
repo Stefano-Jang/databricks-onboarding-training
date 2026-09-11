@@ -40,11 +40,12 @@ Databricks는 이후에도 데이터·AI 분야의 핵심 오픈소스를 잇달
 | **2013년** | **Databricks 설립** | Spark 창시자들이 창업 |
 | 2018년 | **MLflow** 공개 | 머신러닝 실험·모델을 관리하는 오픈소스 |
 | 2019년 | **Delta Lake** 공개 | 데이터 레이크에 신뢰성(트랜잭션)을 더한 오픈소스 저장 포맷 |
-| 2020년 | **'레이크하우스(Lakehouse)' 개념** 제창 | 데이터 레이크 + 웨어하우스 통합 아이디어 |
+| 2020년 | **'레이크하우스(Lakehouse)' 개념** 제창, **Redash 인수** | 데이터 레이크+웨어하우스 통합 아이디어 · SQL 시각화/대시보드 기반 확보 |
 | 2021년 | **Unity Catalog** 발표, **Databricks SQL** 도입 | 데이터·AI 통합 거버넌스와 SQL 분석 기능 |
-| 2023년 | **MosaicML 인수**(약 13.5억 달러) | 생성형 AI(LLM) 역량 강화 |
-| 2024년 | **DBRX**(자체 오픈 LLM) 공개, **Unity Catalog 오픈소스화**, **AI/BI**(Genie·대시보드) 발표 | 본격적인 AI 시대 대응 |
-| 2025년 | **Lakebase**(서버리스 Postgres), **Agent Bricks**, **Databricks One** 발표, **Neon 인수**(약 10억 달러) | AI 에이전트·운영 데이터베이스까지 확장 |
+| 2023년 | **MosaicML 인수**(약 13억 달러, $1.3B) | 생성형 AI(LLM) 역량 강화(→ Mosaic AI) |
+| 2024년 | **DBRX** 공개, **Unity Catalog 오픈소스화**, **AI/BI**(Genie), **Tabular 인수**($1B+) | 본격 AI 시대 대응 · Apache Iceberg **창시자**들 합류(Delta·Iceberg 통합) |
+| 2025년 | **Neon 인수**(약 10억 달러, $1B) → **Lakebase**(Neon 기반 서버리스 Postgres), **Agent Bricks**, **Databricks One** | 인수한 Neon을 기반으로 운영 DB(**Lakebase**)까지 확장 |
+| 2026년 | **Panther 인수**(AI 보안 SOC → Lakewatch), Gartner **AI/DSML Platforms MQ 리더** | 데이터+AI에 **보안**까지 확장 |
 
 ![Databricks 연혁 타임라인](../assets/screenshots/01-intro/01-timeline.png)
 *📸 캡처 안내: 2013년 설립부터 2025년까지의 주요 이정표(Spark → MLflow → Delta Lake → Lakehouse → Unity Catalog → DBRX/AI-BI → Lakebase)를 연도순으로 배열한 타임라인 그림. 발표자료 슬라이드의 연혁 장표를 캡처하거나 별도 다이어그램으로 제작합니다.*
@@ -90,15 +91,19 @@ Databricks는 아직 **상장하지 않은(비상장) 회사**이지만, 대규�
 
 ### Databricks의 위치 (확인된 사실)
 
-Databricks는 **Gartner Magic Quadrant for Cloud Database Management Systems(클라우드 데이터베이스 관리 시스템)** 부문에서 **Leader(리더)** 로 선정되었습니다.
+Databricks는 여러 Gartner Magic Quadrant 부문에서 **Leader(리더)** 로 선정되었습니다.
+
+- **AI Platforms for Data Science and Machine Learning (2026년 6월)** — Leaders 사분면에서 **2년 연속** '실행 능력 최상(highest in execution) + 비전 최우(furthest in vision)'로 평가 *(출처: [Databricks 공식 블로그](https://www.databricks.com/blog/databricks-positioned-highest-execution-and-furthest-vision-second-consecutive-year-gartner) — 직접 확인함)*
+
+**Cloud Database Management Systems** 부문에서도:
 
 - **2025년 판** — 2025년 11월 21일 발표, **5년 연속 Leader** 선정 *(출처: [Databricks 공식 블로그](https://www.databricks.com/blog/databricks-named-leader-2025-gartner-magic-quadrant-cloud-database-management-systems) — 직접 확인함)*
 - **2024년 판** — 2024년 12월 18일 발표, **4년 연속 Leader** 선정 *(출처: [Databricks 공식 블로그](https://www.databricks.com/blog/databricks-named-leader-2024-gartner-magic-quadrant-cloud-database-management-systems) — 직접 확인함)*
 
-![Gartner Magic Quadrant 개념도](../assets/screenshots/01-intro/02-gartner-mq.png)
-*📸 캡처 안내: 가로축 'Completeness of Vision', 세로축 'Ability to Execute'의 4분면 다이어그램에서 오른쪽 위 Leaders 사분면에 Databricks가 위치함을 보여주는 개념도. 발표자료의 MQ 장표를 캡처하거나 4분면 도식을 직접 그려 넣습니다. (실제 Gartner 원본 이미지는 저작권이 있으므로 개념도로 대체)*
+![Gartner Magic Quadrant for AI Platforms for Data Science and Machine Learning (2026년 6월)](../assets/screenshots/01-intro/02-gartner-mq.png)
+*출처: Gartner, "Magic Quadrant for AI Platforms for Data Science and Machine Learning" (2026년 6월) — Databricks 공식 블로그 게재본 인용(© Gartner, Inc.). Databricks는 Leaders 사분면 최상단 우측(실행 능력 최상·비전 최우)에 위치하며, Snowflake는 Visionaries 사분면에 있습니다.*
 
-> 💡 **참고**: Databricks는 과거 여러 해 동안 **Data Science and Machine Learning Platforms(데이터 사이언스·머신러닝 플랫폼)** 부문 MQ에서도 Leader로 소개된 바 있습니다. 다만 본 교재 작성 시점에 해당 최신 보고서 페이지를 직접 열어 확인하지 못했으므로, 정확한 연도·리포트는 Databricks 공식 뉴스룸에서 **'Gartner Magic Quadrant'** 로 검색해 확인하시기 바랍니다.
+> 💡 **참고**: 위 **AI/DSML Platforms MQ**와 **Cloud DBMS MQ**는 서로 다른 평가 부문입니다. 순위·수치는 매년 갱신되므로 최신 정보는 [Databricks 뉴스룸](https://www.databricks.com/company/newsroom)에서 확인하세요.
 
 ---
 

@@ -39,13 +39,13 @@
 | 05 | [컴퓨트 유형](./docs/05-compute.md) | All-Purpose vs SQL Warehouse(DBSQL) vs 서버리스/실시간 |
 | 06 | [테이블 · Volume · RBAC/ABAC](./docs/06-tables-volumes-rbac-abac.md) | Unity Catalog 테이블·볼륨 만들기, 권한(RBAC)·태그기반(ABAC) |
 | 07 | [노트북 & S3 파일 읽기](./docs/07-notebooks.md) | 노트북 생성·실행, S3/샘플 데이터 읽기 |
-| 07b | [Lakeflow Connect: S3 가져오기](./docs/07b-lakeflow-connect-s3.md) | 코드 없이 UI로 S3 파일을 Unity Catalog 테이블로 적재(관리형 인제스트) |
-| 08 | [SQL 작성·저장 & 스니펫](./docs/08-sql.md) | SQL 편집기, 쿼리 저장, 스니펫(snippet) 활용 |
-| 09 | [Job & 스케줄](./docs/09-jobs.md) | Lakeflow Job(Task) 만들기, 스케줄 설정 |
-| 10 | [대시보드 & 퍼블리싱](./docs/10-dashboards.md) | AI/BI 대시보드 만들기, 공유·퍼블리싱 |
-| 11 | [Databricks Apps](./docs/11-apps.md) | 데이터 앱 만들고 배포하기 |
-| 12 | [Streamlit→대시보드 데모(시청용)](./docs/12-streamlit-genie-demo.md) | Genie 기반 앱→대시보드 데모 소개 |
-| 13 | [Snowflake vs Databricks Q&A](./docs/13-snowflake-qa.md) | SF 출신 SA와의 비교 Q&A |
+| 08 | [Lakeflow Connect: S3 가져오기](./docs/08-lakeflow-connect-s3.md) | 코드 없이 UI로 S3 파일을 Unity Catalog 테이블로 적재(관리형 인제스트) |
+| 09 | [SQL 작성·저장 & 스니펫](./docs/09-sql.md) | SQL 편집기, 쿼리 저장, 스니펫(snippet) 활용 |
+| 10 | [Job & 스케줄](./docs/10-jobs.md) | Lakeflow Job(Task) 만들기, 스케줄 설정 |
+| 11 | [대시보드 & 퍼블리싱](./docs/11-dashboards.md) | AI/BI 대시보드 만들기, 공유·퍼블리싱 |
+| 12 | [Databricks Apps](./docs/12-apps.md) | 데이터 앱 만들고 배포하기 |
+| 13 | [Streamlit→대시보드 데모(시청용)](./docs/13-streamlit-genie-demo.md) | Genie 기반 앱→대시보드 데모 소개 |
+| 14 | [Snowflake vs Databricks Q&A](./docs/14-snowflake-qa.md) | SF 출신 SA와의 비교 Q&A |
 
 > 💡 완전 초심자는 **01 → 13 순서대로** 진행하는 것을 권장합니다. 각 문서 하단의 "다음 단계"를 따라가세요.
 

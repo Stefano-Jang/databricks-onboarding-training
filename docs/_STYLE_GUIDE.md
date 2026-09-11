@@ -81,12 +81,12 @@ Databricks를 **처음 접하는 완전 초심자**를 위한 한국어 실습 �
 | `05-compute.md` | `assets/screenshots/05-compute` |
 | `06-tables-volumes-rbac-abac.md` | `assets/screenshots/06-tables-volumes` |
 | `07-notebooks.md` | `assets/screenshots/07-notebooks` |
-| `08-sql.md` | `assets/screenshots/08-sql` |
-| `09-jobs.md` | `assets/screenshots/09-jobs` |
-| `10-dashboards.md` | `assets/screenshots/10-dashboards` |
-| `11-apps.md` | `assets/screenshots/11-apps` |
-| `12-streamlit-genie-demo.md` | `assets/screenshots/12-streamlit-genie` |
-| `13-snowflake-qa.md` | `assets/screenshots/13-snowflake-qa` |
+| `09-sql.md` | `assets/screenshots/09-sql` |
+| `10-jobs.md` | `assets/screenshots/10-jobs` |
+| `11-dashboards.md` | `assets/screenshots/11-dashboards` |
+| `12-apps.md` | `assets/screenshots/12-apps` |
+| `13-streamlit-genie-demo.md` | `assets/screenshots/13-streamlit-genie` |
+| `14-snowflake-qa.md` | `assets/screenshots/14-snowflake-qa` |
 
 ## 5. 공식 문서 링크 규칙 (필수, 날조 금지)
 - 모든 기능 설명에는 **Databricks 공식 문서 링크**를 첨부한다(요구사항).
@@ -116,9 +116,9 @@ Databricks를 **처음 접하는 완전 초심자**를 위한 한국어 실습 �
 5. `05-compute.md` — 컴퓨트 유형
 6. `06-tables-volumes-rbac-abac.md` — 테이블·Volume·RBAC/ABAC
 7. `07-notebooks.md` — 노트북 & S3 파일 읽기
-8. `08-sql.md` — SQL 작성·저장 & 스니펫
-9. `09-jobs.md` — Job(Task) & 스케줄
-10. `10-dashboards.md` — 대시보드 & 퍼블리싱
-11. `11-apps.md` — Databricks Apps
-12. `12-streamlit-genie-demo.md` — Streamlit→대시보드(Genie) 데모(시청용)
-13. `13-snowflake-qa.md` — Snowflake vs Databricks Q&A
+8. `09-sql.md` — SQL 작성·저장 & 스니펫
+9. `10-jobs.md` — Job(Task) & 스케줄
+10. `11-dashboards.md` — 대시보드 & 퍼블리싱
+11. `12-apps.md` — Databricks Apps
+12. `13-streamlit-genie-demo.md` — Streamlit→대시보드(Genie) 데모(시청용)
+13. `14-snowflake-qa.md` — Snowflake vs Databricks Q&A

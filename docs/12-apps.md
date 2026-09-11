@@ -1,8 +1,8 @@
-⬅️ [이전: 대시보드 & 퍼블리싱](./10-dashboards.md) | 🏠 [목차](../README.md) | [다음: Streamlit & Genie 데모](./12-streamlit-genie-demo.md) ➡️
+⬅️ [이전: 대시보드 & 퍼블리싱](./11-dashboards.md) | 🏠 [목차](../README.md) | [다음: Streamlit & Genie 데모](./13-streamlit-genie-demo.md) ➡️
 
 ---
 
-# 11. Databricks Apps
+# 12. Databricks Apps
 
 > **이 실습에서 배우는 것** — Databricks 워크스페이스 안에서 Streamlit·Gradio 같은 데이터 앱을 외부 서버 없이 직접 배포하고 실행하는 방법을 익힙니다.
 
@@ -71,14 +71,14 @@ requirements.txt # Python 패키지 의존성
 
    > 💡 사이드바에 Apps 아이콘이 보이지 않으면 사이드바 하단의 더 보기(⋯) 메뉴 또는 **컴퓨트(Compute)** 항목 아래에서 찾아보세요. 워크스페이스 설정에 따라 위치가 다를 수 있습니다.
 
-   ![Apps 화면](../assets/screenshots/11-apps/01-apps-nav.png)
+   ![Apps 화면](../assets/screenshots/12-apps/01-apps-nav.png)
    *📸 캡처 안내: 워크스페이스 왼쪽 사이드바에서 Apps 아이콘을 클릭한 뒤 Apps 목록 화면이 표시된 상태를 캡처합니다. 사이드바에서 어떤 아이콘이 선택되어 있는지 보이도록 캡처하세요.*
 
 ### 2단계: 새 앱 만들기 시작
 
 1. Apps 목록 화면 우측 상단 또는 중앙의 **+ Create app** 버튼을 클릭합니다.
 
-   ![+ Create app 버튼](../assets/screenshots/11-apps/02-create-app-btn.png)
+   ![+ Create app 버튼](../assets/screenshots/12-apps/02-create-app-btn.png)
    *📸 캡처 안내: Apps 목록 화면 전체를 캡처합니다. "Create app" 버튼의 위치가 잘 보이도록 합니다.*
 
 ### 3단계: 앱 템플릿 선택
@@ -92,7 +92,7 @@ requirements.txt # Python 패키지 의존성
 
    > 💡 어떤 템플릿을 선택해도 생성·배포 흐름은 동일합니다. 원하는 프레임워크로 선택하세요.
 
-   ![템플릿 선택 화면](../assets/screenshots/11-apps/03-template-select.png)
+   ![템플릿 선택 화면](../assets/screenshots/12-apps/03-template-select.png)
    *📸 캡처 안내: 앱 생성 창에서 템플릿 목록이 표시된 전체 화면을 캡처합니다. 선택한 템플릿이 강조(파란 테두리 등)된 상태로 캡처하면 좋습니다.*
 
 ### 4단계: 앱 이름 입력 및 생성
@@ -104,7 +104,7 @@ requirements.txt # Python 패키지 의존성
 2. (선택) **Description** 항목에 간단한 설명을 입력합니다.
 3. 입력이 완료되면 **Create app** 버튼을 클릭합니다.
 
-   ![앱 이름 입력](../assets/screenshots/11-apps/04-app-name.png)
+   ![앱 이름 입력](../assets/screenshots/12-apps/04-app-name.png)
    *📸 캡처 안내: App name 입력란에 이름이 입력된 상태의 앱 생성 창을 캡처합니다. 이메일 주소 등 개인정보는 가리세요.*
 
 ### 5단계: 배포 완료 대기
@@ -118,10 +118,10 @@ requirements.txt # Python 패키지 의존성
 
 3. 상태가 **Running**으로 바뀌면 배포가 완료된 것입니다. (보통 1~3분 소요)
 
-   ![앱 배포 중 상태](../assets/screenshots/11-apps/05-deploying.png)
+   ![앱 배포 중 상태](../assets/screenshots/12-apps/05-deploying.png)
    *📸 캡처 안내: 앱 상세 페이지에서 "Deploying" 또는 "Starting" 상태가 표시된 화면을 캡처합니다. URL 상단의 앱 이름이 보이도록 합니다.*
 
-   ![앱 Running 상태](../assets/screenshots/11-apps/06-running.png)
+   ![앱 Running 상태](../assets/screenshots/12-apps/06-running.png)
    *📸 캡처 안내: 앱 상태가 "Running"으로 변경된 화면을 캡처합니다. 앱 URL 링크와 상태 배지가 잘 보이도록 합니다.*
 
 ### 6단계: 앱 URL로 접속
@@ -130,7 +130,7 @@ requirements.txt # Python 패키지 의존성
    - URL 형식 예시: `https://<앱이름>-<워크스페이스ID>.cloud.databricks.com`
 2. 새 탭에서 앱이 열립니다. 템플릿의 기본 화면이 표시되면 배포가 성공한 것입니다.
 
-   ![앱 접속 화면](../assets/screenshots/11-apps/07-app-url.png)
+   ![앱 접속 화면](../assets/screenshots/12-apps/07-app-url.png)
    *📸 캡처 안내: 앱 URL을 클릭하여 열린 앱 화면(새 탭)을 캡처합니다. 배포된 Streamlit/Gradio 앱의 기본 UI가 표시된 상태로 캡처하세요.*
 
 ---
@@ -197,4 +197,4 @@ resources:
 
 ## 다음 단계 ➡️
 
-- [12. Streamlit & Genie 데모 (시청용)](./12-streamlit-genie-demo.md) — Genie 자연어 데이터 질의 기능을 데모 영상으로 확인합니다.
+- [13. Streamlit & Genie 데모 (시청용)](./13-streamlit-genie-demo.md) — Genie 자연어 데이터 질의 기능을 데모 영상으로 확인합니다.

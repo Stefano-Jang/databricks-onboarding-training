@@ -1,8 +1,8 @@
-⬅️ [이전: Databricks Apps](./11-apps.md) | 🏠 [목차](../README.md) | [다음: Snowflake vs Databricks Q&A](./13-snowflake-qa.md) ➡️
+⬅️ [이전: Databricks Apps](./12-apps.md) | 🏠 [목차](../README.md) | [다음: Snowflake vs Databricks Q&A](./14-snowflake-qa.md) ➡️
 
 ---
 
-# 12. Streamlit + Genie 데모 (시청용)
+# 13. Streamlit + Genie 데모 (시청용)
 
 > **이 섹션에서 배우는 것** — 직접 따라 하는 실습이 아닌 **데모 영상 시청** 섹션입니다. Databricks Genie가 자연어로 데이터 질문에 답하고 앱·대시보드 제작을 어떻게 돕는지 영상을 통해 확인합니다.
 
@@ -42,10 +42,10 @@ Genie 생태계는 세 가지 구성 요소로 이루어져 있습니다.
 
 아래는 실제 워크스페이스에서 볼 수 있는 Genie 화면입니다.
 
-![Genie Agents 목록](../assets/screenshots/12-streamlit-genie/02-genie-agents.png)
+![Genie Agents 목록](../assets/screenshots/13-streamlit-genie/02-genie-agents.png)
 *Genie Agents: 데이터별 자연어 질의 에이전트 목록*
 
-![Genie One](../assets/screenshots/12-streamlit-genie/03-genie-one.png)
+![Genie One](../assets/screenshots/13-streamlit-genie/03-genie-one.png)
 *Genie One: 워크스페이스 전체 데이터에 자연어로 질문*
 
 ### Genie Code(Databricks Assistant)와 Genie One의 차이
@@ -75,7 +75,7 @@ Genie 생태계는 세 가지 구성 요소로 이루어져 있습니다.
 
 [![Streamlit + Genie 데모 영상 썸네일](https://img.youtube.com/vi/BYxOr2479Kg/maxresdefault.jpg)](https://youtu.be/BYxOr2479Kg)
 
-*📸 캡처 안내: `assets/screenshots/12-streamlit-genie/` 폴더에 위 유튜브 썸네일 이미지 플레이스홀더를 `01-demo-thumbnail.png`로 저장해 두세요. 실제 썸네일은 `https://img.youtube.com/vi/BYxOr2479Kg/maxresdefault.jpg` 에서 다운로드할 수 있습니다.*
+*📸 캡처 안내: `assets/screenshots/13-streamlit-genie/` 폴더에 위 유튜브 썸네일 이미지 플레이스홀더를 `01-demo-thumbnail.png`로 저장해 두세요. 실제 썸네일은 `https://img.youtube.com/vi/BYxOr2479Kg/maxresdefault.jpg` 에서 다운로드할 수 있습니다.*
 
 ---
 
@@ -107,4 +107,4 @@ Genie 생태계는 세 가지 구성 요소로 이루어져 있습니다.
 
 ## 다음 단계 ➡️
 
-- [13. Snowflake vs Databricks Q&A](./13-snowflake-qa.md) — Snowflake를 사용해 본 경험이 있다면 자주 묻는 질문들을 정리한 섹션입니다.
+- [14. Snowflake vs Databricks Q&A](./14-snowflake-qa.md) — Snowflake를 사용해 본 경험이 있다면 자주 묻는 질문들을 정리한 섹션입니다.

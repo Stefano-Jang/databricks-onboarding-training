@@ -1,8 +1,8 @@
-⬅️ [이전: 노트북 & S3 파일 읽기](./07-notebooks.md) | 🏠 [목차](../README.md) | [다음: SQL 작성·저장 & 스니펫](./08-sql.md) ➡️
+⬅️ [이전: 노트북 & S3 파일 읽기](./07-notebooks.md) | 🏠 [목차](../README.md) | [다음: SQL 작성·저장 & 스니펫](./09-sql.md) ➡️
 
 ---
 
-# 07b. Lakeflow Connect로 S3 파일을 Unity Catalog 테이블로 가져오기
+# 08. Lakeflow Connect로 S3 파일을 Unity Catalog 테이블로 가져오기
 
 > **이 실습에서 배우는 것** — 코드 없이 UI만으로 S3의 파일을 탐색하고, Unity Catalog 관리형 Delta 테이블로 만들어 봅니다. Lakeflow Connect의 파일 인제스트(Add data) 기능을 사용합니다.
 
@@ -27,7 +27,7 @@
 
 ### 07 실습과 무엇이 다른가요?
 
-| 비교 항목 | 07 실습 (노트북에서 S3 읽기) | 07b 실습 (Lakeflow Connect Add data) |
+| 비교 항목 | 07 실습 (노트북에서 S3 읽기) | 08 실습 (Lakeflow Connect Add data) |
 |---|---|---|
 | 방법 | Python/SQL 코드 작성 | UI 클릭만으로 진행 |
 | 결과 | 메모리 상의 DataFrame(임시) | Unity Catalog 관리형 Delta 테이블(영구 저장) |
@@ -79,7 +79,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 
 두 방법 모두 **Add data** 페이지로 이동합니다.
 
-![Add data - Amazon S3 커넥터](../assets/screenshots/07b-lakeflow-connect/01-ingestion-add.png)
+![Add data - Amazon S3 커넥터](../assets/screenshots/08-lakeflow-connect/01-ingestion-add.png)
 *Databricks connectors에서 Amazon S3 선택*
 
 > 💡 **Add data 페이지**에는 다양한 데이터 소스 옵션이 있습니다. **Upload files to a volume**(로컬 파일 업로드), **Databricks connectors**(Amazon S3, SaaS 앱 등), **Partner connectors** 등이 보입니다. 이번 실습에서는 **Databricks connectors** 섹션의 **Amazon S3** 를 사용합니다.
@@ -93,7 +93,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 3. 상단 탭에서 **S3** 가 선택되어 있는지 확인합니다.
 4. 오른쪽 상단의 **SQL Warehouse** 드롭다운에서 사용할 웨어하우스를 선택합니다.
 
-![S3에서 테이블 생성](../assets/screenshots/07b-lakeflow-connect/02-s3-pipeline-config.png)
+![S3에서 테이블 생성](../assets/screenshots/08-lakeflow-connect/02-s3-pipeline-config.png)
 *Create table from file의 S3 탭, External location 선택 화면*
 
 > ⚠️ **SQL Warehouse를 먼저 선택하세요.** Warehouse를 선택해야 External Location 드롭다운에 목록이 표시되고 파일을 탐색할 수 있습니다.
@@ -105,13 +105,13 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. **External location** 드롭다운을 클릭합니다.
 2. 이 워크스페이스에 등록된 External Location 목록이 표시됩니다. 대상 S3 경로에 해당하는 External Location을 선택합니다.
 
-   ![External Location 선택](../assets/screenshots/07b-lakeflow-connect/03-external-location-select.png)
+   ![External Location 선택](../assets/screenshots/08-lakeflow-connect/03-external-location-select.png)
    *📸 캡처 안내: External location 드롭다운이 펼쳐지고 등록된 External Location 목록에서 하나를 선택하는 화면.*
 
 3. External Location을 선택하면 해당 S3 경로의 파일·폴더 목록이 아래에 표시됩니다.
 4. 가져올 파일 또는 폴더를 클릭하여 선택합니다.
 
-   ![파일/폴더 찾기](../assets/screenshots/07b-lakeflow-connect/04-file-browse.png)
+   ![파일/폴더 찾기](../assets/screenshots/08-lakeflow-connect/04-file-browse.png)
    *📸 캡처 안내: External Location 하위의 S3 폴더/파일 목록이 표시되고, 특정 파일 또는 폴더를 선택하는 화면.*
 
 > 💡 **폴더를 선택하면** 해당 폴더 안의 모든 파일이 자동으로 포함됩니다. 같은 형식(CSV, JSON 등)의 파일 여러 개를 한꺼번에 가져올 때 유용합니다.
@@ -125,7 +125,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. 파일을 선택하면 오른쪽 또는 하단 **Preview** 영역에서 데이터 샘플을 확인할 수 있습니다.
 2. **Preview table** 버튼을 클릭하여 샘플 데이터와 컬럼 이름·데이터 타입을 확인합니다.
 
-   ![테이블 미리보기](../assets/screenshots/07b-lakeflow-connect/05-preview-table.png)
+   ![테이블 미리보기](../assets/screenshots/08-lakeflow-connect/05-preview-table.png)
    *📸 캡처 안내: Preview table 클릭 후 S3 파일의 샘플 데이터가 표 형태로 표시된 화면. 컬럼 이름과 데이터 타입이 보이도록 캡처.*
 
 3. 필요하면 컬럼 이름이나 데이터 타입을 수정합니다.
@@ -144,7 +144,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. 설정을 모두 확인한 후 **Create table** 버튼을 클릭합니다.
 2. 잠시 기다리면 테이블 생성이 완료됩니다.
 
-   ![테이블 생성 완료](../assets/screenshots/07b-lakeflow-connect/06-table-created.png)
+   ![테이블 생성 완료](../assets/screenshots/08-lakeflow-connect/06-table-created.png)
    *📸 캡처 안내: "Table created successfully" 메시지 또는 생성된 테이블의 Catalog Explorer 상세 페이지로 이동한 화면.*
 
 3. 생성된 테이블은 Unity Catalog에 **관리형 Delta 테이블**로 등록됩니다. SQL 편집기에서 바로 쿼리할 수 있습니다.
@@ -179,8 +179,8 @@ SELECT * FROM stan_learning_catalog.onboarding_training.s3_import_demo LIMIT 10;
 
 ## 다음 단계 ➡️
 
-- [08. SQL 작성·저장 & 스니펫](./08-sql.md) — SQL 편집기로 쿼리를 작성하고 저장하는 방법을 배웁니다.
+- [09. SQL 작성·저장 & 스니펫](./09-sql.md) — SQL 편집기로 쿼리를 작성하고 저장하는 방법을 배웁니다.
 
 ---
 
-⬅️ [이전: 노트북 & S3 파일 읽기](./07-notebooks.md) | 🏠 [목차](../README.md) | [다음: SQL 작성·저장 & 스니펫](./08-sql.md) ➡️
+⬅️ [이전: 노트북 & S3 파일 읽기](./07-notebooks.md) | 🏠 [목차](../README.md) | [다음: SQL 작성·저장 & 스니펫](./09-sql.md) ➡️

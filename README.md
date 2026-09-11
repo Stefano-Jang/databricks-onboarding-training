@@ -6,7 +6,7 @@
 > Databricks의 핵심 기능을 자연스럽게 익힐 수 있도록 구성했습니다.
 
 <p align="center">
-  <a href="https://htmlpreview.github.io/?https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/presentation/index.html">
+  <a href="https://stefano-jang.github.io/databricks-onboarding-training/presentation/">
     <b>▶️ 발표자료(슬라이드) 바로 열기</b>
   </a>
 </p>
@@ -23,9 +23,10 @@
 ## 🖥️ 발표자료 (동적 HTML 슬라이드)
 강사용 발표 슬라이드는 브라우저에서 바로 열립니다.
 
-- ▶️ **바로 보기(htmlpreview)**: [발표자료 열기](https://htmlpreview.github.io/?https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/presentation/index.html)
+- ▶️ **바로 보기 (GitHub Pages)**: <https://stefano-jang.github.io/databricks-onboarding-training/presentation/>
+- 대체 링크 (htmlpreview): [열기](https://htmlpreview.github.io/?https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/presentation/index.html)
 - 소스: [`presentation/index.html`](./presentation/index.html)
-- (선택) 저장소 **Settings → Pages**를 켜면 `https://stefano-jang.github.io/databricks-onboarding-training/presentation/` 로도 접속할 수 있습니다.
+- 발표자료는 `main` 브랜치 기준 GitHub Pages로 자동 게시됩니다(내용 갱신 후 1~2분 뒤 반영).
 
 ## 📚 커리큘럼 (실습 순서)
 

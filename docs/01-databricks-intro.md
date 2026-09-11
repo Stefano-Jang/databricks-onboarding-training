@@ -49,9 +49,6 @@ Databricks는 이후에도 데이터·AI 분야의 핵심 오픈소스를 잇달
 | 2025년 | **Neon 인수**(약 10억 달러, $1B) → **Lakebase**(Neon 기반 서버리스 Postgres), **Agent Bricks**, **Databricks One** | 인수한 Neon을 기반으로 운영 DB(**Lakebase**)까지 확장 |
 | 2026년 | **Panther 인수**(AI 보안 SOC → Lakewatch), Gartner **AI/DSML Platforms MQ 리더** | 데이터+AI에 **보안**까지 확장 |
 
-<!-- 스크린샷 예정: ../assets/screenshots/01-intro/01-timeline.png (Databricks 연혁 타임라인) -->
-*📸 캡처 안내: 2013년 설립부터 2025년까지의 주요 이정표(Spark → MLflow → Delta Lake → Lakehouse → Unity Catalog → DBRX/AI-BI → Lakebase)를 연도순으로 배열한 타임라인 그림. 발표자료 슬라이드의 연혁 장표를 캡처하거나 별도 다이어그램으로 제작합니다.*
-
 > 💡 창업자·설립 연도·오픈소스(Apache Spark, Delta Lake, MLflow, Unity Catalog) 정보는 Databricks 공식 소개 페이지와 English Wikipedia에서 확인했습니다(아래 **공식 문서 링크** 섹션 참고).
 
 ---

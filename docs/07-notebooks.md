@@ -79,13 +79,7 @@
 
 2. 드롭다운 메뉴에서 **Notebook**을 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/02-select-notebook.png (Notebook 선택) -->
-   *📸 캡처 안내: "+ New" 드롭다운에서 "Notebook" 항목이 하이라이트된 상태를 캡처합니다.*
-
 3. 새 노트북이 열립니다. 화면 상단의 제목("Untitled Notebook")을 클릭하여 **`onboarding_my_first_notebook`** 으로 변경합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/03-rename-notebook.png (노트북 제목 변경) -->
-   *📸 캡처 안내: 노트북 상단 제목 편집 상태를 캡처합니다. 제목이 편집 가능한 입력 필드로 바뀐 모습이 나오도록 합니다.*
 
 > 💡 노트북은 기본적으로 홈 폴더(Workspace > Users > 내 계정)에 저장됩니다. 저장 위치를 바꾸려면 **File > Move to** 메뉴를 사용합니다.
 
@@ -96,9 +90,6 @@
 노트북의 코드를 실행하려면 반드시 컴퓨트를 연결해야 합니다.
 
 1. 노트북 상단 오른쪽의 **Connect** 버튼(또는 현재 연결된 컴퓨트 이름)을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/04-connect-compute.png (Connect 버튼) -->
-   *📸 캡처 안내: 노트북 툴바 오른쪽의 "Connect" 버튼 또는 컴퓨트 선택 드롭다운이 보이도록 캡처합니다.*
 
 2. 드롭다운에서 연결할 컴퓨트를 선택합니다.
 
@@ -228,9 +219,6 @@ display(df.select("pickup_zip", "fare_amount", "trip_distance").limit(10))
 ls /databricks-datasets/
 ```
 
-<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/10-fs-ls.png (%fs ls 결과) -->
-*📸 캡처 안내: %fs ls /databricks-datasets/ 실행 결과로 폴더 목록이 표시된 화면을 캡처합니다.*
-
 #### 6-2. CSV 파일 읽어서 탐색
 
 아래 코드를 새 셀에 입력하고 실행합니다.
@@ -247,9 +235,6 @@ df_diamonds = spark.read.csv(
 print(f"총 행 수: {df_diamonds.count()}")
 display(df_diamonds)
 ```
-
-<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/11-diamonds-display.png (diamonds 데이터 출력) -->
-*📸 캡처 안내: 다이아몬드 데이터셋의 첫 행들과 컬럼(carat, cut, color, clarity, depth, table, price)이 보이는 display() 결과를 캡처합니다.*
 
 #### 6-3. JSON 파일 읽기 예시
 

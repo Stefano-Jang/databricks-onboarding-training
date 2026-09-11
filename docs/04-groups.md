@@ -109,14 +109,8 @@
 2. **Members** 탭을 클릭합니다.
 3. **Add members** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/03-group-members-tab.png (그룹 Members 탭) -->
-   *📸 캡처 안내: `onboarding_analytics_team` 그룹 상세 페이지 > Members 탭. "Add members" 버튼이 보이도록 캡처.*
-
 4. 검색창에 추가할 사용자의 이름 또는 이메일 주소를 입력하고, 목록에서 선택합니다.
 5. **Add** 버튼을 클릭하면 멤버가 추가됩니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/04-member-added.png (멤버 추가 완료) -->
-   *📸 캡처 안내: Members 탭에 추가된 사용자 목록이 표시된 상태. 이메일 주소는 마스킹.*
 
 > 💡 **그룹 안에 그룹(중첩 그룹)도 추가할 수 있습니다.** 검색창에서 다른 그룹 이름을 검색하여 추가하면 됩니다. 단, 워크스페이스 로컬 그룹은 계정 레벨 그룹의 멤버가 될 수 없습니다.
 
@@ -130,16 +124,10 @@
 
 1. `onboarding_analytics_team` 그룹 상세 페이지에서 **Permissions** 탭을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/05-group-permissions-tab.png (그룹 Permissions 탭) -->
-   *📸 캡처 안내: 그룹 상세 페이지 > Permissions 탭. 현재 권한 목록이 보이도록 캡처.*
-
 2. **Grant permissions** 버튼을 클릭합니다.
 3. 검색창에서 그룹 관리자로 위임할 **사용자** 이름 또는 이메일을 검색하고 선택합니다.
 4. 권한 드롭다운에서 **Can manage** 를 선택합니다.
 5. **Add** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/06-grant-manage-permission.png (그룹 관리 권한 위임 완료) -->
-   *📸 캡처 안내: Permissions 탭에 특정 사용자가 "Can manage" 권한을 부여받은 목록 상태. 이메일은 마스킹.*
 
 > ✅ 이제 해당 사용자는 이 그룹의 Members 탭에서 직접 멤버를 관리할 수 있습니다.
 
@@ -152,13 +140,7 @@
 1. 계정 콘솔 왼쪽 사이드바에서 **Workspaces** 아이콘을 클릭합니다.
 2. 워크스페이스 목록에서 실습에 사용할 워크스페이스(예: `coupang-appdemo`)를 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/07-workspaces-list.png (워크스페이스 목록) -->
-   *📸 캡처 안내: 계정 콘솔 > Workspaces 목록 화면. 워크스페이스 목록이 나열된 상태.*
-
 3. 상단 탭에서 **Permissions** 탭을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/08-workspace-permissions-tab.png (워크스페이스 Permissions 탭) -->
-   *📸 캡처 안내: 워크스페이스 상세 > Permissions 탭. 현재 할당된 사용자/그룹 목록.*
 
 4. **Add permissions** 버튼을 클릭합니다.
 5. 검색창에 `onboarding_analytics_team` 을 입력하고, 목록에서 선택합니다.
@@ -171,9 +153,6 @@
    | **Allow cluster creation** | 클러스터를 직접 생성할 수 있는 추가 권한 |
 
 7. **Save** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/04-groups/09-group-added-to-workspace.png (그룹 워크스페이스 할당 완료) -->
-   *📸 캡처 안내: Permissions 탭 목록에 `onboarding_analytics_team` 그룹이 추가된 상태.*
 
 > ✅ 이제 `onboarding_analytics_team` 소속 사용자들이 이 워크스페이스에 로그인할 수 있습니다.
 

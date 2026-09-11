@@ -110,9 +110,6 @@ COMMENT '온보딩 실습용 스키마';
 SHOW SCHEMAS IN main;
 ```
 
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/01-create-schema.png (스키마 생성 확인) -->
-*📸 캡처 안내: SQL Editor에서 SHOW SCHEMAS 결과가 표시된 화면. `onboarding_training` 스키마가 목록에 보이도록 캡처.*
-
 > 💡 **카탈로그 탐색기(Catalog Explorer)에서도 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘을 클릭 → `main` 확장 → `onboarding_training` 스키마 확인.
 
 ---
@@ -147,9 +144,6 @@ INSERT INTO main.onboarding_training.sales_summary VALUES
 -- 데이터 확인
 SELECT * FROM main.onboarding_training.sales_summary;
 ```
-
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/02-create-table-select.png (테이블 생성 및 데이터 확인) -->
-*📸 캡처 안내: SQL Editor에서 SELECT 결과로 5개 행이 표시된 화면.*
 
 > 💡 **Catalog Explorer에서도 테이블 상세를 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘 클릭 → 카탈로그 → 스키마 → 테이블 이름을 클릭하면 컬럼 목록, 데이터 타입, 통계, 히스토리 등을 한눈에 볼 수 있습니다.
 
@@ -197,24 +191,15 @@ COMMENT '온보딩 실습용 파일 업로드 볼륨';
 SHOW VOLUMES IN main.onboarding_training;
 ```
 
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/03-create-volume-sql.png (볼륨 생성 SQL 결과) -->
-*📸 캡처 안내: SHOW VOLUMES 결과에 `uploads` 볼륨이 나타난 화면.*
-
 #### 방법 B — UI (카탈로그 탐색기)로 생성
 
 1. 왼쪽 사이드바에서 **카탈로그(Catalog)** 아이콘을 클릭합니다.
 2. `main` → `onboarding_training` 스키마를 클릭하여 확장합니다.
 3. 오른쪽 상단의 **Create** 버튼(또는 스키마 이름 옆의 `⋯` 메뉴)을 클릭하고 **Create Volume** 을 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/04-create-volume-ui.png (카탈로그 탐색기 Create Volume) -->
-   *📸 캡처 안내: 카탈로그 탐색기에서 스키마 하위 "Create Volume" 옵션이 보이는 화면.*
-
 4. **Volume name**: `uploads_ui` 를 입력합니다.
 5. **Volume type**: **Managed** 를 선택합니다.
 6. **Create** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/05-volume-created-ui.png (Volume 생성 완료) -->
-   *📸 캡처 안내: 카탈로그 탐색기에서 `uploads_ui` 볼륨이 생성된 상태. 볼륨 상세 화면.*
 
 ---
 
@@ -223,14 +208,8 @@ SHOW VOLUMES IN main.onboarding_training;
 1. 카탈로그 탐색기에서 `main` → `onboarding_training` → **`uploads`** 볼륨을 클릭합니다.
 2. 볼륨 상세 페이지 오른쪽에서 **Upload to this volume** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/06-upload-to-volume-button.png (볼륨 파일 업로드 버튼) -->
-   *📸 캡처 안내: 볼륨 상세 페이지에서 "Upload to this volume" 버튼이 보이는 화면.*
-
 3. 업로드할 파일을 드래그하거나 **Browse** 버튼으로 선택합니다. (예: 간단한 `.csv` 또는 `.txt` 파일)
 4. **Upload** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/07-file-uploaded.png (파일 업로드 완료) -->
-   *📸 캡처 안내: 볼륨에 파일이 업로드된 후, 파일 목록에 업로드된 파일 이름이 나타난 상태.*
 
 업로드된 파일은 아래 경로로 접근할 수 있습니다.
 
@@ -257,9 +236,6 @@ Unity Catalog Permissions UI를 사용하면 SQL 없이도 그룹에 권한을 �
 4. **Principals** 검색창에 `onboarding_analytics_team` 을 입력하고 선택합니다.
 5. 부여할 권한(Privilege)으로 **SELECT** 에 체크합니다.
 6. **Grant** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/09-grant-select-ui.png (테이블 권한 부여 완료) -->
-   *📸 캡처 안내: Permissions 탭에 `onboarding_analytics_team` 그룹에 SELECT 권한이 부여된 목록.*
 
 > 💡 **테이블을 사용하려면 상위 객체 권한도 필요합니다.** USE CATALOG와 USE SCHEMA 권한을 부여하지 않으면 테이블에 접근할 수 없습니다. 아래 SQL 방법(6단계)에서 전체 권한 체인을 함께 부여합니다.
 
@@ -305,9 +281,6 @@ TO `onboarding_analytics_team`;
 -- 테이블에 부여된 권한 전체 확인
 SHOW GRANTS ON TABLE main.onboarding_training.sales_summary;
 ```
-
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/10-show-grants-result.png (SHOW GRANTS 결과) -->
-*📸 캡처 안내: SQL Editor에서 SHOW GRANTS 결과가 표시된 화면. `onboarding_analytics_team`에 SELECT 권한이 보이도록 캡처.*
 
 #### 권한 회수 (REVOKE)
 
@@ -381,9 +354,6 @@ ALTER TABLE main.onboarding_training.sales_summary
 SELECT * FROM main.onboarding_training.sales_summary;
 ```
 
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/11-row-filter-result.png (행 필터 동작 확인) -->
-*📸 캡처 안내: 일반 사용자 계정으로 SELECT 실행 시 서울 지역 2개 행만 반환된 화면.*
-
 **④ 행 필터 제거**
 
 ```sql
@@ -420,9 +390,6 @@ ALTER TABLE main.onboarding_training.sales_summary
 -- 비관리자 계정으로 실행 시 amount 열이 -1.00 으로 표시됨
 SELECT order_id, customer, region, amount FROM main.onboarding_training.sales_summary;
 ```
-
-<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/12-column-mask-result.png (열 마스킹 동작 확인) -->
-*📸 캡처 안내: 비관리자 계정으로 실행 시 amount 열이 모두 -1.00으로 표시된 SELECT 결과 화면.*
 
 **④ 열 마스킹 제거**
 

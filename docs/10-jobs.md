@@ -99,9 +99,6 @@ print("✅ Job 태스크 실행 완료!")
 
 1. 왼쪽 사이드바에서 **워크플로(Workflows)** 아이콘을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/01-workflows-sidebar.png (Workflows 아이콘) -->
-   *📸 캡처 안내: 왼쪽 사이드바에서 Workflows 아이콘(시계 모양 또는 분기 아이콘)이 선택된 상태.*
-
 2. **잡(Jobs)** 탭이 기본으로 열립니다. 기존에 생성된 Job 목록이 표시됩니다.
 
    ![Jobs 탭](../assets/screenshots/10-jobs/02-jobs-list.png)
@@ -112,9 +109,6 @@ print("✅ Job 태스크 실행 완료!")
 ### 2단계: 새 Job 생성
 
 1. 오른쪽 상단의 **잡 만들기(Create job)** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/03-create-job-button.png (Create job 버튼) -->
-   *📸 캡처 안내: "Create job" 버튼을 강조 표시(화살표 또는 박스).*
 
 2. Job 편집 화면이 열립니다. 화면 상단에서 Job 이름 필드를 클릭하고 이름을 입력합니다.
 
@@ -150,9 +144,6 @@ print("✅ Job 태스크 실행 완료!")
 
 5. 파일 탐색 창에서 07 실습에서 저장한 노트북(또는 방금 만든 `onboarding-job-notebook`)을 찾아 선택하고 **확인(Confirm)** 을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/06-notebook-path-select.png (노트북 경로 선택) -->
-   *📸 캡처 안내: 워크스페이스 파일 탐색 창에서 노트북 파일이 선택된 상태. 경로에 이메일 주소가 포함된 경우 마스킹.*
-
 ---
 
 ### 4단계: 컴퓨트(Compute) 지정
@@ -171,18 +162,9 @@ print("✅ Job 태스크 실행 완료!")
 
    > 💡 **추천**: 초심자는 **서버리스(Serverless)** 를 선택하세요. 클러스터 설정 없이 바로 실행됩니다. 서버리스가 보이지 않으면 기존 대화형 클러스터를 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/07-compute-select.png (컴퓨트 선택) -->
-   *📸 캡처 안내: Cluster 드롭다운이 열린 상태. Serverless 옵션 또는 기존 클러스터 목록이 보이도록.*
-
 3. 태스크 설정이 완료되면 **태스크 저장(Save task)** 또는 **만들기(Create)** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/08-save-task.png (태스크 저장) -->
-   *📸 캡처 안내: "Save task" 버튼이 강조된 태스크 설정 패널 하단.*
-
    태스크가 저장되면 Job 캔버스에 태스크 박스가 표시됩니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/09-job-canvas.png (Job 캔버스) -->
-   *📸 캡처 안내: Job 편집 화면 전체. 캔버스에 "analyze-nyctaxi-data" 태스크 박스가 표시된 상태.*
 
 ---
 
@@ -190,13 +172,7 @@ print("✅ Job 태스크 실행 완료!")
 
 1. Job 편집 화면 오른쪽 상단의 **지금 실행(Run now)** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/10-run-now.png (Run now 버튼) -->
-   *📸 캡처 안내: 오른쪽 상단 "Run now" 버튼을 강조 표시.*
-
 2. 실행이 시작되면 화면 하단 또는 상단에 실행 상태 알림이 나타납니다. **실행 상세 보기(View run)** 링크를 클릭하거나, 왼쪽 상단 탭에서 **실행(Runs)** 탭을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/11-run-started.png (실행 시작 알림) -->
-   *📸 캡처 안내: "Run now" 클릭 후 나타나는 "Run started" 또는 실행 링크가 포함된 알림 배너.*
 
 ---
 
@@ -216,13 +192,7 @@ print("✅ Job 태스크 실행 완료!")
    | 태스크별 상태 | 캔버스 내 태스크 박스 색상(초록=성공, 빨강=실패) |
    | 출력 로그 | 태스크 박스 클릭 후 로그 패널 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/13-run-detail.png (실행 상세 화면) -->
-   *📸 캡처 안내: 실행 상세 화면 전체. 태스크 박스가 초록색(Succeeded)으로 표시된 상태.*
-
 3. 태스크 박스를 클릭하면 오른쪽에 **태스크 실행 세부 정보** 패널이 열립니다. **로그 보기(View Logs)** 또는 **출력(Output)** 링크를 클릭해 노트북 실행 결과를 확인합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/14-task-log.png (태스크 로그) -->
-   *📸 캡처 안내: 태스크 클릭 후 오른쪽 패널에 "View Logs" 또는 "Output" 링크가 표시된 상태.*
 
 > 💡 **실패했다면?** 태스크 박스가 빨간색이면 클릭 후 "Error" 메시지를 확인하세요. 가장 많은 원인은 노트북 경로 오류, 컴퓨트 권한 부족입니다. 아래 "자주 겪는 문제" 섹션을 참고하세요.
 
@@ -233,9 +203,6 @@ print("✅ Job 태스크 실행 완료!")
 수동 실행이 성공했다면 이제 자동 실행 스케줄을 설정합니다.
 
 1. **태스크(Tasks)** 탭 옆의 **스케줄(Schedules & Triggers)** 탭을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/15-schedules-tab.png (Schedules 탭) -->
-   *📸 캡처 안내: Job 편집 화면 상단에서 "Schedules & Triggers" 또는 "Triggers" 탭이 선택된 상태.*
 
 2. **스케줄 추가(Add schedule)** 또는 **트리거 추가(Add trigger)** 버튼을 클릭합니다.
 
@@ -252,9 +219,6 @@ print("✅ Job 태스크 실행 완료!")
    | 시작 시각(Start time) | `06:00` | 실행 시각 |
    | 시간대(Timezone) | `Asia/Seoul` | 한국 표준시 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/16-schedule-simple.png (간단 스케줄 설정) -->
-   *📸 캡처 안내: Simple 스케줄 설정 폼. "Every 1 Days at 06:00, Asia/Seoul" 형태로 입력된 상태.*
-
    **방법 B — Cron 표현식 (Advanced)**: **Cron 구문 표시(Show Cron Syntax)** 체크박스를 선택하면 Quartz Cron 형식으로 직접 입력할 수 있습니다.
 
    | Cron 예시 | 의미 |
@@ -263,15 +227,9 @@ print("✅ Job 태스크 실행 완료!")
    | `0 0 9 ? * MON-FRI` | 평일(월~금) 오전 9시 |
    | `0 0 0/2 * * ?` | 2시간마다 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/17-schedule-cron.png (Cron 스케줄 설정) -->
-   *📸 캡처 안내: "Show Cron Syntax" 체크 후 cron 표현식 입력 필드가 표시된 상태.*
-
 5. 설정을 완료했으면 **저장(Save)** 버튼을 클릭합니다.
 
    스케줄이 저장되면 Job 화면 상단에 다음 예약 실행 시각이 표시됩니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/18-schedule-saved.png (스케줄 저장 완료) -->
-   *📸 캡처 안내: 스케줄 저장 후 Job 화면. "Next run: ..." 형태로 다음 실행 예정 시각이 표시된 상태.*
 
 ---
 
@@ -283,9 +241,6 @@ Job 실행 결과를 이메일로 받도록 설정합니다.
 
    > 탭 위치는 워크스페이스 버전에 따라 다를 수 있습니다. 보이지 않으면 Job 세부 설정 페이지 상단을 확인하세요.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/19-notifications-tab.png (알림 탭) -->
-   *📸 캡처 안내: "Notifications" 탭 또는 "Add notification" 버튼이 보이는 화면.*
-
 2. **알림 추가(Add notification)** 창에서 다음을 설정합니다.
 
    | 설정 | 값 |
@@ -295,9 +250,6 @@ Job 실행 결과를 이메일로 받도록 설정합니다.
    | 알림 시점 | **실패 시(On failure)** 체크 (권장) |
 
    선택적으로 **성공 시(On success)**, **시작 시(On start)** 도 체크할 수 있습니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/20-notification-config.png (알림 설정 창) -->
-   *📸 캡처 안내: 알림 설정 창. 이메일 입력 필드와 "On failure" 체크박스가 보이도록. 실제 이메일 주소는 마스킹.*
 
 3. **저장(Save)** 또는 **확인(Confirm)** 버튼을 클릭합니다.
 

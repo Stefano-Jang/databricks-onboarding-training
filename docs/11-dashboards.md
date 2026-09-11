@@ -69,9 +69,6 @@
 
 1. 왼쪽 사이드바에서 **대시보드(Dashboards)** 아이콘을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/01-dashboards-sidebar.png (Dashboards 아이콘) -->
-   *📸 캡처 안내: 왼쪽 사이드바에서 "Dashboards" 아이콘(격자 또는 차트 모양)이 선택된 상태.*
-
 2. 대시보드 목록 페이지가 열립니다. 오른쪽 상단의 **만들기(Create dashboard)** 버튼을 클릭합니다.
 
    ![대시보드 목록](../assets/screenshots/11-dashboards/02-dashboards-list.png)
@@ -83,22 +80,16 @@
    NYC 택시 운행 현황
    ```
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/03-dashboard-name.png (대시보드 이름 입력) -->
-   *📸 캡처 안내: 대시보드 편집 화면 상단. 이름 필드에 "NYC 택시 운행 현황"이 입력된 상태.*
-
 ---
 
 ### 2단계: 데이터셋(SQL 쿼리) 추가
 
 1. 화면 왼쪽 상단에서 **데이터(Data)** 탭을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/04-data-tab.png (Data 탭) -->
-   *📸 캡처 안내: "Data" 탭이 선택된 대시보드 편집 화면.*
+   ![Data 탭](../assets/screenshots/11-dashboards/04-data-tab.png)
+   *대시보드 편집 > "Data" 탭 — 데이터셋 목록과 선택한 데이터셋의 SQL·결과 표. "Add SQL dataset"으로 새 데이터셋을 추가합니다.*
 
 2. **SQL 데이터셋 추가(Add SQL dataset)** 또는 **데이터 추가(Add data)** 버튼을 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/05-add-dataset.png (데이터셋 추가 버튼) -->
-   *📸 캡처 안내: Data 탭의 "Add SQL dataset" 버튼을 강조.*
 
 3. SQL 편집기가 열립니다. 데이터셋 이름을 `pickup_zip_stats` 로 변경한 뒤, 아래 SQL을 입력합니다.
 
@@ -114,13 +105,7 @@
    LIMIT 20
    ```
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/06-dataset-sql.png (SQL 데이터셋 쿼리 입력) -->
-   *📸 캡처 안내: SQL 편집기에 위 쿼리가 입력된 상태. 데이터셋 이름 "pickup_zip_stats"가 표시되도록.*
-
 4. **실행(Run)** 버튼(▷ 아이콘)을 클릭해 쿼리 결과를 확인합니다. 결과 테이블이 아래에 표시되면 정상입니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/07-dataset-result.png (쿼리 결과 확인) -->
-   *📸 캡처 안내: SQL 쿼리 실행 후 하단에 결과 테이블(pickup_zip, trip_count, avg_fare, avg_distance 컬럼)이 표시된 상태.*
 
 5. **저장(Save)** 버튼을 클릭해 데이터셋을 저장합니다.
 
@@ -139,9 +124,6 @@
 
    실행하여 결과를 확인한 뒤 저장합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/08-dataset-daily.png (두 번째 데이터셋) -->
-   *📸 캡처 안내: "daily_trips" 데이터셋 쿼리 결과가 표시된 상태. 날짜와 건수, 매출 컬럼이 보이도록.*
-
 > 💡 **팁**: 데이터셋은 대시보드의 "재료"입니다. 하나의 데이터셋을 여러 차트에서 동시에 사용할 수 있습니다.
 
 ---
@@ -157,9 +139,6 @@
 
 3. **시각화(Visualization)** 를 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/10-add-widget.png (위젯 추가 메뉴) -->
-   *📸 캡처 안내: 위젯 추가 팝업 또는 메뉴. "Visualization" 옵션이 강조된 상태.*
-
 4. 위젯 설정 패널이 오른쪽에 열립니다. 다음과 같이 설정합니다.
 
    | 설정 항목 | 값 |
@@ -169,15 +148,9 @@
    | **X축(X axis)** | `pickup_zip` |
    | **Y축(Y axis)** | `trip_count` |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/11-bar-chart-config.png (막대 차트 설정) -->
-   *📸 캡처 안내: 오른쪽 위젯 설정 패널. Dataset, Visualization type(Bar), X axis, Y axis 필드가 설정된 상태.*
-
 5. 제목 필드에 `픽업 구역별 운행 건수` 를 입력합니다.
 
 6. 캔버스에 막대 차트가 표시됩니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/12-bar-chart-result.png (막대 차트 결과) -->
-   *📸 캡처 안내: 캔버스에 막대 차트가 표시된 상태. 구역별 운행 건수가 막대로 나타나도록.*
 
 ---
 
@@ -198,12 +171,6 @@
 
 3. 제목을 `일별 운행 건수 추이` 로 입력합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/13-line-chart-config.png (선 차트 설정) -->
-   *📸 캡처 안내: 선 차트 위젯 설정 패널. Line 유형이 선택된 상태.*
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/14-line-chart-result.png (선 차트 결과) -->
-   *📸 캡처 안내: 캔버스에 선 차트가 추가된 상태. 날짜별 운행 건수 추이가 선으로 표시.*
-
 #### 카운터 (총 운행 건수 요약)
 
 1. 캔버스에 **추가(+)** → **시각화(Visualization)** 를 선택합니다.
@@ -218,12 +185,6 @@
 
 6. 제목을 `총 운행 건수` 로 입력합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/15-counter-config.png (카운터 설정) -->
-   *📸 캡처 안내: Counter 유형이 선택된 위젯 설정 패널. Value = daily_trip_count, Aggregation = Sum.*
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/16-counter-result.png (카운터 결과) -->
-   *📸 캡처 안내: 캔버스에 카운터 위젯이 추가된 상태. 총 건수가 큰 숫자로 표시.*
-
 > 💡 **캔버스 정리 팁**: 위젯 모서리를 드래그해 크기를 조절하고, 위젯을 드래그해 원하는 위치로 이동할 수 있습니다. 카운터와 요약 수치는 대시보드 상단에 배치하는 것이 좋습니다.
 
 ---
@@ -233,9 +194,6 @@
 필터를 추가하면 대시보드 뷰어가 직접 데이터 범위를 조절할 수 있어 대화형(Interactive) 대시보드가 됩니다.
 
 1. 캔버스 빈 공간에서 **추가(+)** 를 클릭하고 **필터(Filter)** 를 선택합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/17-add-filter.png (필터 추가 메뉴) -->
-   *📸 캡처 안내: 위젯 추가 메뉴에서 "Filter" 옵션이 강조된 상태.*
 
 2. 필터 위젯이 캔버스에 추가되고 오른쪽에 필터 설정 패널이 열립니다.
 
@@ -247,20 +205,11 @@
    | **제목(Title)** | `날짜 범위 선택` |
    | **데이터셋 및 열** | `daily_trips` 데이터셋의 `pickup_date` 열 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/18-date-filter-config.png (날짜 필터 설정) -->
-   *📸 캡처 안내: 필터 설정 패널. "Date range picker" 유형이 선택되고 daily_trips.pickup_date에 연결된 상태.*
-
 4. **필터 저장** 후, 선 차트 위젯을 클릭하고 설정 패널에서 **필터(Filters)** 섹션을 찾아 방금 만든 날짜 필터를 연결합니다.
 
    > 위젯의 필터 연결 위치는 화면에서 직접 확인하세요(화면에서 실제 명칭 확인).
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/19-filter-link.png (필터 연결) -->
-   *📸 캡처 안내: 선 차트 위젯 설정 패널에서 날짜 필터가 연결된 상태.*
-
 5. 캔버스에서 날짜 범위 필터를 조작해 보면 연결된 차트가 함께 변경되는 것을 확인할 수 있습니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/20-filter-action.png (필터 동작 확인) -->
-   *📸 캡처 안내: 날짜 범위 필터를 선택했을 때 선 차트 데이터가 필터링된 상태.*
 
 ---
 
@@ -270,9 +219,6 @@
 
 1. 화면 오른쪽 상단의 **게시(Publish)** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/21-publish-button.png (Publish 버튼) -->
-   *📸 캡처 안내: 대시보드 편집 화면 오른쪽 상단의 "Publish" 버튼을 강조.*
-
 2. 게시 옵션 대화 상자가 열립니다. **데이터 권한(Data credentials)** 설정이 표시됩니다.
 
    | 옵션 | 설명 |
@@ -281,9 +227,6 @@
    | **내장 자격 증명(Embedded credentials)** | 게시자의 자격 증명으로 데이터 접근. 뷰어가 해당 데이터에 직접 접근 권한이 없어도 볼 수 있음. |
 
    > 💡 **팁**: 실습 환경에서는 **뷰어 자격 증명(Viewer credentials)** 을 선택합니다. 프로덕션에서는 보안 정책에 따라 결정합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/22-publish-options.png (게시 옵션) -->
-   *📸 캡처 안내: 게시 옵션 대화 상자. "Viewer credentials" 옵션이 선택된 상태.*
 
 3. **게시(Publish)** 버튼을 클릭합니다.
 
@@ -298,9 +241,6 @@
 
 1. 화면 오른쪽 상단의 **공유(Share)** 버튼 또는 **...** 메뉴에서 **공유(Share)** 를 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/24-share-button.png (Share 버튼) -->
-   *📸 캡처 안내: 오른쪽 상단 "Share" 버튼이 강조된 게시된 대시보드 화면.*
-
 2. 공유 대화 상자가 열립니다. 사용자 또는 그룹을 검색해 추가하고 권한 수준을 지정합니다.
 
    | 권한 수준 | 가능한 작업 |
@@ -310,17 +250,11 @@
    | **편집(Can edit)** | 대시보드 내용 수정 가능 |
    | **관리(Can manage)** | 권한 설정 및 삭제 포함 모든 작업 가능 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/25-share-dialog.png (공유 대화 상자) -->
-   *📸 캡처 안내: 공유 대화 상자. 사용자 검색 필드와 권한 드롭다운이 보이도록. 이메일 주소는 마스킹.*
-
 3. 이메일 주소 또는 그룹명을 입력하고 권한 수준을 선택한 뒤 **추가(Add)** 버튼을 클릭합니다.
 
 4. 워크스페이스 전체에 공개하려면 **계정 내 모든 사람(Anyone in my account can view)** 옵션을 활성화할 수도 있습니다.
 
 5. **완료(Done)** 를 클릭해 공유 설정을 저장합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/11-dashboards/26-share-done.png (공유 완료) -->
-   *📸 캡처 안내: 공유 설정이 완료된 대화 상자. 추가된 사용자/그룹 목록과 권한 수준이 표시된 상태.*
 
 > 💡 **공유 링크 복사**: 공유 대화 상자에서 **링크 복사(Copy link)** 버튼을 클릭하면 대시보드 URL을 클립보드에 복사할 수 있습니다. 이 링크를 이메일이나 Slack으로 전달하세요.
 

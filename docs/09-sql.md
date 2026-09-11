@@ -79,9 +79,6 @@ SQL 편집기에서 작성한 쿼리는 Databricks 워크스페이스에 파일�
 
    > 💡 아이콘 명칭이 화면에 표시되지 않는 경우, 사이드바 아이콘에 마우스를 올려 툴팁을 확인하세요.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/01-sql-editor-icon.png (SQL Editor 아이콘) -->
-   *📸 캡처 안내: 왼쪽 사이드바에서 SQL Editor 아이콘이 하이라이트된 상태를 캡처합니다.*
-
 2. SQL 편집기 화면이 열립니다. 처음 열 경우 빈 쿼리 탭이 나타납니다.
 
    ![SQL 편집기 초기 화면](../assets/screenshots/09-sql/02-sql-editor-home.png)
@@ -133,9 +130,6 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 
 2. **Run** 버튼을 클릭하거나 **Ctrl + Enter** (Mac: **Cmd + Enter**)를 눌러 쿼리를 실행합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/05-run-button.png (Run 버튼) -->
-   *📸 캡처 안내: Run 버튼(파란 삼각형 아이콘)이 쿼리 편집기 상단에 보이도록 캡처합니다.*
-
 3. 실행이 완료되면 하단에 결과가 표 형태로 나타납니다.
 
    ![쿼리 결과 표](../assets/screenshots/09-sql/06-query-result.png)
@@ -169,15 +163,9 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 
 1. 편집기 상단의 쿼리 제목 부분을 클릭합니다. 기본값은 **"New query"** 입니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/08-query-title.png (쿼리 제목 클릭) -->
-   *📸 캡처 안내: 쿼리 탭 또는 상단의 "New query" 제목이 편집 가능한 상태(커서가 표시된 입력 필드)로 바뀐 화면을 캡처합니다.*
-
 2. 제목을 **`onboarding_nyc_taxi_by_zipcode`** 로 입력하고 Enter를 누릅니다.
 
 3. 쿼리는 자동 저장됩니다. 저장 상태는 제목 옆의 아이콘(화면에서 실제 명칭 확인)으로 확인할 수 있습니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/09-saved-query-name.png (저장된 쿼리 이름) -->
-   *📸 캡처 안내: 쿼리 제목이 "onboarding_nyc_taxi_by_zipcode"로 변경된 상태를 캡처합니다.*
 
 > 💡 Databricks SQL 편집기는 **자동 저장(autosave)** 기능이 있어 별도로 저장 버튼을 누르지 않아도 주기적으로 저장됩니다. 이름을 지정해 두면 나중에 다시 찾기 쉽습니다.
 
@@ -191,9 +179,6 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 
 1. 왼쪽 패널에서 **Queries** 탭을 클릭합니다. (화면에서 실제 탭 명칭 확인)
 2. 목록에서 `onboarding_nyc_taxi_by_zipcode` 를 클릭합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/10-queries-list.png (Queries 목록) -->
-   *📸 캡처 안내: 왼쪽 패널의 Queries 탭이 열려 있고, 저장된 쿼리 목록에 방금 저장한 쿼리가 보이는 화면을 캡처합니다.*
 
 #### 방법 B: Workspace 파일 브라우저에서 열기
 
@@ -229,9 +214,6 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
    | **Can Edit** | 쿼리 수정 가능 |
    | **Can Manage** | 권한 설정 포함 전체 관리 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/11-share-permissions.png (권한 설정 다이얼로그) -->
-   *📸 캡처 안내: 쿼리 권한 설정(Permissions) 다이얼로그가 열려 있고 팀원 추가 입력 필드가 보이는 화면을 캡처합니다.*
-
 > 💡 **Run as Viewer / Run as Owner**: 쿼리를 공유할 때 "Run as viewer"는 다른 사용자가 자신의 권한으로 실행하고, "Run as owner"는 쿼리 소유자의 권한으로 실행됩니다. 민감한 데이터에는 신중히 선택하세요.
 
 ---
@@ -246,13 +228,7 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 2. 메뉴에서 **View** 를 클릭합니다.
 3. **Query snippets** 를 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/12-snippets-menu.png (Query snippets 메뉴) -->
-   *📸 캡처 안내: SQL 편집기의 더보기(⋮) 메뉴가 열려 있고 "View" 하위에 "Query snippets" 항목이 보이는 화면을 캡처합니다.*
-
 4. **Query Snippets** 관리 페이지가 열립니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/13-snippets-page.png (Query Snippets 관리 화면) -->
-   *📸 캡처 안내: Query Snippets 관리 화면 전체를 캡처합니다. "Create query snippet" 버튼이 보여야 합니다.*
 
 #### 첫 번째 스니펫 만들기
 
@@ -277,9 +253,6 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
    ORDER BY trip_count DESC
    LIMIT ${1:상위 몇 개};
    ```
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/14-create-snippet-form.png (스니펫 생성 폼) -->
-   *📸 캡처 안내: "Create query snippet" 다이얼로그 또는 폼이 열려 있고 Replace, Description, Snippet 필드가 모두 채워진 상태를 캡처합니다.*
 
 3. **Create** 버튼을 클릭하여 저장합니다.
 
@@ -308,17 +281,11 @@ WHERE ${1:날짜컬럼} BETWEEN '${2:시작일 YYYY-MM-DD}' AND '${3:종료일 Y
 1. SQL 편집기의 빈 쿼리 탭으로 돌아옵니다.
 2. 편집 영역에서 트리거 단어 **`nyc_top_zip`** 을 입력하기 시작합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/15-snippet-autocomplete.png (자동완성에 스니펫 표시) -->
-   *📸 캡처 안내: 편집기에서 "nyc_top_zip"을 입력하는 중 자동완성 드롭다운에 등록한 스니펫이 표시된 화면을 캡처합니다.*
-
 3. 자동완성 목록에 스니펫이 나타나면 **Enter** 또는 **Tab** 으로 선택합니다.
 
    > 💡 자동완성이 보이지 않으면 **Ctrl + Space** (Mac: **Cmd + Space**)를 눌러 강제로 자동완성 창을 열 수 있습니다.
 
 4. 스니펫의 전체 SQL 코드가 편집기에 삽입됩니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/16-snippet-inserted.png (스니펫 삽입 결과) -->
-   *📸 캡처 안내: 스니펫이 삽입되어 전체 SQL 코드가 편집기에 나타난 화면을 캡처합니다. `${1:상위 몇 개}` 부분이 하이라이트된 상태면 이상적입니다.*
 
 5. `${1:상위 몇 개}` 부분이 선택된 상태에서 원하는 숫자(예: `10`)를 입력하고 쿼리를 실행합니다.
 
@@ -334,9 +301,6 @@ WHERE ${1:날짜컬럼} BETWEEN '${2:시작일 YYYY-MM-DD}' AND '${3:종료일 Y
    ```
 
 6. **Run** 버튼 또는 **Ctrl + Enter**로 실행합니다.
-
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/17-snippet-result.png (스니펫 쿼리 실행 결과) -->
-   *📸 캡처 안내: 스니펫으로 완성된 쿼리의 실행 결과가 표 형태로 표시된 화면을 캡처합니다.*
 
 ---
 

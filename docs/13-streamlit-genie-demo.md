@@ -75,7 +75,7 @@ Genie 생태계는 세 가지 구성 요소로 이루어져 있습니다.
 
 [![Streamlit + Genie 데모 영상 썸네일](https://img.youtube.com/vi/BYxOr2479Kg/maxresdefault.jpg)](https://youtu.be/BYxOr2479Kg)
 
-*📸 캡처 안내: `assets/screenshots/13-streamlit-genie/` 폴더에 위 유튜브 썸네일 이미지 플레이스홀더를 `01-demo-thumbnail.png`로 저장해 두세요. 실제 썸네일은 `https://img.youtube.com/vi/BYxOr2479Kg/maxresdefault.jpg` 에서 다운로드할 수 있습니다.*
+*Streamlit + Genie 데모 영상 썸네일 — 클릭하면 YouTube에서 재생됩니다.*
 
 ---
 

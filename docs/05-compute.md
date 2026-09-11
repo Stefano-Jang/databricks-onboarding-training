@@ -223,8 +223,8 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
    > **참고**: `Type` 항목에서 `Serverless`가 기본으로 선택되어 있으면 그대로 둡니다. 서버리스가 비활성화된 경우 `Pro`를 선택하세요.
 
-<!-- 스크린샷 예정: ../assets/screenshots/05-compute/13-warehouse-create-form.png (SQL Warehouse 생성 폼) -->
-*📸 캡처 안내: SQL Warehouse 생성 폼 전체가 보이도록 캡처합니다. Name, Cluster size, Auto stop, Type(Serverless) 값이 모두 보여야 합니다.*
+![SQL Warehouse 생성 폼](../assets/screenshots/05-compute/13-warehouse-create-form.png)
+*"New Serverless SQL warehouse" 생성 폼 — Name·Cluster size(2X-Small)·Auto stop(10분)·Scaling(Min/Max)·Advanced options와 Create/Cancel 버튼.*
 
 4. **만들기(Create)** 버튼을 클릭합니다.
 

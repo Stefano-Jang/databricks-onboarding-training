@@ -92,8 +92,8 @@ requirements.txt # Python 패키지 의존성
 
    > 💡 어떤 템플릿을 선택해도 생성·배포 흐름은 동일합니다. 원하는 프레임워크로 선택하세요.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/03-template-select.png (템플릿 선택 화면) -->
-   *📸 캡처 안내: 앱 생성 창에서 템플릿 목록이 표시된 전체 화면을 캡처합니다. 선택한 템플릿이 강조(파란 테두리 등)된 상태로 캡처하면 좋습니다.*
+   ![앱 템플릿 선택 화면](../assets/screenshots/12-apps/03-template-select.png)
+   *"Create new app" 화면 — "Create a custom app"과 템플릿 탭(Hello world·Agents·Dashboard·Database), Dash·Flask·Gradio 등 시작 템플릿 카드.*
 
 ### 4단계: 앱 이름 입력 및 생성
 

@@ -122,8 +122,8 @@ print("✅ Job 태스크 실행 완료!")
    onboarding-nyctaxi-job
    ```
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/04-job-name.png (Job 이름 입력) -->
-   *📸 캡처 안내: Job 이름 입력 필드에 "onboarding-nyctaxi-job"이 입력된 상태. 상단 Job 이름 필드 위치를 강조.*
+   ![새 잡 화면](../assets/screenshots/10-jobs/04-job-name.png)
+   *새 잡 화면 — 상단의 잡 이름과 우측 Job details(Job ID·Creator·Run as·트리거·파라미터), 가운데 "Add your first task"의 Notebook 태스크 추가.*
 
 > 💡 **팁**: Job 이름에는 영문, 숫자, 하이픈을 사용하세요. 한글도 지원되지만 외부 시스템 연동 시 문제가 생길 수 있습니다.
 
@@ -145,8 +145,8 @@ print("✅ Job 태스크 실행 완료!")
 
 4. **경로(Path)** 필드 오른쪽의 **찾아보기(Browse)** 아이콘을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/10-jobs/05-task-config.png (태스크 설정 패널) -->
-   *📸 캡처 안내: 태스크 설정 패널 전체. Task name, Type(Notebook), Source(Workspace), Path 필드가 모두 보이도록.*
+   ![태스크 설정 패널](../assets/screenshots/10-jobs/05-task-config.png)
+   *태스크 설정 패널 — Task name, Type(Notebook), Source(Workspace), Path(Select Notebook), Compute 필드와 Create task/Cancel 버튼.*
 
 5. 파일 탐색 창에서 07 실습에서 저장한 노트북(또는 방금 만든 `onboarding-job-notebook`)을 찾아 선택하고 **확인(Confirm)** 을 클릭합니다.
 

@@ -74,8 +74,8 @@
 
 1. 왼쪽 사이드바에서 **+ New** 버튼을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/01-new-button.png (+ New 버튼 위치) -->
-   *📸 캡처 안내: 왼쪽 사이드바 상단의 "+ New" 버튼과 드롭다운 메뉴가 보이도록 캡처합니다.*
+   ![+ New 메뉴](../assets/screenshots/07-notebooks/01-new-button.png)
+   *왼쪽 사이드바 "+ New" 버튼을 눌러 펼친 메뉴 — Notebook·Query·Dashboard·Job·ETL pipeline 등 새로 만들 리소스 목록. 맨 위 "Notebook"을 선택합니다.*
 
 2. 드롭다운 메뉴에서 **Notebook**을 선택합니다.
 
@@ -110,8 +110,8 @@
 
    > 💡 서버리스 컴퓨트가 활성화된 워크스페이스에서는 **Serverless**를 선택하는 것이 가장 빠릅니다. 클러스터는 시작 시간이 1~5분 소요될 수 있습니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/05-select-compute.png (컴퓨트 선택 드롭다운) -->
-   *📸 캡처 안내: 컴퓨트 선택 드롭다운에 Serverless 및 기존 클러스터 목록이 보이도록 캡처합니다.*
+   ![컴퓨트 선택 드롭다운](../assets/screenshots/07-notebooks/05-select-compute.png)
+   *노트북 상단의 컴퓨트 버튼을 눌러 연 드롭다운 — "Serverless"(Environment version 5)가 선택되어 있고, "More…"로 다른 컴퓨트를 고를 수 있습니다.*
 
 3. 선택 후 노트북 상단에 연결된 컴퓨트 이름이 표시되면 준비 완료입니다.
 
@@ -129,7 +129,7 @@
 3. 셀 왼쪽의 ▶ 버튼을 클릭하거나 **Shift + Enter** 를 눌러 실행합니다.
 
    ![셀 실행 결과](../assets/screenshots/07-notebooks/06-run-cell.png)
-   *노트북 셀을 실행하는 방법 — 셀 왼쪽 상단 실행 버튼의 드롭다운(Run cell · Run all above · Run all below). 실행하면 셀 아래에 출력이 표시됩니다.*
+   *Python 셀에 print 코드를 입력하고 실행한 결과 — 셀 아래에 "안녕하세요, Databricks 노트북입니다!" 출력이 표시됩니다(Serverless 컴퓨트, 1초 소요).*
 
 4. 셀 아래에 출력 결과가 표시됩니다.
 

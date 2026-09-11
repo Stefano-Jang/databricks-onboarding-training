@@ -95,8 +95,8 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
 
 1. 편집기 상단(또는 우측 상단)의 컴퓨트 선택 드롭다운을 클릭합니다. (화면에서 실제 명칭 확인)
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/03-warehouse-dropdown.png (SQL Warehouse 선택 드롭다운) -->
-   *📸 캡처 안내: 쿼리 편집 영역 위쪽 또는 오른쪽에 있는 SQL Warehouse 선택 드롭다운이 열린 상태를 캡처합니다. 사용 가능한 웨어하우스 목록이 보여야 합니다.*
+   ![SQL Warehouse 선택 드롭다운](../assets/screenshots/09-sql/03-warehouse-dropdown.png)
+   *SQL 편집기에서 웨어하우스 선택 드롭다운을 연 화면 — "Serverless Starter Warehouse"(Serverless·Small)가 활성 리소스로 표시됩니다.*
 
 2. 사용 가능한 SQL Warehouse 목록에서 하나를 선택합니다.
 
@@ -128,8 +128,8 @@ SQL 편집기에서 쿼리를 실행하려면 **SQL Warehouse**에 연결해야 
    LIMIT 20
    ```
 
-   <!-- 스크린샷 예정: ../assets/screenshots/09-sql/04-write-query.png (쿼리 입력 화면) -->
-   *📸 캡처 안내: SQL 편집 영역에 위 쿼리가 입력된 상태를 캡처합니다. 자동완성 제안이 보이면 더 좋습니다.*
+   ![쿼리 입력 화면](../assets/screenshots/09-sql/04-write-query.png)
+   *SQL 편집기에 SELECT 쿼리를 입력한 화면 — samples.nyctaxi.trips에서 컬럼 4개를 LIMIT 20으로 조회하며, 상단에 "Run all" 실행 버튼이 있습니다.*
 
 2. **Run** 버튼을 클릭하거나 **Ctrl + Enter** (Mac: **Cmd + Enter**)를 눌러 쿼리를 실행합니다.
 

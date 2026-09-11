@@ -72,7 +72,7 @@ requirements.txt # Python 패키지 의존성
    > 💡 사이드바에 Apps 아이콘이 보이지 않으면 사이드바 하단의 더 보기(⋯) 메뉴 또는 **컴퓨트(Compute)** 항목 아래에서 찾아보세요. 워크스페이스 설정에 따라 위치가 다를 수 있습니다.
 
    ![Apps 화면](../assets/screenshots/12-apps/01-apps-nav.png)
-   *📸 캡처 안내: 워크스페이스 왼쪽 사이드바에서 Apps 아이콘을 클릭한 뒤 Apps 목록 화면이 표시된 상태를 캡처합니다. 사이드바에서 어떤 아이콘이 선택되어 있는지 보이도록 캡처하세요.*
+   *Databricks Apps 홈 — 앱 목록에 "nytaxi-dashboard"(Active)가 표시되고 우측 상단에 "Create app" 버튼.*
 
 ### 2단계: 새 앱 만들기 시작
 
@@ -122,7 +122,7 @@ requirements.txt # Python 패키지 의존성
    *📸 캡처 안내: 앱 상세 페이지에서 "Deploying" 또는 "Starting" 상태가 표시된 화면을 캡처합니다. URL 상단의 앱 이름이 보이도록 합니다.*
 
    ![앱 Running 상태](../assets/screenshots/12-apps/06-running.png)
-   *📸 캡처 안내: 앱 상태가 "Running"으로 변경된 화면을 캡처합니다. 앱 URL 링크와 상태 배지가 잘 보이도록 합니다.*
+   *앱 상세(Overview) 화면 — App status가 "Running"이고 접속 URL이 활성화된 상태, 배포 이력(App started successfully)까지 표시.*
 
 ### 6단계: 앱 URL로 접속
 

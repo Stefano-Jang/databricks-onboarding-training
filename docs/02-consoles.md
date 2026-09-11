@@ -69,7 +69,7 @@ Databricks에는 두 가지 관리 화면이 있습니다.
 > 💡 사이드바 항목 중 자물쇠(🔒) 아이콘이 보이는 메뉴는 현재 계정에 해당 권한(entitlement)이 없음을 의미합니다.
 
 ![워크스페이스 사이드바 전체 보기](../assets/screenshots/02-consoles/02-workspace-sidebar.png)
-*📸 캡처 안내: 로그인 직후 왼쪽 사이드바 전체가 보이도록 캡처. New·Workspace·Catalog·Jobs & Pipelines·SQL Editor·Dashboards·Compute·Marketplace 등 각 아이콘과 이름이 식별되어야 합니다.*
+*로그인 직후 워크스페이스 홈 화면과 왼쪽 사이드바 — New·Workspace·Recents·Catalog·Jobs & Pipelines·Compute·SQL Editor·Dashboards·Marketplace 등 주요 메뉴가 보입니다.*
 
 ---
 
@@ -80,19 +80,19 @@ Databricks 워크스페이스 UI는 한국어를 포함한 다국어를 지원�
 1. 화면 **오른쪽 상단**의 본인 **사용자 아이콘(이니셜 또는 프로필 사진)**을 클릭합니다.
 
    ![사용자 메뉴 열기](../assets/screenshots/02-consoles/03-user-menu.png)
-   *📸 캡처 안내: 우측 상단 사용자 아이콘 클릭 후 드롭다운 메뉴가 펼쳐진 상태. "Settings" 항목이 목록에 보여야 합니다.*
+   *우측 상단 사용자 아이콘을 클릭해 펼쳐진 드롭다운 메뉴 — 이메일·워크스페이스 ID와 함께 "Settings"·"Log out" 등의 항목이 보입니다.*
 
 2. 드롭다운 메뉴에서 **Settings(설정)**를 클릭합니다.
 
 3. 설정(Settings) 화면이 열리면, 왼쪽 메뉴에서 **Preferences(환경 설정)** 탭을 클릭합니다.
 
    ![설정 화면에서 Preferences 탭 선택](../assets/screenshots/02-consoles/04-settings-preferences.png)
-   *📸 캡처 안내: Settings 화면에서 왼쪽 사이드바의 "Preferences" 탭이 선택된 상태. Language(언어) 항목이 화면에 보여야 합니다.*
+   *Settings 화면에서 왼쪽의 "Preferences" 탭을 선택한 상태 — 오른쪽 General 영역에 "Language(언어)" 설정 드롭다운이 보입니다.*
 
 4. **Language(언어)** 항목을 찾아 드롭다운을 클릭한 뒤, **한국어**를 선택합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/02-consoles/05-language-korean.png (언어 드롭다운에서 한국어 선택) -->
-   *📸 캡처 안내: Language 드롭다운이 펼쳐진 상태에서 "한국어" 항목이 목록에 보이도록 캡처.*
+   ![언어 드롭다운에서 한국어 선택](../assets/screenshots/02-consoles/05-language-korean.png)
+   *Language 드롭다운을 펼친 상태 — English·日本語·中文 등과 함께 "한국어" 항목이 목록에 보입니다.*
 
 5. 저장(Save) 또는 확인 버튼이 있다면 클릭합니다. 페이지가 새로고침되면서 UI가 한국어로 전환됩니다.
 

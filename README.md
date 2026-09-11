@@ -47,7 +47,7 @@
 | 13 | [Streamlit→대시보드 데모(시청용)](./docs/13-streamlit-genie-demo.md) | Genie 기반 앱→대시보드 데모 소개 |
 | 14 | [Snowflake vs Databricks Q&A](./docs/14-snowflake-qa.md) | SF 출신 SA와의 비교 Q&A |
 
-> 💡 완전 초심자는 **01 → 13 순서대로** 진행하는 것을 권장합니다. 각 문서 하단의 "다음 단계"를 따라가세요.
+> 💡 완전 초심자는 **01 → 14 순서대로** 진행하는 것을 권장합니다. 각 문서 하단의 "다음 단계"를 따라가세요.
 
 ## ✅ 사전 준비
 - Databricks 워크스페이스 접속 권한(교육에서는 `coupang-appdemo` 샌드박스 사용)
@@ -56,11 +56,16 @@
 
 ## 🖼️ 스크린샷 & 동영상
 - 실습 문서에는 화면 캡처가 함께 제공됩니다. 이미지 규칙은 [`assets/screenshots/README.md`](./assets/screenshots/README.md) 참고.
-- 일부 절차는 동영상으로도 제공됩니다(예: 12번 데모).
+- 일부 절차는 동영상으로도 제공됩니다(예: 13번 Streamlit→대시보드 데모).
 
 ## 📎 참고
 - 모든 기능 설명에는 **Databricks 공식 문서 링크**가 첨부되어 있습니다.
 - 본 자료는 교육용이며, 실제 화면/메뉴 명칭은 제품 업데이트에 따라 달라질 수 있습니다.
+
+## 🚀 직접 해보기 — Databricks Free Edition
+교육 워크스페이스(`coupang-appdemo`)는 교육용 샌드박스입니다. 교육이 끝난 뒤에도 **개인적으로 자유롭게 실습**하고 싶다면, **완전 무료·기간 제한 없는** **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** 으로 시작하세요. 노트북(Python·SQL)·SQL 분석·대시보드·Genie·ML/AI 등 이 교육에서 배운 대부분을 개인 계정에서 직접 해 볼 수 있습니다. (소규모 컴퓨트·공정 사용 한도가 있으며, 상업적 용도로는 사용할 수 없습니다.)
+
+- ▶️ **시작하기**: <https://www.databricks.com/learn/free-edition>
 
 ---
 <sub>License: 저장소의 [LICENSE](./LICENSE) 참고.</sub>

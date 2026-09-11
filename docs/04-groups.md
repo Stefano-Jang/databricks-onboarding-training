@@ -89,13 +89,13 @@
 3. 화면 상단의 탭 중 **Groups** 를 클릭합니다.
 
    ![계정 콘솔 Groups 탭](../assets/screenshots/04-groups/01-account-console-groups-tab.png)
-   *📸 캡처 안내: `accounts.cloud.databricks.com` > User Management > Groups 탭이 선택된 화면. 기존 그룹 목록이 보이도록 캡처. 이메일 주소는 마스킹.*
+   *그룹 목록 화면 — admins·users 등 계정에 정의된 그룹과 각 그룹의 멤버 수·소스(System/Account), 우측 상단 "Add group" 버튼.*
 
 4. 오른쪽 상단의 **Add Group** 버튼을 클릭합니다.
 5. **Group name** 입력란에 `onboarding_analytics_team` 을 입력합니다.
 
    ![그룹 이름 입력](../assets/screenshots/04-groups/02-add-group-name.png)
-   *📸 캡처 안내: Add Group 다이얼로그(또는 양식)에 그룹 이름 `onboarding_analytics_team`을 입력한 상태.*
+   *"Add group" 다이얼로그 — 계정의 기존 그룹을 선택하거나 새 그룹을 만들어 추가하는 화면.*
 
 6. **Add** 버튼을 클릭하여 그룹을 생성합니다.
 

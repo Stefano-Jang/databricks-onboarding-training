@@ -129,7 +129,7 @@
 3. 셀 왼쪽의 ▶ 버튼을 클릭하거나 **Shift + Enter** 를 눌러 실행합니다.
 
    ![셀 실행 결과](../assets/screenshots/07-notebooks/06-run-cell.png)
-   *📸 캡처 안내: Python 셀에 print 코드가 입력되고, 셀 아래에 "안녕하세요, Databricks 노트북입니다!" 출력 결과가 보이도록 캡처합니다.*
+   *노트북 셀을 실행하는 방법 — 셀 왼쪽 상단 실행 버튼의 드롭다운(Run cell · Run all above · Run all below). 실행하면 셀 아래에 출력이 표시됩니다.*
 
 4. 셀 아래에 출력 결과가 표시됩니다.
 

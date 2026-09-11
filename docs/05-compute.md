@@ -121,7 +121,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 3. 컴퓨트 목록 페이지가 열립니다. 상단에 **All-Purpose Compute**, **Job Compute**, **SQL Warehouses** 탭이 보입니다.
 
 ![컴퓨트 탭 구조](../assets/screenshots/05-compute/02-compute-tabs.png)
-*📸 캡처 안내: 컴퓨트 페이지 상단의 All-Purpose Compute / Job Compute / SQL Warehouses 탭이 모두 보이도록 캡처합니다.*
+*컴퓨트 페이지 상단 탭(Serverless · SQL warehouses · AI Search · Apps)과 기본 서버리스 컴퓨트(Default Interactive/Automated Compute) 목록. (워크스페이스 구성에 따라 탭 이름·구성은 달라질 수 있습니다.)*
 
 ---
 
@@ -204,7 +204,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 1. 컴퓨트 페이지 상단 탭에서 **SQL Warehouses** 탭을 클릭합니다.
 
 ![SQL Warehouses 탭](../assets/screenshots/05-compute/11-sql-warehouse-tab.png)
-*📸 캡처 안내: SQL Warehouses 탭이 선택된 상태의 화면 상단을 캡처합니다.*
+*컴퓨트 > "SQL warehouses" 탭 — "Serverless Starter Warehouse"(Small · Serverless) 목록과 우측 "Create SQL warehouse" 버튼.*
 
 2. 오른쪽 상단의 **SQL Warehouse 만들기(Create SQL warehouse)** 버튼을 클릭합니다.
 

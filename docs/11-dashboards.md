@@ -75,7 +75,7 @@
 2. 대시보드 목록 페이지가 열립니다. 오른쪽 상단의 **만들기(Create dashboard)** 버튼을 클릭합니다.
 
    ![대시보드 목록](../assets/screenshots/11-dashboards/02-dashboards-list.png)
-   *📸 캡처 안내: 대시보드 목록 화면. 오른쪽 상단 "Create dashboard" 버튼을 강조.*
+   *대시보드 목록 화면 — 우측 상단 "Create dashboard" 버튼과 기존 대시보드("NY Taxi 대시보드") 목록.*
 
 3. 새 대시보드 편집 화면이 열립니다. 화면 상단의 대시보드 이름 필드를 클릭하고 이름을 입력합니다.
 
@@ -151,7 +151,7 @@
 1. 상단에서 **캔버스(Canvas)** 탭을 클릭합니다.
 
    ![Canvas 탭](../assets/screenshots/11-dashboards/09-canvas-tab.png)
-   *📸 캡처 안내: "Canvas" 탭이 선택된 대시보드 편집 화면.*
+   *대시보드 편집(Canvas) 화면 — 총 운행 건수·총 매출·평균 요금 등 KPI 카드와 일별 운행/매출 차트가 배치된 캔버스.*
 
 2. 캔버스 빈 공간 어디서나 클릭하거나, 상단 메뉴의 **추가(+)** 버튼을 클릭해 위젯 추가 메뉴를 엽니다.
 
@@ -290,7 +290,7 @@
 4. 대시보드가 게시되면 편집 모드에서 뷰어 모드로 전환됩니다. 상단에 "게시됨(Published)" 배지가 표시됩니다.
 
    ![게시 완료](../assets/screenshots/11-dashboards/23-published.png)
-   *📸 캡처 안내: 게시된 대시보드 뷰어 화면. 상단에 "Published" 또는 관련 표시가 보이도록.*
+   *게시된 대시보드 화면 — KPI 카드와 차트, 하단의 "Ask Genie" 질의 입력창, 상단의 "Share"·"Edit draft" 표시.*
 
 ---
 

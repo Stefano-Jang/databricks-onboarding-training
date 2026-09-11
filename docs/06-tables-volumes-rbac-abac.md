@@ -251,7 +251,7 @@ Unity Catalog Permissions UI를 사용하면 SQL 없이도 그룹에 권한을 �
 2. 상단 탭에서 **Permissions** 탭을 클릭합니다.
 
    ![테이블 Permissions 탭](../assets/screenshots/06-tables-volumes/08-table-permissions-tab.png)
-   *📸 캡처 안내: `sales_summary` 테이블 상세 페이지 > Permissions 탭. 현재 권한 목록 화면.*
+   *테이블 상세 페이지 상단 탭에서 "Permissions" 탭을 선택한 화면. (예시는 읽기 전용 `samples` 데이터라 "권한을 볼 수 없다"는 안내가 뜨며, 본인이 만든 `sales_summary` 테이블에서는 권한 목록과 "Grant" 버튼이 나타납니다.)*
 
 3. **Grant** 버튼을 클릭합니다.
 4. **Principals** 검색창에 `onboarding_analytics_team` 을 입력하고 선택합니다.

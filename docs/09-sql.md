@@ -85,7 +85,7 @@ SQL 편집기에서 작성한 쿼리는 Databricks 워크스페이스에 파일�
 2. SQL 편집기 화면이 열립니다. 처음 열 경우 빈 쿼리 탭이 나타납니다.
 
    ![SQL 편집기 초기 화면](../assets/screenshots/09-sql/02-sql-editor-home.png)
-   *📸 캡처 안내: SQL 편집기의 전체 레이아웃(왼쪽 패널 + 쿼리 편집 영역 + 컴퓨트 선택 드롭다운)이 보이도록 전체 화면을 캡처합니다.*
+   *SQL 편집기 시작 화면 — "Create new"의 SQL Query 생성 버튼과 최근·즐겨찾기(Quick access) 영역.*
 
 ---
 

@@ -105,7 +105,7 @@ print("✅ Job 태스크 실행 완료!")
 2. **잡(Jobs)** 탭이 기본으로 열립니다. 기존에 생성된 Job 목록이 표시됩니다.
 
    ![Jobs 탭](../assets/screenshots/10-jobs/02-jobs-list.png)
-   *📸 캡처 안내: "Jobs" 탭 화면 전체. 상단에 "Create job" 버튼이 보이도록.*
+   *Jobs & Pipelines 화면 — 상단 "Create new"(Ingestion pipeline · ETL pipeline · Job) 카드와 잡·파이프라인 목록, 우측 "Create" 버튼.*
 
 ---
 
@@ -205,7 +205,7 @@ print("✅ Job 태스크 실행 완료!")
 1. **실행(Runs)** 탭에서 방금 시작된 실행 항목을 클릭합니다. 상태가 **실행 중(Running)** 이라면 완료될 때까지 잠시 기다립니다.
 
    ![Runs 탭](../assets/screenshots/10-jobs/12-runs-tab.png)
-   *📸 캡처 안내: Runs 탭에서 최근 실행 목록. 상태(Succeeded/Running/Failed)와 시작 시간이 보이도록.*
+   *Jobs & Pipelines의 "Runs" 탭 — 실행 상태(Failed·Skipped·Succeeded) 타임라인 차트와 기간 필터, 실행 목록 영역.*
 
 2. 실행 상세 화면에서 다음 정보를 확인합니다.
 

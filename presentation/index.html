@@ -209,6 +209,39 @@
   .reveal section.present .bench-row .bar { animation: growBar .9s cubic-bezier(.2,.7,.2,1) .15s both; }
   .reveal section.present .bench-row .val { opacity: 0; animation: fadeIn .5s ease .55s forwards; }
 
+  /* ═══ Dynamic motion enhancements ═══ */
+  @keyframes popIn    { 0%{opacity:0;transform:scale(.5)} 65%{opacity:1;transform:scale(1.12)} 100%{transform:scale(1)} }
+  @keyframes slideInR { from{opacity:0;transform:translateX(34px) scale(.95)} to{opacity:1;transform:none} }
+  @keyframes glowPulse{ 0%,100%{box-shadow:0 0 0 rgba(255,54,33,0)} 50%{box-shadow:0 0 22px rgba(255,54,33,.55)} }
+  @keyframes gradShift{ 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
+
+  /* Title & closing — living gradient background */
+  .reveal .title-slide, .reveal .closing-slide { background-size:220% 220% !important; animation: gradShift 12s ease-in-out infinite alternate; }
+
+  /* Number badges & section accents pop in with overshoot */
+  .reveal section.present .curr-num  { animation: popIn .55s cubic-bezier(.2,.8,.25,1.45) both; }
+  .reveal section.present .accent    { display:inline-block; animation: popIn .55s cubic-bezier(.2,.8,.25,1.45) .08s both; }
+
+  /* Screenshots fly in from the right + zoom on hover */
+  .reveal section.present .curr-shot { animation: slideInR .6s cubic-bezier(.2,.7,.2,1) .18s both; }
+  .reveal .curr-shot { transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease; cursor: zoom-in; }
+  .reveal .curr-shot:hover { transform: scale(1.08); box-shadow:0 14px 44px rgba(0,0,0,.3); position:relative; z-index:9; }
+
+  /* Agenda cards — pop entrance (overrides fadeUp) + hover lift */
+  .reveal section.present .agenda-grid li { animation-name: popIn; animation-duration:.5s; animation-timing-function: cubic-bezier(.2,.8,.25,1.45); }
+  .reveal .agenda-grid li { transition: transform .2s ease, box-shadow .2s ease; }
+  .reveal .agenda-grid li:hover { transform: translateY(-5px) scale(1.03); box-shadow:0 9px 22px rgba(27,49,57,.2); }
+
+  /* Timeline year badges pop */
+  .reveal section.present .timeline .yr { animation: popIn .5s cubic-bezier(.2,.8,.25,1.45) both; }
+
+  /* Valuation big numbers glow-pulse; link boxes lift on hover */
+  .reveal section.present .fund-table .big { animation: glowPulse 1.5s ease .7s 2; border-radius:5px; }
+  .reveal .curr-link-box { transition: transform .2s ease, box-shadow .2s ease; }
+  .reveal .curr-link-box:hover { transform: translateY(-3px); box-shadow:0 8px 20px rgba(27,49,57,.16); }
+
+  .countup { font-variant-numeric: tabular-nums; }
+
   /* Respect reduced-motion: keep everything visible, drop the motion */
   @media (prefers-reduced-motion: reduce) {
     .reveal section.present * { animation-duration: 1ms !important; animation-delay: 0s !important; }
@@ -292,19 +325,19 @@
     </thead>
     <tbody>
       <tr>
-        <td>2023-09</td><td>시리즈 I</td><td>~$5억 (≈$500M)</td><td>~$43B</td>
+        <td>2023-09</td><td>시리즈 I</td><td>~$5억 (≈$500M)</td><td><span class="countup" data-count="43" data-prefix="~$" data-suffix="B">~$43B</span></td>
       </tr>
       <tr>
-        <td>2024-12</td><td>시리즈 J</td><td>~$100억 (≈$10B)</td><td>~$62B</td>
+        <td>2024-12</td><td>시리즈 J</td><td>~$100억 (≈$10B)</td><td><span class="countup" data-count="62" data-prefix="~$" data-suffix="B">~$62B</span></td>
       </tr>
       <tr>
-        <td>2025-09</td><td>시리즈 K</td><td>~$10억 ($1B)</td><td class="big">$100B+</td>
+        <td>2025-09</td><td>시리즈 K</td><td>~$10억 ($1B)</td><td class="big"><span class="countup" data-count="100" data-prefix="$" data-suffix="B+">$100B+</span></td>
       </tr>
       <tr>
-        <td>2025-12</td><td>시리즈 L</td><td>—</td><td class="big">~$134B</td>
+        <td>2025-12</td><td>시리즈 L</td><td>—</td><td class="big"><span class="countup" data-count="134" data-prefix="~$" data-suffix="B">~$134B</span></td>
       </tr>
       <tr>
-        <td>2026</td><td>후속 라운드</td><td>—</td><td class="big">~$190B</td>
+        <td>2026</td><td>후속 라운드</td><td>—</td><td class="big"><span class="countup" data-count="190" data-prefix="~$" data-suffix="B">~$190B</span></td>
       </tr>
     </tbody>
   </table>
@@ -324,7 +357,7 @@
   <p style="font-size:.85em;margin-bottom:.5em;">
     Databricks = <strong class="accent">Leader</strong> (2년 연속 highest execution + furthest vision)
   </p>
-  <img class="curr-shot" style="max-height:440px" src="../assets/screenshots/01-intro/02-gartner-mq.png" alt="Gartner Magic Quadrant for AI Platforms for Data Science and Machine Learning, 2026년 6월">
+  <img class="curr-shot" style="max-height:405px" src="../assets/screenshots/01-intro/02-gartner-mq.png" alt="Gartner Magic Quadrant for AI Platforms for Data Science and Machine Learning, 2026년 6월">
   <p class="shot-cap">출처: Gartner, Magic Quadrant for AI Platforms for Data Science and Machine Learning (2026년 6월) — Databricks 블로그 인용. Databricks는 Leaders 사분면에서 2년 연속 실행력 최상·비전 최우로 평가.</p>
   <aside class="notes">Gartner MQ의 4분면(가로축=비전 완성도, 세로축=실행력) 개념을 간략히 설명하세요. AI Platforms for Data Science and ML 부문에서 Databricks가 Leaders 사분면에 2년 연속(실행력 최상·비전 최우) 선정된 점이 엔터프라이즈 신뢰성의 지표임을 강조하세요.</aside>
 </section>
@@ -444,7 +477,7 @@
       <li>Volume — 파일(비정형 데이터) 저장 관리 단위</li>
       <li>행 필터(Row Filter) · 열 마스킹(Column Masking) — ABAC 구현</li>
     </ul>
-    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/06-tables-volumes/08-table-permissions-tab.png" alt="테이블 권한(RBAC) 탭"><div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/06-tables-volumes/00b-table-detail.png" alt="Catalog Explorer 테이블 상세"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/06-tables-volumes-rbac-abac.md" target="_blank">
         docs/06-tables-volumes-rbac-abac.md
@@ -519,7 +552,7 @@
       <li>스니펫(Snippets) 등록 — 자주 쓰는 SQL 템플릿 재사용</li>
       <li>쿼리 히스토리 및 실행 계획(EXPLAIN) 확인</li>
     </ul>
-    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/09-sql/02-sql-editor-home.png" alt="SQL 편집기"><div class="curr-link-box">
+    <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/09-sql/06-query-result.png" alt="SQL 편집기 쿼리 결과"><div class="curr-link-box">
       <span class="lbl">📄 GitHub 튜토리얼</span>
       <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/09-sql.md" target="_blank">
         docs/09-sql.md
@@ -626,7 +659,7 @@
         </a>
         <span class="yt-lbl">▶ 유튜브 데모 영상 보기</span>
       </div>
-      <div class="curr-right"><img class="curr-shot" src="../assets/screenshots/13-streamlit-genie/02-genie-agents.png" alt="Genie Agents"><div class="curr-link-box" style="margin-top:.6em;text-align:left;">
+      <div class="curr-right"><img class="curr-shot" style="max-height:150px" src="../assets/screenshots/13-streamlit-genie/02-genie-agents.png" alt="Genie Agents"><div class="curr-link-box" style="margin-top:.5em;text-align:left;">
         <span class="lbl">📄 GitHub 튜토리얼</span>
         <a href="https://github.com/Stefano-Jang/databricks-onboarding-training/blob/main/docs/13-streamlit-genie-demo.md" target="_blank">
           docs/13-streamlit-genie-demo.md
@@ -671,9 +704,9 @@
   <h3 style="margin-top:.2em;font-size:1.02em;">① TPC-DI ETL 벤치마크 (2025년 6월, 공개) — Databricks SQL Serverless 기준</h3>
   <p style="font-size:.7em;color:var(--db-muted);margin:.1em 0 .35em;">Snowflake <strong>Gen2</strong> 대비 (SF10000 ≈ 1TB · Azure · dbt Core · 막대가 짧을수록 우수)</p>
   <div class="bench-row bench-db"><span class="lbl">속도 · DBX</span><div class="bar" style="width:20%"></div><span class="val">1.0× (기준)</span></div>
-  <div class="bench-row bench-sf"><span class="lbl">속도 · SF</span><div class="bar" style="width:56%"></div><span class="val">2.8× 느림</span></div>
+  <div class="bench-row bench-sf"><span class="lbl">속도 · SF</span><div class="bar" style="width:56%"></div><span class="val"><span class="countup" data-count="2.8" data-dec="1" data-suffix="×">2.8×</span> 느림</span></div>
   <div class="bench-row bench-db"><span class="lbl">비용 · DBX</span><div class="bar" style="width:18%"></div><span class="val">1.0× (기준)</span></div>
-  <div class="bench-row bench-sf"><span class="lbl">비용 · SF</span><div class="bar" style="width:65%"></div><span class="val">3.6× 비쌈</span></div>
+  <div class="bench-row bench-sf"><span class="lbl">비용 · SF</span><div class="bar" style="width:65%"></div><span class="val"><span class="countup" data-count="3.6" data-dec="1" data-suffix="×">3.6×</span> 비쌈</span></div>
   <p class="shot-cap" style="text-align:left;margin-top:.25em;">Gen1 대비 4.3× 빠름·4.1× 저렴. ⚠ <strong>Databricks 자체 공개 벤치마크(자사 유리)</strong> · 커뮤니티 피드백 반영. 출처: DBSQL SME Engineering (Medium, 2025-06).</p>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2em;margin-top:.4em;">
@@ -695,54 +728,6 @@
 
   <p class="disclaimer">벤치마크는 워크로드·구성에 따라 크게 달라집니다. ①의 TPC-DI 수치는 <strong>Databricks 엔지니어링 팀이 발표한 공개 벤치마크</strong>(자사에 유리, 커뮤니티 피드백 반영본)이며, 중립 제3자(②)에서는 거의 대등했습니다. 실제 의사결정 전 반드시 <strong>자체 워크로드로 직접 측정</strong>하세요.</p>
   <aside class="notes">한쪽으로 단정하지 말 것 — "구성·워크로드에 따라 결과가 달라진다"를 강조하고, ①은 Databricks 자체 발표라 자사 유리함을 밝히세요. 출처 URL — ① TPC-DI(2025-06, DBSQL SME Engineering): https://medium.com/dbsql-sme-engineering/benchmarking-etl-with-the-tpc-di-snowflake-cb0a83aaad5b · ② 독립 제3자(Fivetran/Brooklyn Data): https://www.fivetran.com/blog/warehouse-benchmark · ③ TPC-DS 세계기록: https://www.databricks.com/blog/2021/11/02/databricks-sets-official-data-warehousing-performance-record.html</aside>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     슬라이드 17b · 주요 실습 화면 갤러리 (1/3)
-══════════════════════════════════════════════ -->
-<section>
-  <h2>📸 주요 실습 화면 <span style="font-size:.5em;color:var(--db-muted);font-weight:400;">— 콘솔 · 컴퓨트 (1/3)</span></h2>
-  <div class="gallery-grid anim">
-    <figure><img src="../assets/screenshots/02-consoles/02-workspace-sidebar.png" alt="워크스페이스 홈"><figcaption>워크스페이스 홈 &amp; 사이드바</figcaption></figure>
-    <figure><img src="../assets/screenshots/02-consoles/04-settings-preferences.png" alt="언어 설정"><figcaption>Settings — 언어(한국어) 변경</figcaption></figure>
-    <figure><img src="../assets/screenshots/02-consoles/07-account-console-home.png" alt="계정 콘솔"><figcaption>계정 콘솔 홈</figcaption></figure>
-    <figure><img src="../assets/screenshots/05-compute/02-compute-tabs.png" alt="컴퓨트"><figcaption>컴퓨트 유형 탭</figcaption></figure>
-    <figure><img src="../assets/screenshots/05-compute/11-sql-warehouse-tab.png" alt="SQL 웨어하우스"><figcaption>SQL 웨어하우스 목록</figcaption></figure>
-    <figure><img src="../assets/screenshots/05-compute/13-warehouse-create-form.png" alt="웨어하우스 생성"><figcaption>SQL 웨어하우스 생성 폼</figcaption></figure>
-  </div>
-  <aside class="notes">각 화면은 GitHub 튜토리얼 문서(02·05)에서 단계별로 다룹니다. 실제 워크스페이스 캡처입니다.</aside>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     슬라이드 17c · 주요 실습 화면 갤러리 (2/3)
-══════════════════════════════════════════════ -->
-<section>
-  <h2>📸 주요 실습 화면 <span style="font-size:.5em;color:var(--db-muted);font-weight:400;">— 데이터 · 노트북 · SQL (2/3)</span></h2>
-  <div class="gallery-grid anim">
-    <figure><img src="../assets/screenshots/06-tables-volumes/00b-table-detail.png" alt="카탈로그 탐색기"><figcaption>카탈로그 탐색기 — 테이블 상세</figcaption></figure>
-    <figure><img src="../assets/screenshots/06-tables-volumes/13-lineage.png" alt="데이터 계보"><figcaption>Unity Catalog 데이터 계보</figcaption></figure>
-    <figure><img src="../assets/screenshots/07-notebooks/06-run-cell.png" alt="노트북 실행"><figcaption>노트북 셀 실행 결과</figcaption></figure>
-    <figure><img src="../assets/screenshots/07-notebooks/09-sql-magic.png" alt="%sql"><figcaption>노트북 %sql 셀 결과</figcaption></figure>
-    <figure><img src="../assets/screenshots/09-sql/06-query-result.png" alt="SQL 결과"><figcaption>SQL 편집기 쿼리 결과</figcaption></figure>
-    <figure><img src="../assets/screenshots/09-sql/07-visualization.png" alt="시각화"><figcaption>SQL 결과 막대그래프</figcaption></figure>
-  </div>
-  <aside class="notes">데이터(06)·노트북(07)·SQL(09) 문서와 연결됩니다. 노트북·SQL은 서버리스에서 실제 실행한 결과입니다.</aside>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     슬라이드 17d · 주요 실습 화면 갤러리 (3/3)
-══════════════════════════════════════════════ -->
-<section>
-  <h2>📸 주요 실습 화면 <span style="font-size:.5em;color:var(--db-muted);font-weight:400;">— Job · 대시보드 · 앱 (3/3)</span></h2>
-  <div class="gallery-grid anim">
-    <figure><img src="../assets/screenshots/10-jobs/02-jobs-list.png" alt="Jobs"><figcaption>Lakeflow Jobs &amp; Pipelines</figcaption></figure>
-    <figure><img src="../assets/screenshots/10-jobs/05-task-config.png" alt="태스크 설정"><figcaption>Job 태스크 설정</figcaption></figure>
-    <figure><img src="../assets/screenshots/11-dashboards/09-canvas-tab.png" alt="대시보드 편집"><figcaption>AI/BI 대시보드 편집(Canvas)</figcaption></figure>
-    <figure><img src="../assets/screenshots/11-dashboards/23-published.png" alt="대시보드 게시"><figcaption>게시된 대시보드</figcaption></figure>
-    <figure><img src="../assets/screenshots/12-apps/06-running.png" alt="앱 실행"><figcaption>Databricks App 실행</figcaption></figure>
-    <figure><img src="../assets/screenshots/08-lakeflow-connect/01-ingestion-add.png" alt="데이터 적재"><figcaption>Lakeflow Connect — S3 적재</figcaption></figure>
-  </div>
-  <aside class="notes">Job(10)·대시보드(11)·앱(12)·Lakeflow(08) 문서와 연결됩니다.</aside>
 </section>
 
 <!-- ══════════════════════════════════════════════
@@ -792,6 +777,33 @@
     progress: true,
     plugins: [ RevealHighlight, RevealNotes ]
   });
+
+  /* ═══ Count-up numbers each time a slide is shown ═══ */
+  function _countUp(el){
+    var target = parseFloat(el.dataset.count || '0'),
+        dec = parseInt(el.dataset.dec || '0', 10),
+        pre = el.dataset.prefix || '', suf = el.dataset.suffix || '',
+        dur = 1000, t0 = null;
+    function step(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      p = 1 - Math.pow(1 - p, 3);               // easeOutCubic
+      el.textContent = pre + (target * p).toFixed(dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function _runCounts(slide){
+    if (!slide) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    slide.querySelectorAll('.countup').forEach(function(el){
+      if (reduce) return;                        // keep final value for reduced-motion
+      el.textContent = (el.dataset.prefix || '') + '0' + (el.dataset.suffix || '');
+      _countUp(el);
+    });
+  }
+  Reveal.on('ready', function(e){ _runCounts(e.currentSlide); });
+  Reveal.on('slidechanged', function(e){ _runCounts(e.currentSlide); });
 </script>
 </body>
 </html>

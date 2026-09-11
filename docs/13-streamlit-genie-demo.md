@@ -94,7 +94,7 @@ Genie 생태계는 세 가지 구성 요소로 이루어져 있습니다.
 
 - **Genie를 직접 사용하려면**: 워크스페이스 관리자가 Genie Agents를 설정하고 관련 권한을 부여해야 합니다. 개인이 바로 켤 수 있는 기능이 아닙니다.
 - **Genie Code(노트북 AI 어시스턴트)는 이미 사용 가능**: 노트북이나 SQL 편집기 우측에 있는 AI 어시스턴트 패널은 별도 설정 없이 바로 사용할 수 있습니다. 이것이 Genie Code(구 Databricks Assistant)입니다.
-- **가격**: Genie One과 Genie Agents는 2027년 1월 31일까지 무료로 제공됩니다(공식 문서 기준, 변경될 수 있음). Genie Code는 2026년 7월부터 사용량 기반 과금이 적용됩니다.
+- **가격**: Genie 관련 기능의 과금 정책(무료 프로모션·사용량 기반 과금 등)은 시점에 따라 바뀝니다. **정확한 최신 요율은 반드시 공식 페이지에서 확인하세요** → [Databricks 가격](https://www.databricks.com/product/pricing) · [Genie 문서](https://docs.databricks.com/aws/en/genie/). (이 교재의 특정 날짜·요율 언급은 참고용이며 실제와 다를 수 있습니다.)
 - **'AI/BI Genie'라는 표현**: 이전 버전 문서·블로그에서 자주 등장하던 이름입니다. 현재 공식 명칭은 'Genie' 또는 'Genie Agents'입니다.
 
 ---

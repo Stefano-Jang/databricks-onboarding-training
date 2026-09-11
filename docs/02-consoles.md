@@ -45,7 +45,7 @@ Databricks에는 두 가지 관리 화면이 있습니다.
    ```
 2. 이메일과 비밀번호(또는 SSO)를 입력하여 로그인합니다.
 
-![워크스페이스 로그인 화면](../assets/screenshots/02-consoles/01-workspace-login.png)
+<!-- 스크린샷 예정: ../assets/screenshots/02-consoles/01-workspace-login.png (워크스페이스 로그인 화면) -->
 *📸 캡처 안내: 로그인 화면 전체. 이메일 입력란이 보이도록 캡처. 개인 이메일·비밀번호를 입력하기 전 빈 상태로 촬영하거나, 입력 후라면 마스킹 처리 후 캡처.*
 
 ---
@@ -91,12 +91,12 @@ Databricks 워크스페이스 UI는 한국어를 포함한 다국어를 지원�
 
 4. **Language(언어)** 항목을 찾아 드롭다운을 클릭한 뒤, **한국어**를 선택합니다.
 
-   ![언어 드롭다운에서 한국어 선택](../assets/screenshots/02-consoles/05-language-korean.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/02-consoles/05-language-korean.png (언어 드롭다운에서 한국어 선택) -->
    *📸 캡처 안내: Language 드롭다운이 펼쳐진 상태에서 "한국어" 항목이 목록에 보이도록 캡처.*
 
 5. 저장(Save) 또는 확인 버튼이 있다면 클릭합니다. 페이지가 새로고침되면서 UI가 한국어로 전환됩니다.
 
-   ![한국어로 전환된 워크스페이스 UI](../assets/screenshots/02-consoles/06-ui-korean.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/02-consoles/06-ui-korean.png (한국어로 전환된 워크스페이스 UI) -->
    *📸 캡처 안내: 언어 변경 후 워크스페이스 왼쪽 사이드바 메뉴들이 한국어("카탈로그", "컴퓨트" 등)로 표시된 화면 전체.*
 
 > 💡 **팁**: 언어를 변경해도 노트북 내용·데이터·쿼리 결과에는 영향이 없습니다. UI 레이블만 바뀝니다.
@@ -121,7 +121,7 @@ Databricks 워크스페이스 UI는 한국어를 포함한 다국어를 지원�
    | **클라우드 리소스 (Cloud Resources)** | AWS S3·IAM 등 클라우드 인프라 자격증명 설정 |
    | **설정 (Settings)** | 계정 이름·계정 ID·언어·이메일 알림 환경 설정 |
 
-   ![계정 콘솔 홈 화면](../assets/screenshots/02-consoles/07-account-console-home.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/02-consoles/07-account-console-home.png (계정 콘솔 홈 화면) -->
    *📸 캡처 안내: `https://accounts.cloud.databricks.com` 로그인 직후 첫 화면. 왼쪽 사이드바와 주요 메뉴가 모두 보이도록. 계정 ID 등 민감 정보는 마스킹 처리 후 캡처.*
 
 3. 계정 콘솔에서는 노트북 실행·SQL 쿼리 등 워크스페이스 단위의 일상 업무는 수행할 수 없습니다. 어디까지나 **계정 전체 수준의 관리** 화면입니다.

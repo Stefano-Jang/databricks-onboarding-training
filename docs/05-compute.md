@@ -115,7 +115,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 1. 워크스페이스([https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com](https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com))에 로그인합니다.
 2. 왼쪽 사이드바에서 **컴퓨트(Compute)** 아이콘을 클릭합니다.
 
-![컴퓨트 메뉴 이동](../assets/screenshots/05-compute/01-sidebar-compute.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/01-sidebar-compute.png (컴퓨트 메뉴 이동) -->
 *📸 캡처 안내: 왼쪽 사이드바에서 컴퓨트(Compute) 아이콘이 강조된 상태와 오른쪽에 열리는 컴퓨트 목록 화면 전체를 캡처합니다.*
 
 3. 컴퓨트 목록 페이지가 열립니다. 상단에 **All-Purpose Compute**, **Job Compute**, **SQL Warehouses** 탭이 보입니다.
@@ -129,7 +129,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
 1. **All-Purpose Compute** 탭이 선택된 상태에서 오른쪽 상단의 **클러스터 만들기(Create compute)** 버튼을 클릭합니다.
 
-![클러스터 만들기 버튼](../assets/screenshots/05-compute/03-create-compute-button.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/03-create-compute-button.png (클러스터 만들기 버튼) -->
 *📸 캡처 안내: 컴퓨트 목록 페이지 우상단의 "Create compute" 버튼이 보이도록 캡처합니다.*
 
 2. 클러스터 생성 폼이 열립니다. 아래 설정값을 입력합니다.
@@ -146,29 +146,29 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
    | **Worker type** | `m5.xlarge` (기본값) | AWS 기준 기본 인스턴스 |
    | **Driver type** | 워커와 동일(기본값) | |
 
-![클러스터 생성 폼 - 기본 설정](../assets/screenshots/05-compute/04-cluster-create-form.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/04-cluster-create-form.png (클러스터 생성 폼 - 기본 설정) -->
 *📸 캡처 안내: 클러스터 생성 폼 전체가 보이도록 스크롤하여 캡처합니다. 클러스터 이름, Autoscaling 체크, Min/Max workers, Auto termination 값이 모두 보여야 합니다.*
 
 3. **오토스케일(Autoscaling)** 설정을 확인합니다. `Enable autoscaling` 체크박스가 체크되면 **Min workers**와 **Max workers** 입력창이 나타납니다.
 
-![오토스케일 설정](../assets/screenshots/05-compute/05-autoscaling-settings.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/05-autoscaling-settings.png (오토스케일 설정) -->
 *📸 캡처 안내: Autoscaling 체크박스가 체크된 상태와 Min workers(1), Max workers(2) 입력창을 확대 캡처합니다.*
 
 4. **Auto termination** 설정을 확인합니다. `Terminate after` 옵션에 **30** 분을 입력합니다.
 
    > 💡 **비용 절약 핵심**: 자동 종료를 설정하지 않으면 클러스터가 계속 실행되어 비용이 청구됩니다. **실습 환경에서는 반드시 30분 이내로 설정하세요.**
 
-![자동 종료 설정](../assets/screenshots/05-compute/06-auto-termination.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/06-auto-termination.png (자동 종료 설정) -->
 *📸 캡처 안내: Auto termination 섹션에서 "30분" 이 입력된 상태를 확대 캡처합니다.*
 
 5. 설정을 모두 확인한 후 오른쪽 상단 또는 하단의 **클러스터 만들기(Create compute)** 버튼을 클릭합니다.
 
 6. 클러스터 생성이 시작되면 목록에서 클러스터 이름 옆에 **Pending → Starting → Running** 순서로 상태가 변합니다. 보통 **2~5분** 정도 소요됩니다.
 
-![클러스터 시작 중 상태](../assets/screenshots/05-compute/07-cluster-starting.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/07-cluster-starting.png (클러스터 시작 중 상태) -->
 *📸 캡처 안내: 클러스터 목록에서 방금 생성한 클러스터가 "Starting" 또는 "Pending" 상태로 표시된 화면을 캡처합니다.*
 
-![클러스터 실행 중 상태](../assets/screenshots/05-compute/08-cluster-running.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/08-cluster-running.png (클러스터 실행 중 상태) -->
 *📸 캡처 안내: 클러스터 상태가 녹색 "Running"으로 바뀐 화면을 캡처합니다.*
 
 ---
@@ -184,7 +184,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 3. 확인 팝업에서 **확인** 을 클릭합니다.
 4. 클러스터 상태가 **Terminating → Terminated** 로 변합니다.
 
-![클러스터 종료 버튼](../assets/screenshots/05-compute/09-terminate-cluster.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/09-terminate-cluster.png (클러스터 종료 버튼) -->
 *📸 캡처 안내: 클러스터 상세 페이지 우상단의 "Terminate" 버튼이 보이도록 캡처합니다.*
 
 #### 클러스터 재시작(Restart / Start)
@@ -194,7 +194,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
 > **참고**: 클러스터가 **Terminated** 상태일 때는 비용이 청구되지 않습니다. 사용하지 않을 때는 반드시 종료해 두세요.
 
-![클러스터 시작 버튼](../assets/screenshots/05-compute/10-start-cluster.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/10-start-cluster.png (클러스터 시작 버튼) -->
 *📸 캡처 안내: 컴퓨트 목록에서 Terminated 상태 클러스터 행의 시작(Start) 버튼 또는 삼각형 재생 아이콘을 확대 캡처합니다.*
 
 ---
@@ -208,7 +208,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
 2. 오른쪽 상단의 **SQL Warehouse 만들기(Create SQL warehouse)** 버튼을 클릭합니다.
 
-![SQL Warehouse 만들기 버튼](../assets/screenshots/05-compute/12-create-warehouse-button.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/12-create-warehouse-button.png (SQL Warehouse 만들기 버튼) -->
 *📸 캡처 안내: SQL Warehouses 목록 페이지 우상단의 "Create SQL warehouse" 버튼을 캡처합니다.*
 
 3. SQL Warehouse 생성 폼에서 아래 설정값을 입력합니다.
@@ -223,14 +223,14 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
    > **참고**: `Type` 항목에서 `Serverless`가 기본으로 선택되어 있으면 그대로 둡니다. 서버리스가 비활성화된 경우 `Pro`를 선택하세요.
 
-![SQL Warehouse 생성 폼](../assets/screenshots/05-compute/13-warehouse-create-form.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/13-warehouse-create-form.png (SQL Warehouse 생성 폼) -->
 *📸 캡처 안내: SQL Warehouse 생성 폼 전체가 보이도록 캡처합니다. Name, Cluster size, Auto stop, Type(Serverless) 값이 모두 보여야 합니다.*
 
 4. **만들기(Create)** 버튼을 클릭합니다.
 
 5. SQL Warehouse가 생성되면 자동으로 시작됩니다. 목록에서 상태가 **Starting → Running** 으로 바뀝니다. 서버리스의 경우 **2~6초** 내에 Running 상태가 됩니다.
 
-![SQL Warehouse 실행 중](../assets/screenshots/05-compute/14-warehouse-running.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/14-warehouse-running.png (SQL Warehouse 실행 중) -->
 *📸 캡처 안내: SQL Warehouses 목록에서 방금 생성한 Warehouse가 녹색 "Running" 상태로 표시된 화면을 캡처합니다.*
 
 ---
@@ -245,7 +245,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
    또는 Warehouse 이름을 클릭하여 상세 페이지로 이동한 뒤 **중지(Stop)** 버튼을 클릭해도 됩니다.
 
-![SQL Warehouse 중지](../assets/screenshots/05-compute/15-warehouse-stop.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/15-warehouse-stop.png (SQL Warehouse 중지) -->
 *📸 캡처 안내: SQL Warehouse 목록에서 더보기(⋮) 메뉴를 클릭했을 때 Stop 옵션이 보이는 화면을 캡처합니다.*
 
 #### SQL Warehouse 시작
@@ -253,7 +253,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 1. SQL Warehouses 목록에서 **Stopped** 상태인 Warehouse 행의 **시작(Start)** 버튼 또는 **▶** 아이콘을 클릭합니다.
 2. 서버리스 Warehouse는 몇 초 내에 다시 **Running** 상태가 됩니다.
 
-![SQL Warehouse 시작](../assets/screenshots/05-compute/16-warehouse-start.png)
+<!-- 스크린샷 예정: ../assets/screenshots/05-compute/16-warehouse-start.png (SQL Warehouse 시작) -->
 *📸 캡처 안내: Stopped 상태인 SQL Warehouse의 Start 버튼이 보이는 목록 화면을 캡처합니다.*
 
 ---

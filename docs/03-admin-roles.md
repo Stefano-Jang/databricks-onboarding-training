@@ -91,14 +91,14 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 1. 브라우저에서 `https://accounts.cloud.databricks.com`으로 이동하여 로그인합니다.
 2. 왼쪽 사이드바에서 **User Management(사용자 관리)** → **Users(사용자)**를 클릭합니다.
 
-   ![계정 콘솔 사용자 목록](../assets/screenshots/03-admin-roles/01-account-console-users.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/01-account-console-users.png (계정 콘솔 사용자 목록) -->
    *📸 캡처 안내: 계정 콘솔의 User Management > Users 화면. 사용자 목록과 "Account admin" 배지 또는 열이 보이도록 캡처. 이메일 주소는 마스킹 처리.*
 
 3. 사용자 목록에서 **Account admin** 배지 또는 체크 표시가 있는 사용자를 찾습니다.
 
 4. 특정 사용자의 이름을 클릭하면 해당 사용자에게 부여된 역할 상세 내용을 확인할 수 있습니다.
 
-   ![사용자 상세 페이지 — 계정 관리자 역할 활성화](../assets/screenshots/03-admin-roles/02-account-admin-detail.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/02-account-admin-detail.png (사용자 상세 페이지 — 계정 관리자 역할 활성화) -->
    *📸 캡처 안내: 특정 사용자 상세 화면에서 "Account admin" 역할이 활성화(체크 또는 토글 ON)된 상태. 이름·이메일은 마스킹 처리.*
 
 ---
@@ -109,7 +109,7 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 2. 오른쪽 상단 **사용자 아이콘** → **Settings(설정)**를 클릭합니다.
 3. 왼쪽 메뉴에서 **Identity and access** → **Users**를 클릭합니다.
 
-   ![워크스페이스 Settings — Identity and access — Users](../assets/screenshots/03-admin-roles/03-workspace-users.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/03-workspace-users.png (워크스페이스 Settings — Identity and access — Users) -->
    *📸 캡처 안내: 워크스페이스 Settings > Identity and access > Users 화면. 사용자 목록과 "Workspace admin" 열(또는 배지)이 보이도록 캡처. 이메일 마스킹.*
 
 4. 사용자 목록에서 **Workspace admin** 열에 체크 표시 또는 배지가 있는 사용자를 확인합니다.
@@ -121,14 +121,14 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 1. 계정 콘솔(`https://accounts.cloud.databricks.com`)의 왼쪽 사이드바에서 **Catalog(카탈로그)** 또는 **Data**를 클릭합니다.
 2. **Metastores(메타스토어)** 항목을 클릭합니다.
 
-   ![계정 콘솔 — 메타스토어 목록](../assets/screenshots/03-admin-roles/04-metastore-list.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/04-metastore-list.png (계정 콘솔 — 메타스토어 목록) -->
    *📸 캡처 안내: 계정 콘솔의 메타스토어 목록 화면. 메타스토어 이름·리전·연결된 워크스페이스 수가 보이도록 캡처.*
 
 3. 사용 중인 메타스토어 이름을 클릭합니다.
 
 4. 메타스토어 상세 화면에서 **Admins(관리자)** 탭을 클릭하면 현재 메타스토어 관리자로 지정된 사용자 또는 그룹을 확인할 수 있습니다.
 
-   ![메타스토어 관리자 확인](../assets/screenshots/03-admin-roles/05-metastore-admin.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/05-metastore-admin.png (메타스토어 관리자 확인) -->
    *📸 캡처 안내: 메타스토어 상세 화면의 Admins 탭. 메타스토어 관리자(사용자 또는 그룹 이름)가 보이도록 캡처. 이름은 마스킹 처리.*
 
 ---
@@ -142,7 +142,7 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 3. **Workspace admin** 토글 또는 체크박스를 **ON**으로 변경합니다.
 4. **Save(저장)**를 클릭합니다.
 
-   ![워크스페이스 관리자 역할 부여 화면](../assets/screenshots/03-admin-roles/06-assign-workspace-admin.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/06-assign-workspace-admin.png (워크스페이스 관리자 역할 부여 화면) -->
    *📸 캡처 안내: 사용자 상세 화면에서 "Workspace admin" 토글이 활성화된 상태. 이름·이메일 마스킹. 실제로 변경하지 말고 UI 상태만 캡처.*
 
 ---

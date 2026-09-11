@@ -58,7 +58,7 @@
 | SQL Warehouse | 왼쪽 사이드바 **SQL Warehouses** → 상태가 Running 또는 Starting인 웨어하우스 존재 |
 | S3 External Location | 왼쪽 사이드바 **Catalog** → **External Locations** 탭에서 대상 S3 경로가 등록되어 있는지 확인 |
 | READ FILES 권한 | External Location 상세 > **Permissions** 에서 본인 사용자/그룹에 READ FILES 권한 확인 |
-| 대상 카탈로그·스키마 | 테이블을 저장할 카탈로그와 스키마 준비 (06 실습에서 생성한 `stan_learning_catalog.onboarding_training` 사용 가능) |
+| 대상 카탈로그·스키마 | 테이블을 저장할 카탈로그와 스키마 준비 (06 실습에서 생성한 `main.onboarding_training` 사용 가능) |
 
 ---
 
@@ -105,13 +105,13 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. **External location** 드롭다운을 클릭합니다.
 2. 이 워크스페이스에 등록된 External Location 목록이 표시됩니다. 대상 S3 경로에 해당하는 External Location을 선택합니다.
 
-   ![External Location 선택](../assets/screenshots/08-lakeflow-connect/03-external-location-select.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/08-lakeflow-connect/03-external-location-select.png (External Location 선택) -->
    *📸 캡처 안내: External location 드롭다운이 펼쳐지고 등록된 External Location 목록에서 하나를 선택하는 화면.*
 
 3. External Location을 선택하면 해당 S3 경로의 파일·폴더 목록이 아래에 표시됩니다.
 4. 가져올 파일 또는 폴더를 클릭하여 선택합니다.
 
-   ![파일/폴더 찾기](../assets/screenshots/08-lakeflow-connect/04-file-browse.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/08-lakeflow-connect/04-file-browse.png (파일/폴더 찾기) -->
    *📸 캡처 안내: External Location 하위의 S3 폴더/파일 목록이 표시되고, 특정 파일 또는 폴더를 선택하는 화면.*
 
 > 💡 **폴더를 선택하면** 해당 폴더 안의 모든 파일이 자동으로 포함됩니다. 같은 형식(CSV, JSON 등)의 파일 여러 개를 한꺼번에 가져올 때 유용합니다.
@@ -125,7 +125,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. 파일을 선택하면 오른쪽 또는 하단 **Preview** 영역에서 데이터 샘플을 확인할 수 있습니다.
 2. **Preview table** 버튼을 클릭하여 샘플 데이터와 컬럼 이름·데이터 타입을 확인합니다.
 
-   ![테이블 미리보기](../assets/screenshots/08-lakeflow-connect/05-preview-table.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/08-lakeflow-connect/05-preview-table.png (테이블 미리보기) -->
    *📸 캡처 안내: Preview table 클릭 후 S3 파일의 샘플 데이터가 표 형태로 표시된 화면. 컬럼 이름과 데이터 타입이 보이도록 캡처.*
 
 3. 필요하면 컬럼 이름이나 데이터 타입을 수정합니다.
@@ -133,7 +133,7 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 
    | 항목 | 설명 | 예시 |
    |---|---|---|
-   | **Catalog** | 대상 카탈로그 | `stan_learning_catalog` |
+   | **Catalog** | 대상 카탈로그 | `main` |
    | **Schema** | 대상 스키마 | `onboarding_training` |
    | **Table name** | 생성할 테이블 이름 | `s3_import_demo` |
 
@@ -144,14 +144,14 @@ S3에서 데이터를 가져오려면 먼저 **Data Ingestion** 메뉴로 진입
 1. 설정을 모두 확인한 후 **Create table** 버튼을 클릭합니다.
 2. 잠시 기다리면 테이블 생성이 완료됩니다.
 
-   ![테이블 생성 완료](../assets/screenshots/08-lakeflow-connect/06-table-created.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/08-lakeflow-connect/06-table-created.png (테이블 생성 완료) -->
    *📸 캡처 안내: "Table created successfully" 메시지 또는 생성된 테이블의 Catalog Explorer 상세 페이지로 이동한 화면.*
 
 3. 생성된 테이블은 Unity Catalog에 **관리형 Delta 테이블**로 등록됩니다. SQL 편집기에서 바로 쿼리할 수 있습니다.
 
 ```sql
 -- 생성된 테이블 조회
-SELECT * FROM stan_learning_catalog.onboarding_training.s3_import_demo LIMIT 10;
+SELECT * FROM main.onboarding_training.s3_import_demo LIMIT 10;
 ```
 
 > 💡 이 테이블은 [06 실습](./06-tables-volumes-rbac-abac.md)에서 배운 RBAC/ABAC 권한 제어가 즉시 적용되는 관리형 테이블입니다. Catalog Explorer에서 Permissions 탭을 통해 그룹 권한을 바로 설정할 수 있습니다.

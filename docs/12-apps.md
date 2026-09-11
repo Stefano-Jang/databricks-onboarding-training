@@ -78,7 +78,7 @@ requirements.txt # Python 패키지 의존성
 
 1. Apps 목록 화면 우측 상단 또는 중앙의 **+ Create app** 버튼을 클릭합니다.
 
-   ![+ Create app 버튼](../assets/screenshots/12-apps/02-create-app-btn.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/02-create-app-btn.png (+ Create app 버튼) -->
    *📸 캡처 안내: Apps 목록 화면 전체를 캡처합니다. "Create app" 버튼의 위치가 잘 보이도록 합니다.*
 
 ### 3단계: 앱 템플릿 선택
@@ -92,7 +92,7 @@ requirements.txt # Python 패키지 의존성
 
    > 💡 어떤 템플릿을 선택해도 생성·배포 흐름은 동일합니다. 원하는 프레임워크로 선택하세요.
 
-   ![템플릿 선택 화면](../assets/screenshots/12-apps/03-template-select.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/03-template-select.png (템플릿 선택 화면) -->
    *📸 캡처 안내: 앱 생성 창에서 템플릿 목록이 표시된 전체 화면을 캡처합니다. 선택한 템플릿이 강조(파란 테두리 등)된 상태로 캡처하면 좋습니다.*
 
 ### 4단계: 앱 이름 입력 및 생성
@@ -104,7 +104,7 @@ requirements.txt # Python 패키지 의존성
 2. (선택) **Description** 항목에 간단한 설명을 입력합니다.
 3. 입력이 완료되면 **Create app** 버튼을 클릭합니다.
 
-   ![앱 이름 입력](../assets/screenshots/12-apps/04-app-name.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/04-app-name.png (앱 이름 입력) -->
    *📸 캡처 안내: App name 입력란에 이름이 입력된 상태의 앱 생성 창을 캡처합니다. 이메일 주소 등 개인정보는 가리세요.*
 
 ### 5단계: 배포 완료 대기
@@ -118,7 +118,7 @@ requirements.txt # Python 패키지 의존성
 
 3. 상태가 **Running**으로 바뀌면 배포가 완료된 것입니다. (보통 1~3분 소요)
 
-   ![앱 배포 중 상태](../assets/screenshots/12-apps/05-deploying.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/05-deploying.png (앱 배포 중 상태) -->
    *📸 캡처 안내: 앱 상세 페이지에서 "Deploying" 또는 "Starting" 상태가 표시된 화면을 캡처합니다. URL 상단의 앱 이름이 보이도록 합니다.*
 
    ![앱 Running 상태](../assets/screenshots/12-apps/06-running.png)
@@ -130,7 +130,7 @@ requirements.txt # Python 패키지 의존성
    - URL 형식 예시: `https://<앱이름>-<워크스페이스ID>.cloud.databricks.com`
 2. 새 탭에서 앱이 열립니다. 템플릿의 기본 화면이 표시되면 배포가 성공한 것입니다.
 
-   ![앱 접속 화면](../assets/screenshots/12-apps/07-app-url.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/12-apps/07-app-url.png (앱 접속 화면) -->
    *📸 캡처 안내: 앱 URL을 클릭하여 열린 앱 화면(새 탭)을 캡처합니다. 배포된 Streamlit/Gradio 앱의 기본 UI가 표시된 상태로 캡처하세요.*
 
 ---

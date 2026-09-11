@@ -41,11 +41,11 @@ Unity Catalog는 데이터 객체를 아래와 같은 3단계 계층으로 관�
 ```
 
 객체 전체 이름은 항상 `<카탈로그>.<스키마>.<객체>` 형식으로 표현합니다.  
-예: `stan_learning_catalog.onboarding_training.sales_summary`
+예: `main.onboarding_training.sales_summary`
 
 | 계층 | 역할 | 예시 |
 |---|---|---|
-| **카탈로그(Catalog)** | 최상위 네임스페이스. 부서·프로젝트 단위로 구성 | `stan_learning_catalog`, `samples` |
+| **카탈로그(Catalog)** | 최상위 네임스페이스. 부서·프로젝트 단위로 구성 | `main`, `samples` |
 | **스키마(Schema)** | 관련 객체를 묶는 컨테이너. 데이터베이스와 동일 개념 | `onboarding_training`, `nyctaxi` |
 | **테이블/볼륨** | 실제 데이터를 담는 객체 | `sales_summary`, `uploads` |
 
@@ -90,7 +90,7 @@ Unity Catalog는 데이터 객체를 아래와 같은 3단계 계층으로 관�
 > **실습 환경**: 아래 SQL은 워크스페이스의 **SQL 편집기(SQL Editor)** 또는 **노트북**에서 실행합니다.  
 > 왼쪽 사이드바에서 **SQL Editor** 아이콘을 클릭하여 접근할 수 있습니다.
 
-> **⚠️ 카탈로그 이름 확인**: 아래 SQL 예시는 `stan_learning_catalog` 를 사용합니다. 이것은 이 워크스페이스(`coupang-appdemo`)의 실습용 카탈로그입니다. 실제 사용 환경에 따라 카탈로그 이름이 다를 수 있으므로, 왼쪽 사이드바의 **카탈로그(Catalog)** 아이콘을 클릭하여 접근 가능한 카탈로그를 먼저 확인하세요.
+> **⚠️ 카탈로그 이름 먼저 확인·교체**: 아래 SQL 예시는 Unity Catalog 기본 카탈로그인 `main` 을 사용합니다. **본인이 `CREATE SCHEMA` 권한을 가진 카탈로그명으로 바꿔서 실행하세요.** 왼쪽 사이드바의 **카탈로그(Catalog)** 아이콘에서 접근 가능한 카탈로그를 확인할 수 있고, `main`이 없거나 권한이 없으면 워크스페이스/메타스토어 관리자에게 카탈로그 생성 또는 권한을 요청하세요.
 
 ---
 
@@ -100,20 +100,20 @@ Unity Catalog는 데이터 객체를 아래와 같은 3단계 계층으로 관�
 
 ```sql
 -- 스키마가 없으면 새로 생성 (이미 있으면 무시)
-CREATE SCHEMA IF NOT EXISTS stan_learning_catalog.onboarding_training
+CREATE SCHEMA IF NOT EXISTS main.onboarding_training
 COMMENT '온보딩 실습용 스키마';
 ```
 
 스키마가 만들어졌는지 확인합니다.
 
 ```sql
-SHOW SCHEMAS IN stan_learning_catalog;
+SHOW SCHEMAS IN main;
 ```
 
-![스키마 생성 확인](../assets/screenshots/06-tables-volumes/01-create-schema.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/01-create-schema.png (스키마 생성 확인) -->
 *📸 캡처 안내: SQL Editor에서 SHOW SCHEMAS 결과가 표시된 화면. `onboarding_training` 스키마가 목록에 보이도록 캡처.*
 
-> 💡 **카탈로그 탐색기(Catalog Explorer)에서도 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘을 클릭 → `stan_learning_catalog` 확장 → `onboarding_training` 스키마 확인.
+> 💡 **카탈로그 탐색기(Catalog Explorer)에서도 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘을 클릭 → `main` 확장 → `onboarding_training` 스키마 확인.
 
 ---
 
@@ -123,7 +123,7 @@ SHOW SCHEMAS IN stan_learning_catalog;
 
 ```sql
 -- 관리형 테이블 생성
-CREATE TABLE IF NOT EXISTS stan_learning_catalog.onboarding_training.sales_summary (
+CREATE TABLE IF NOT EXISTS main.onboarding_training.sales_summary (
   order_id    BIGINT        COMMENT '주문 ID',
   customer    STRING        COMMENT '고객명',
   region      STRING        COMMENT '지역',
@@ -135,7 +135,7 @@ COMMENT '온보딩 실습용 매출 요약 테이블';
 
 ```sql
 -- 샘플 데이터 삽입 (복사 후 그대로 실행)
-INSERT INTO stan_learning_catalog.onboarding_training.sales_summary VALUES
+INSERT INTO main.onboarding_training.sales_summary VALUES
   (1001, '김민준', '서울',  58000.00, '2024-01-15'),
   (1002, '이서윤', '부산',  32000.50, '2024-01-16'),
   (1003, '박지호', '대구',  75000.00, '2024-01-17'),
@@ -145,10 +145,10 @@ INSERT INTO stan_learning_catalog.onboarding_training.sales_summary VALUES
 
 ```sql
 -- 데이터 확인
-SELECT * FROM stan_learning_catalog.onboarding_training.sales_summary;
+SELECT * FROM main.onboarding_training.sales_summary;
 ```
 
-![테이블 생성 및 데이터 확인](../assets/screenshots/06-tables-volumes/02-create-table-select.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/02-create-table-select.png (테이블 생성 및 데이터 확인) -->
 *📸 캡처 안내: SQL Editor에서 SELECT 결과로 5개 행이 표시된 화면.*
 
 > 💡 **Catalog Explorer에서도 테이블 상세를 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘 클릭 → 카탈로그 → 스키마 → 테이블 이름을 클릭하면 컬럼 목록, 데이터 타입, 통계, 히스토리 등을 한눈에 볼 수 있습니다.
@@ -162,7 +162,7 @@ SELECT * FROM stan_learning_catalog.onboarding_training.sales_summary;
 
 ```sql
 -- samples.nyctaxi.trips 에서 처음 1,000행을 가져와 새 테이블 생성
-CREATE TABLE IF NOT EXISTS stan_learning_catalog.onboarding_training.nyc_taxi_sample
+CREATE TABLE IF NOT EXISTS main.onboarding_training.nyc_taxi_sample
 AS
 SELECT
   tpep_pickup_datetime,
@@ -177,7 +177,7 @@ LIMIT 1000;
 ```sql
 -- 생성 확인
 SELECT COUNT(*) AS row_count
-FROM stan_learning_catalog.onboarding_training.nyc_taxi_sample;
+FROM main.onboarding_training.nyc_taxi_sample;
 ```
 
 ---
@@ -188,55 +188,55 @@ FROM stan_learning_catalog.onboarding_training.nyc_taxi_sample;
 
 ```sql
 -- 관리형 볼륨 생성
-CREATE VOLUME IF NOT EXISTS stan_learning_catalog.onboarding_training.uploads
+CREATE VOLUME IF NOT EXISTS main.onboarding_training.uploads
 COMMENT '온보딩 실습용 파일 업로드 볼륨';
 ```
 
 ```sql
 -- 볼륨 생성 확인
-SHOW VOLUMES IN stan_learning_catalog.onboarding_training;
+SHOW VOLUMES IN main.onboarding_training;
 ```
 
-![볼륨 생성 SQL 결과](../assets/screenshots/06-tables-volumes/03-create-volume-sql.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/03-create-volume-sql.png (볼륨 생성 SQL 결과) -->
 *📸 캡처 안내: SHOW VOLUMES 결과에 `uploads` 볼륨이 나타난 화면.*
 
 #### 방법 B — UI (카탈로그 탐색기)로 생성
 
 1. 왼쪽 사이드바에서 **카탈로그(Catalog)** 아이콘을 클릭합니다.
-2. `stan_learning_catalog` → `onboarding_training` 스키마를 클릭하여 확장합니다.
+2. `main` → `onboarding_training` 스키마를 클릭하여 확장합니다.
 3. 오른쪽 상단의 **Create** 버튼(또는 스키마 이름 옆의 `⋯` 메뉴)을 클릭하고 **Create Volume** 을 선택합니다.
 
-   ![카탈로그 탐색기 Create Volume](../assets/screenshots/06-tables-volumes/04-create-volume-ui.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/04-create-volume-ui.png (카탈로그 탐색기 Create Volume) -->
    *📸 캡처 안내: 카탈로그 탐색기에서 스키마 하위 "Create Volume" 옵션이 보이는 화면.*
 
 4. **Volume name**: `uploads_ui` 를 입력합니다.
 5. **Volume type**: **Managed** 를 선택합니다.
 6. **Create** 버튼을 클릭합니다.
 
-   ![Volume 생성 완료](../assets/screenshots/06-tables-volumes/05-volume-created-ui.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/05-volume-created-ui.png (Volume 생성 완료) -->
    *📸 캡처 안내: 카탈로그 탐색기에서 `uploads_ui` 볼륨이 생성된 상태. 볼륨 상세 화면.*
 
 ---
 
 ### 4단계: Volume에 파일 업로드 (UI)
 
-1. 카탈로그 탐색기에서 `stan_learning_catalog` → `onboarding_training` → **`uploads`** 볼륨을 클릭합니다.
+1. 카탈로그 탐색기에서 `main` → `onboarding_training` → **`uploads`** 볼륨을 클릭합니다.
 2. 볼륨 상세 페이지 오른쪽에서 **Upload to this volume** 버튼을 클릭합니다.
 
-   ![볼륨 파일 업로드 버튼](../assets/screenshots/06-tables-volumes/06-upload-to-volume-button.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/06-upload-to-volume-button.png (볼륨 파일 업로드 버튼) -->
    *📸 캡처 안내: 볼륨 상세 페이지에서 "Upload to this volume" 버튼이 보이는 화면.*
 
 3. 업로드할 파일을 드래그하거나 **Browse** 버튼으로 선택합니다. (예: 간단한 `.csv` 또는 `.txt` 파일)
 4. **Upload** 버튼을 클릭합니다.
 
-   ![파일 업로드 완료](../assets/screenshots/06-tables-volumes/07-file-uploaded.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/07-file-uploaded.png (파일 업로드 완료) -->
    *📸 캡처 안내: 볼륨에 파일이 업로드된 후, 파일 목록에 업로드된 파일 이름이 나타난 상태.*
 
 업로드된 파일은 아래 경로로 접근할 수 있습니다.
 
 ```python
 # 노트북에서 볼륨 파일 경로 확인
-display(dbutils.fs.ls("/Volumes/stan_learning_catalog/onboarding_training/uploads/"))
+display(dbutils.fs.ls("/Volumes/main/onboarding_training/uploads/"))
 ```
 
 ---
@@ -247,7 +247,7 @@ Unity Catalog Permissions UI를 사용하면 SQL 없이도 그룹에 권한을 �
 
 #### 테이블에 권한 부여
 
-1. 카탈로그 탐색기에서 `stan_learning_catalog` → `onboarding_training` → **`sales_summary`** 테이블을 클릭합니다.
+1. 카탈로그 탐색기에서 `main` → `onboarding_training` → **`sales_summary`** 테이블을 클릭합니다.
 2. 상단 탭에서 **Permissions** 탭을 클릭합니다.
 
    ![테이블 Permissions 탭](../assets/screenshots/06-tables-volumes/08-table-permissions-tab.png)
@@ -258,7 +258,7 @@ Unity Catalog Permissions UI를 사용하면 SQL 없이도 그룹에 권한을 �
 5. 부여할 권한(Privilege)으로 **SELECT** 에 체크합니다.
 6. **Grant** 버튼을 클릭합니다.
 
-   ![테이블 권한 부여 완료](../assets/screenshots/06-tables-volumes/09-grant-select-ui.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/09-grant-select-ui.png (테이블 권한 부여 완료) -->
    *📸 캡처 안내: Permissions 탭에 `onboarding_analytics_team` 그룹에 SELECT 권한이 부여된 목록.*
 
 > 💡 **테이블을 사용하려면 상위 객체 권한도 필요합니다.** USE CATALOG와 USE SCHEMA 권한을 부여하지 않으면 테이블에 접근할 수 없습니다. 아래 SQL 방법(6단계)에서 전체 권한 체인을 함께 부여합니다.
@@ -283,19 +283,19 @@ Unity Catalog에서 테이블에 접근하려면 아래 3단계 권한을 **모�
 
 ```sql
 -- ① 카탈로그 사용 권한
-GRANT USE CATALOG ON CATALOG stan_learning_catalog
+GRANT USE CATALOG ON CATALOG main
 TO `onboarding_analytics_team`;
 
 -- ② 스키마 사용 권한
-GRANT USE SCHEMA ON SCHEMA stan_learning_catalog.onboarding_training
+GRANT USE SCHEMA ON SCHEMA main.onboarding_training
 TO `onboarding_analytics_team`;
 
 -- ③ 테이블 SELECT 권한
-GRANT SELECT ON TABLE stan_learning_catalog.onboarding_training.sales_summary
+GRANT SELECT ON TABLE main.onboarding_training.sales_summary
 TO `onboarding_analytics_team`;
 
 -- (선택) 볼륨 읽기 권한
-GRANT READ VOLUME ON VOLUME stan_learning_catalog.onboarding_training.uploads
+GRANT READ VOLUME ON VOLUME main.onboarding_training.uploads
 TO `onboarding_analytics_team`;
 ```
 
@@ -303,17 +303,17 @@ TO `onboarding_analytics_team`;
 
 ```sql
 -- 테이블에 부여된 권한 전체 확인
-SHOW GRANTS ON TABLE stan_learning_catalog.onboarding_training.sales_summary;
+SHOW GRANTS ON TABLE main.onboarding_training.sales_summary;
 ```
 
-![SHOW GRANTS 결과](../assets/screenshots/06-tables-volumes/10-show-grants-result.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/10-show-grants-result.png (SHOW GRANTS 결과) -->
 *📸 캡처 안내: SQL Editor에서 SHOW GRANTS 결과가 표시된 화면. `onboarding_analytics_team`에 SELECT 권한이 보이도록 캡처.*
 
 #### 권한 회수 (REVOKE)
 
 ```sql
 -- 테이블 SELECT 권한 회수
-REVOKE SELECT ON TABLE stan_learning_catalog.onboarding_training.sales_summary
+REVOKE SELECT ON TABLE main.onboarding_training.sales_summary
 FROM `onboarding_analytics_team`;
 ```
 
@@ -356,7 +356,7 @@ ABAC(속성 기반 접근 제어, Attribute-Based Access Control)는 사용자�
 **① 행 필터 SQL 함수 생성**
 
 ```sql
-CREATE OR REPLACE FUNCTION stan_learning_catalog.onboarding_training.filter_by_region(region STRING)
+CREATE OR REPLACE FUNCTION main.onboarding_training.filter_by_region(region STRING)
   RETURN is_account_group_member('account admins') 
       OR region = '서울';
 ```
@@ -370,24 +370,24 @@ CREATE OR REPLACE FUNCTION stan_learning_catalog.onboarding_training.filter_by_r
 **② 테이블에 행 필터 적용**
 
 ```sql
-ALTER TABLE stan_learning_catalog.onboarding_training.sales_summary
-  SET ROW FILTER stan_learning_catalog.onboarding_training.filter_by_region ON (region);
+ALTER TABLE main.onboarding_training.sales_summary
+  SET ROW FILTER main.onboarding_training.filter_by_region ON (region);
 ```
 
 **③ 동작 확인** (관리자가 아닌 일반 사용자 계정으로 실행)
 
 ```sql
 -- 비관리자 계정으로 실행 시 서울 지역 데이터(2건)만 반환됨
-SELECT * FROM stan_learning_catalog.onboarding_training.sales_summary;
+SELECT * FROM main.onboarding_training.sales_summary;
 ```
 
-![행 필터 동작 확인](../assets/screenshots/06-tables-volumes/11-row-filter-result.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/11-row-filter-result.png (행 필터 동작 확인) -->
 *📸 캡처 안내: 일반 사용자 계정으로 SELECT 실행 시 서울 지역 2개 행만 반환된 화면.*
 
 **④ 행 필터 제거**
 
 ```sql
-ALTER TABLE stan_learning_catalog.onboarding_training.sales_summary
+ALTER TABLE main.onboarding_training.sales_summary
   DROP ROW FILTER;
 ```
 
@@ -400,7 +400,7 @@ ALTER TABLE stan_learning_catalog.onboarding_training.sales_summary
 **① 열 마스킹 SQL 함수 생성**
 
 ```sql
-CREATE OR REPLACE FUNCTION stan_learning_catalog.onboarding_training.mask_amount(amount DECIMAL(10,2))
+CREATE OR REPLACE FUNCTION main.onboarding_training.mask_amount(amount DECIMAL(10,2))
   RETURN CASE
     WHEN is_account_group_member('account admins') THEN amount
     ELSE CAST(-1.00 AS DECIMAL(10,2))
@@ -410,24 +410,24 @@ CREATE OR REPLACE FUNCTION stan_learning_catalog.onboarding_training.mask_amount
 **② 테이블의 `amount` 열에 마스킹 적용**
 
 ```sql
-ALTER TABLE stan_learning_catalog.onboarding_training.sales_summary
-  ALTER COLUMN amount SET MASK stan_learning_catalog.onboarding_training.mask_amount;
+ALTER TABLE main.onboarding_training.sales_summary
+  ALTER COLUMN amount SET MASK main.onboarding_training.mask_amount;
 ```
 
 **③ 동작 확인** (비관리자 계정)
 
 ```sql
 -- 비관리자 계정으로 실행 시 amount 열이 -1.00 으로 표시됨
-SELECT order_id, customer, region, amount FROM stan_learning_catalog.onboarding_training.sales_summary;
+SELECT order_id, customer, region, amount FROM main.onboarding_training.sales_summary;
 ```
 
-![열 마스킹 동작 확인](../assets/screenshots/06-tables-volumes/12-column-mask-result.png)
+<!-- 스크린샷 예정: ../assets/screenshots/06-tables-volumes/12-column-mask-result.png (열 마스킹 동작 확인) -->
 *📸 캡처 안내: 비관리자 계정으로 실행 시 amount 열이 모두 -1.00으로 표시된 SELECT 결과 화면.*
 
 **④ 열 마스킹 제거**
 
 ```sql
-ALTER TABLE stan_learning_catalog.onboarding_training.sales_summary
+ALTER TABLE main.onboarding_training.sales_summary
   ALTER COLUMN amount DROP MASK;
 ```
 
@@ -459,7 +459,7 @@ Unity Catalog는 쿼리·잡·노트북의 실행 기록을 분석하여 계보 
 ### Lineage 탭 확인하기
 
 1. 왼쪽 사이드바에서 **카탈로그(Catalog)** 아이콘을 클릭합니다.
-2. 계보를 확인할 테이블(예: `stan_learning_catalog` → `onboarding_training` → `sales_summary`)을 클릭합니다.
+2. 계보를 확인할 테이블(예: `main` → `onboarding_training` → `sales_summary`)을 클릭합니다.
 3. 테이블 상세 페이지 상단의 탭에서 **Lineage** 탭을 클릭합니다.
 4. 이 테이블에 데이터를 쓴 노트북·잡·쿼리(Upstream)와 이 테이블을 읽는 대시보드·뷰·노트북(Downstream)을 시각적으로 확인할 수 있습니다.
 

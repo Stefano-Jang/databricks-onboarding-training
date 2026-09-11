@@ -74,17 +74,17 @@
 
 1. 왼쪽 사이드바에서 **+ New** 버튼을 클릭합니다.
 
-   ![+ New 버튼 위치](../assets/screenshots/07-notebooks/01-new-button.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/01-new-button.png (+ New 버튼 위치) -->
    *📸 캡처 안내: 왼쪽 사이드바 상단의 "+ New" 버튼과 드롭다운 메뉴가 보이도록 캡처합니다.*
 
 2. 드롭다운 메뉴에서 **Notebook**을 선택합니다.
 
-   ![Notebook 선택](../assets/screenshots/07-notebooks/02-select-notebook.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/02-select-notebook.png (Notebook 선택) -->
    *📸 캡처 안내: "+ New" 드롭다운에서 "Notebook" 항목이 하이라이트된 상태를 캡처합니다.*
 
 3. 새 노트북이 열립니다. 화면 상단의 제목("Untitled Notebook")을 클릭하여 **`onboarding_my_first_notebook`** 으로 변경합니다.
 
-   ![노트북 제목 변경](../assets/screenshots/07-notebooks/03-rename-notebook.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/03-rename-notebook.png (노트북 제목 변경) -->
    *📸 캡처 안내: 노트북 상단 제목 편집 상태를 캡처합니다. 제목이 편집 가능한 입력 필드로 바뀐 모습이 나오도록 합니다.*
 
 > 💡 노트북은 기본적으로 홈 폴더(Workspace > Users > 내 계정)에 저장됩니다. 저장 위치를 바꾸려면 **File > Move to** 메뉴를 사용합니다.
@@ -97,7 +97,7 @@
 
 1. 노트북 상단 오른쪽의 **Connect** 버튼(또는 현재 연결된 컴퓨트 이름)을 클릭합니다.
 
-   ![Connect 버튼](../assets/screenshots/07-notebooks/04-connect-compute.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/04-connect-compute.png (Connect 버튼) -->
    *📸 캡처 안내: 노트북 툴바 오른쪽의 "Connect" 버튼 또는 컴퓨트 선택 드롭다운이 보이도록 캡처합니다.*
 
 2. 드롭다운에서 연결할 컴퓨트를 선택합니다.
@@ -110,7 +110,7 @@
 
    > 💡 서버리스 컴퓨트가 활성화된 워크스페이스에서는 **Serverless**를 선택하는 것이 가장 빠릅니다. 클러스터는 시작 시간이 1~5분 소요될 수 있습니다.
 
-   ![컴퓨트 선택 드롭다운](../assets/screenshots/07-notebooks/05-select-compute.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/05-select-compute.png (컴퓨트 선택 드롭다운) -->
    *📸 캡처 안내: 컴퓨트 선택 드롭다운에 Serverless 및 기존 클러스터 목록이 보이도록 캡처합니다.*
 
 3. 선택 후 노트북 상단에 연결된 컴퓨트 이름이 표시되면 준비 완료입니다.
@@ -154,7 +154,7 @@
 
 3. 셀을 실행하면 마크다운이 **렌더링**되어 읽기 쉬운 텍스트로 변환됩니다.
 
-   ![마크다운 셀 렌더링](../assets/screenshots/07-notebooks/07-markdown-cell.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/07-markdown-cell.png (마크다운 셀 렌더링) -->
    *📸 캡처 안내: %md 셀이 실행된 후 헤더와 불릿 목록이 렌더링된 결과를 캡처합니다.*
 
 #### 4-2. SQL 셀 실행하기 (%sql)
@@ -175,7 +175,7 @@
 
 2. 셀을 실행합니다.
 
-   ![%sql 셀 실행 결과](../assets/screenshots/07-notebooks/09-sql-magic.png)
+   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/09-sql-magic.png (%sql 셀 실행 결과) -->
    *📸 캡처 안내: %sql 셀 실행 결과로 표 형태의 데이터가 출력된 화면을 캡처합니다.*
 
 > 💡 `samples.nyctaxi.trips`는 Databricks가 제공하는 **내장 샘플 테이블**입니다. Unity Catalog의 `samples` 카탈로그에 항상 존재하므로 별도 생성 없이 바로 쿼리할 수 있습니다.
@@ -196,7 +196,7 @@ df = spark.read.table("samples.nyctaxi.trips")
 display(df)
 ```
 
-![display() 결과 표](../assets/screenshots/07-notebooks/09-display-table.png)
+<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/09-display-table.png (display() 결과 표) -->
 *📸 캡처 안내: display(df) 실행 결과로 인터랙티브 표가 출력된 화면을 캡처합니다. 상단의 "Table", "+" 탭과 행/열이 보이도록 합니다.*
 
 실행 결과 테이블 위쪽에 **+ (차트 추가)** 아이콘이 있습니다. 클릭하면 막대그래프·꺾은선 그래프 등 다양한 시각화를 바로 생성할 수 있습니다.
@@ -228,7 +228,7 @@ display(df.select("pickup_zip", "fare_amount", "trip_distance").limit(10))
 ls /databricks-datasets/
 ```
 
-![%fs ls 결과](../assets/screenshots/07-notebooks/10-fs-ls.png)
+<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/10-fs-ls.png (%fs ls 결과) -->
 *📸 캡처 안내: %fs ls /databricks-datasets/ 실행 결과로 폴더 목록이 표시된 화면을 캡처합니다.*
 
 #### 6-2. CSV 파일 읽어서 탐색
@@ -248,7 +248,7 @@ print(f"총 행 수: {df_diamonds.count()}")
 display(df_diamonds)
 ```
 
-![diamonds 데이터 출력](../assets/screenshots/07-notebooks/11-diamonds-display.png)
+<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/11-diamonds-display.png (diamonds 데이터 출력) -->
 *📸 캡처 안내: 다이아몬드 데이터셋의 첫 행들과 컬럼(carat, cut, color, clarity, depth, table, price)이 보이는 display() 결과를 캡처합니다.*
 
 #### 6-3. JSON 파일 읽기 예시

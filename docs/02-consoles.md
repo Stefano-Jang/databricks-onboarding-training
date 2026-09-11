@@ -121,8 +121,8 @@ Databricks 워크스페이스 UI는 한국어를 포함한 다국어를 지원�
    | **클라우드 리소스 (Cloud Resources)** | AWS S3·IAM 등 클라우드 인프라 자격증명 설정 |
    | **설정 (Settings)** | 계정 이름·계정 ID·언어·이메일 알림 환경 설정 |
 
-   <!-- 스크린샷 예정: ../assets/screenshots/02-consoles/07-account-console-home.png (계정 콘솔 홈 화면) -->
-   *📸 캡처 안내: `https://accounts.cloud.databricks.com` 로그인 직후 첫 화면. 왼쪽 사이드바와 주요 메뉴가 모두 보이도록. 계정 ID 등 민감 정보는 마스킹 처리 후 캡처.*
+   ![계정 콘솔 홈 화면](../assets/screenshots/02-consoles/07-account-console-home.png)
+   *계정 콘솔(accounts.cloud.databricks.com) 홈 — "Welcome to Databricks"와 Admin 메뉴(Workspaces·Catalog·User management·Security·Cloud resources·Settings). 계정 전체를 관리하는 화면입니다.*
 
 3. 계정 콘솔에서는 노트북 실행·SQL 쿼리 등 워크스페이스 단위의 일상 업무는 수행할 수 없습니다. 어디까지나 **계정 전체 수준의 관리** 화면입니다.
 

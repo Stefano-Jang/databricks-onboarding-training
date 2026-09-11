@@ -95,7 +95,7 @@
 5. **Group name** 입력란에 `onboarding_analytics_team` 을 입력합니다.
 
    ![그룹 이름 입력](../assets/screenshots/04-groups/02-add-group-name.png)
-   *"Add group" 다이얼로그 — 계정의 기존 그룹을 선택하거나 새 그룹을 만들어 추가하는 화면.*
+   *계정 콘솔의 "Add group" 다이얼로그 — "New group name"에 `onboarding_analytics_team`을 입력하고 "Add group"으로 생성합니다. (배경 그룹 목록의 이름은 마스킹 처리.)*
 
 6. **Add** 버튼을 클릭하여 그룹을 생성합니다.
 

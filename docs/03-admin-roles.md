@@ -91,8 +91,8 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 1. 브라우저에서 `https://accounts.cloud.databricks.com`으로 이동하여 로그인합니다.
 2. 왼쪽 사이드바에서 **User Management(사용자 관리)** → **Users(사용자)**를 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/01-account-console-users.png (계정 콘솔 사용자 목록) -->
-   *📸 캡처 안내: 계정 콘솔의 User Management > Users 화면. 사용자 목록과 "Account admin" 배지 또는 열이 보이도록 캡처. 이메일 주소는 마스킹 처리.*
+   ![계정 콘솔 사용자 목록](../assets/screenshots/03-admin-roles/01-account-console-users.png)
+   *계정 콘솔 > User management > Users — 사용자별 Status·Source(Account/External)·Roles(Account admin) 열이 표시됩니다. (개인정보 보호를 위해 이름·이메일 열은 마스킹 처리했습니다.)*
 
 3. 사용자 목록에서 **Account admin** 배지 또는 체크 표시가 있는 사용자를 찾습니다.
 
@@ -121,8 +121,8 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 1. 계정 콘솔(`https://accounts.cloud.databricks.com`)의 왼쪽 사이드바에서 **Catalog(카탈로그)** 또는 **Data**를 클릭합니다.
 2. **Metastores(메타스토어)** 항목을 클릭합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/03-admin-roles/04-metastore-list.png (계정 콘솔 — 메타스토어 목록) -->
-   *📸 캡처 안내: 계정 콘솔의 메타스토어 목록 화면. 메타스토어 이름·리전·연결된 워크스페이스 수가 보이도록 캡처.*
+   ![계정 콘솔 메타스토어 목록](../assets/screenshots/03-admin-roles/04-metastore-list.png)
+   *계정 콘솔 > Catalog > Metastores — 메타스토어 목록과 리전·생성일, 우측 "Create metastore" 버튼. 메타스토어는 Unity Catalog의 최상위 컨테이너입니다. (이름·경로 열은 마스킹 처리.)*
 
 3. 사용 중인 메타스토어 이름을 클릭합니다.
 

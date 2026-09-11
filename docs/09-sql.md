@@ -1,4 +1,4 @@
-⬅️ [이전: Lakeflow Connect로 S3 가져오기](./08-lakeflow-connect-s3.md) | 🏠 [목차](../README.md) | [다음: Job & 스케줄](./10-jobs.md) ➡️
+⬅️ [이전: Lakeflow Connect로 S3 가져오기](./08-lakeflow-connect-s3.md) | 🏠 [목차](../README.md) | [다음: Lakeflow Jobs — 태스크 & 스케줄](./10-jobs.md) ➡️
 
 ---
 
@@ -366,4 +366,4 @@ WHERE ${1:날짜컬럼} BETWEEN '${2:시작일 YYYY-MM-DD}' AND '${3:종료일 Y
 
 ## 다음 단계 ➡️
 
-- [10. Job & 스케줄](./10-jobs.md) — Lakeflow Job을 만들고 스케줄을 설정해 쿼리와 노트북을 자동으로 실행하는 방법을 배웁니다.
+- [10. Lakeflow Jobs — 태스크 & 스케줄](./10-jobs.md) — Lakeflow Job을 만들고 스케줄을 설정해 쿼리와 노트북을 자동으로 실행하는 방법을 배웁니다.

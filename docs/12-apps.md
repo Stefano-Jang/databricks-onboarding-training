@@ -1,4 +1,4 @@
-⬅️ [이전: 대시보드 & 퍼블리싱](./11-dashboards.md) | 🏠 [목차](../README.md) | [다음: Streamlit & Genie 데모](./13-streamlit-genie-demo.md) ➡️
+⬅️ [이전: AI/BI 대시보드 — 시각화 & 퍼블리싱](./11-dashboards.md) | 🏠 [목차](../README.md) | [다음: Streamlit & Genie 데모](./13-streamlit-genie-demo.md) ➡️
 
 ---
 

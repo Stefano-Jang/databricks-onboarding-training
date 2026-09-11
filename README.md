@@ -44,8 +44,8 @@
 | 07 | [노트북 & S3 파일 읽기](./docs/07-notebooks.md) | 노트북 생성·실행, S3/샘플 데이터 읽기 |
 | 08 | [Lakeflow Connect: S3 가져오기](./docs/08-lakeflow-connect-s3.md) | 코드 없이 UI로 S3 파일을 Unity Catalog 테이블로 적재(관리형 인제스트) |
 | 09 | [SQL 작성·저장 & 스니펫](./docs/09-sql.md) | SQL 편집기, 쿼리 저장, 스니펫(snippet) 활용 |
-| 10 | [Job & 스케줄](./docs/10-jobs.md) | Lakeflow Job(Task) 만들기, 스케줄 설정 |
-| 11 | [대시보드 & 퍼블리싱](./docs/11-dashboards.md) | AI/BI 대시보드 만들기, 공유·퍼블리싱 |
+| 10 | [Lakeflow Jobs — 태스크 & 스케줄](./docs/10-jobs.md) | Lakeflow Job(Task) 만들기, 스케줄 설정 |
+| 11 | [AI/BI 대시보드 — 시각화 & 퍼블리싱](./docs/11-dashboards.md) | AI/BI 대시보드 만들기, 공유·퍼블리싱 |
 | 12 | [Databricks Apps](./docs/12-apps.md) | 데이터 앱 만들고 배포하기 |
 | 13 | [Streamlit→대시보드 데모(시청용)](./docs/13-streamlit-genie-demo.md) | Genie 기반 앱→대시보드 데모 소개 |
 | 14 | [Snowflake vs Databricks Q&A](./docs/14-snowflake-qa.md) | SF 출신 SA와의 비교 Q&A |

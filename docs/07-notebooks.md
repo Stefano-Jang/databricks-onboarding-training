@@ -154,8 +154,8 @@
 
 3. 셀을 실행하면 마크다운이 **렌더링**되어 읽기 쉬운 텍스트로 변환됩니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/07-markdown-cell.png (마크다운 셀 렌더링) -->
-   *📸 캡처 안내: %md 셀이 실행된 후 헤더와 불릿 목록이 렌더링된 결과를 캡처합니다.*
+   ![마크다운 셀 렌더링](../assets/screenshots/07-notebooks/07-markdown-cell.png)
+   *`%md` 매직으로 작성한 마크다운 셀이 렌더링된 모습 — 헤더·굵은 텍스트·불릿 목록이 서식으로 표시됩니다.*
 
 #### 4-2. SQL 셀 실행하기 (%sql)
 
@@ -175,8 +175,8 @@
 
 2. 셀을 실행합니다.
 
-   <!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/09-sql-magic.png (%sql 셀 실행 결과) -->
-   *📸 캡처 안내: %sql 셀 실행 결과로 표 형태의 데이터가 출력된 화면을 캡처합니다.*
+   ![%sql 셀 실행 결과](../assets/screenshots/07-notebooks/09-sql-magic.png)
+   *`%sql` 매직으로 노트북에서 SQL을 실행한 결과 — pickup_zip별 운행 수·평균 요금이 표로 출력되고, 결과가 `_sqldf`로 저장됩니다.*
 
 > 💡 `samples.nyctaxi.trips`는 Databricks가 제공하는 **내장 샘플 테이블**입니다. Unity Catalog의 `samples` 카탈로그에 항상 존재하므로 별도 생성 없이 바로 쿼리할 수 있습니다.
 
@@ -196,8 +196,8 @@ df = spark.read.table("samples.nyctaxi.trips")
 display(df)
 ```
 
-<!-- 스크린샷 예정: ../assets/screenshots/07-notebooks/09-display-table.png (display() 결과 표) -->
-*📸 캡처 안내: display(df) 실행 결과로 인터랙티브 표가 출력된 화면을 캡처합니다. 상단의 "Table", "+" 탭과 행/열이 보이도록 합니다.*
+![display() 결과 표](../assets/screenshots/07-notebooks/09-display-table.png)
+*`display(df)`로 Spark DataFrame을 인터랙티브 표로 출력한 화면 — 상단 "Table"·"+" 탭과 컬럼·행이 표시됩니다.*
 
 실행 결과 테이블 위쪽에 **+ (차트 추가)** 아이콘이 있습니다. 클릭하면 막대그래프·꺾은선 그래프 등 다양한 시각화를 바로 생성할 수 있습니다.
 

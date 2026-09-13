@@ -259,7 +259,7 @@ Snowflake도 **Iceberg 테이블**을 지원하므로, "Iceberg를 공통 분모
 
 ## 🚀 이제 직접 해보기 — Databricks Free Edition
 
-이 교육에서 사용한 워크스페이스(`coupang-appdemo`)는 **교육용 샌드박스**입니다. 교육이 끝난 뒤에도 **개인적으로 마음껏 이것저것 실습**해 보고 싶다면 **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** 을 추천합니다.
+이 교육에서 사용한 워크스페이스는 **교육용 샌드박스**입니다. 교육이 끝난 뒤에도 **개인적으로 마음껏 이것저것 실습**해 보고 싶다면 **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** 을 추천합니다.
 
 **Databricks Free Edition이란?**
 - **완전 무료 · 기간 제한 없음**(영구 무료). 신용카드 없이 시작할 수 있습니다.

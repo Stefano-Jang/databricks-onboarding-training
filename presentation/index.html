@@ -250,6 +250,19 @@
   /* Generic staggered helper */
   .reveal section.present .anim { opacity:0; animation: fadeUp .5s ease forwards; }
 
+  /* ── TOC navigation ── */
+  .toc-fab { position:fixed; top:16px; right:18px; z-index:70; font-family:inherit;
+    background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--glassb); color:var(--ink);
+    border-radius:22px; padding:8px 15px; font-size:15px; font-weight:800; cursor:pointer; letter-spacing:.01em;
+    box-shadow:0 6px 20px rgba(0,0,0,.35); transition:transform .2s ease, background .2s ease, box-shadow .2s ease, opacity .25s ease; }
+  .toc-fab:hover { transform:translateY(-2px) scale(1.05); background:linear-gradient(135deg,var(--red),var(--orange));
+    color:#fff; border-color:transparent; box-shadow:0 10px 28px rgba(255,54,33,.45); }
+  .toc-fab.is-hidden { opacity:0; pointer-events:none; transform:translateY(-8px); }
+  .reveal .agenda-grid li { cursor:pointer; position:relative; }
+  .reveal .agenda-grid li::after { content:"\2192"; margin-left:auto; color:var(--orange); font-weight:800;
+    opacity:0; transform:translateX(-5px); transition:opacity .2s ease, transform .2s ease; }
+  .reveal .agenda-grid li:hover::after { opacity:1; transform:none; }
+
   /* Respect reduced-motion */
   @media (prefers-reduced-motion: reduce) {
     body::before { animation:none; }
@@ -278,20 +291,20 @@
 <section>
   <h2>오늘의 아젠다</h2>
   <ul class="agenda-grid">
-    <li><span class="n">01</span>Databricks 소개 &amp; 연혁</li>
-    <li><span class="n">02</span>사용자·계정 콘솔</li>
-    <li><span class="n">03</span>관리자 역할</li>
-    <li><span class="n">04</span>그룹 관리</li>
-    <li><span class="n">05</span>컴퓨트 유형</li>
-    <li><span class="n">06</span>테이블·Volume·RBAC/ABAC</li>
-    <li><span class="n">07</span>노트북 &amp; S3 데이터 읽기</li>
-    <li><span class="n">08</span>Lakeflow Connect: S3 가져오기</li>
-    <li><span class="n">09</span>SQL 편집기 &amp; 스니펫</li>
-    <li><span class="n">10</span>Job &amp; 스케줄</li>
-    <li><span class="n">11</span>AI/BI 대시보드</li>
-    <li><span class="n">12</span>Databricks Apps</li>
-    <li><span class="n">13</span>Genie 데모 (시청)</li>
-    <li><span class="n">14</span>Snowflake vs Databricks Q&amp;A</li>
+    <li onclick="Reveal.slide(2)"><span class="n">01</span>Databricks 소개 &amp; 연혁</li>
+    <li onclick="Reveal.slide(5)"><span class="n">02</span>사용자·계정 콘솔</li>
+    <li onclick="Reveal.slide(6)"><span class="n">03</span>관리자 역할</li>
+    <li onclick="Reveal.slide(7)"><span class="n">04</span>그룹 관리</li>
+    <li onclick="Reveal.slide(8)"><span class="n">05</span>컴퓨트 유형</li>
+    <li onclick="Reveal.slide(9)"><span class="n">06</span>테이블·Volume·RBAC/ABAC</li>
+    <li onclick="Reveal.slide(10)"><span class="n">07</span>노트북 &amp; S3 데이터 읽기</li>
+    <li onclick="Reveal.slide(11)"><span class="n">08</span>Lakeflow Connect: S3 가져오기</li>
+    <li onclick="Reveal.slide(12)"><span class="n">09</span>SQL 편집기 &amp; 스니펫</li>
+    <li onclick="Reveal.slide(13)"><span class="n">10</span>Job &amp; 스케줄</li>
+    <li onclick="Reveal.slide(14)"><span class="n">11</span>AI/BI 대시보드</li>
+    <li onclick="Reveal.slide(15)"><span class="n">12</span>Databricks Apps</li>
+    <li onclick="Reveal.slide(16)"><span class="n">13</span>Genie 데모 (시청)</li>
+    <li onclick="Reveal.slide(17)"><span class="n">14</span>Snowflake vs Databricks Q&amp;A</li>
   </ul>
   <aside class="notes">전체 커리큘럼을 보여 주며 오늘 다룰 주제를 예고합니다. 수강생이 미리 흐름을 파악할 수 있도록 잠깐 멈춰 질문을 받으세요.</aside>
 </section>
@@ -773,6 +786,8 @@
 </div><!-- .slides -->
 </div><!-- .reveal -->
 
+<button class="toc-fab is-hidden" onclick="Reveal.slide(1)" aria-label="목차로 이동" title="목차로 이동">☰ 목차</button>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/notes/notes.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/highlight.min.js"></script>
@@ -812,8 +827,9 @@
       _countUp(el);
     });
   }
-  Reveal.on('ready', function(e){ _runCounts(e.currentSlide); });
-  Reveal.on('slidechanged', function(e){ _runCounts(e.currentSlide); });
+  function _toggleTocBtn(idx){ var b=document.querySelector('.toc-fab'); if(b) b.classList.toggle('is-hidden', idx<=1); }
+  Reveal.on('ready', function(e){ _runCounts(e.currentSlide); _toggleTocBtn(e.indexh); });
+  Reveal.on('slidechanged', function(e){ _runCounts(e.currentSlide); _toggleTocBtn(e.indexh); });
 </script>
 </body>
 </html>

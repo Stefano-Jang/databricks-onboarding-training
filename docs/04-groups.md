@@ -88,8 +88,8 @@
 2. 왼쪽 사이드바에서 **User Management** 아이콘(사람 모양)을 클릭합니다.
 3. 화면 상단의 탭 중 **Groups** 를 클릭합니다.
 
-   ![계정 콘솔 Groups 탭](../assets/screenshots/04-groups/01-account-console-groups-tab.png)
-   *그룹 목록 화면 — admins·users 등 계정에 정의된 그룹과 각 그룹의 멤버 수·소스(System/Account), 우측 상단 "Add group" 버튼.*
+   ![계정 콘솔 User management > Groups 탭](../assets/screenshots/04-groups/01-account-console-groups-tab.png)
+   *계정 콘솔(`accounts.cloud.databricks.com`)의 **User management → Groups** 탭 — 계정 레벨 그룹 목록입니다. (여기서는 이 실습에서 만드는 `onboarding_analytics_team`·`onboarding_intern_team`만 보이도록 검색창에 "onboarding"으로 필터했습니다.) 각 그룹의 멤버 수와 소스(Account), 우측 상단 "Add group" 버튼을 확인하세요. 좌측 내비게이션이 Governance·Admin(Workspaces·User management 등)으로 구성된 점이 워크스페이스 콘솔이 아닌 **계정 콘솔**임을 보여줍니다.*
 
 4. 오른쪽 상단의 **Add Group** 버튼을 클릭합니다.
 5. **Group name** 입력란에 `onboarding_analytics_team` 을 입력합니다.

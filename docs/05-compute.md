@@ -112,7 +112,7 @@ Python / Spark 코드를 노트북에서 대화형으로 실행하고 싶다면
 
 ### 1단계: 컴퓨트 메뉴로 이동하기
 
-1. 워크스페이스([https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com](https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com))에 로그인합니다.
+1. 본인의 Databricks 워크스페이스(`https://<워크스페이스>.cloud.databricks.com`)에 로그인합니다.
 2. 왼쪽 사이드바에서 **컴퓨트(Compute)** 아이콘을 클릭합니다.
 
 3. 컴퓨트 목록 페이지가 열립니다. 상단에 **All-Purpose Compute**, **Job Compute**, **SQL Warehouses** 탭이 보입니다.

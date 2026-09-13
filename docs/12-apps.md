@@ -66,7 +66,7 @@ requirements.txt # Python 패키지 의존성
 
 ### 1단계: Apps 화면 열기
 
-1. 워크스페이스([https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com](https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com))에 로그인합니다.
+1. 본인의 Databricks 워크스페이스(`https://<워크스페이스>.cloud.databricks.com`)에 로그인합니다.
 2. 왼쪽 사이드바에서 **앱(Apps)** 아이콘을 클릭합니다.
 
    > 💡 사이드바에 Apps 아이콘이 보이지 않으면 사이드바 하단의 더 보기(⋯) 메뉴 또는 **컴퓨트(Compute)** 항목 아래에서 찾아보세요. 워크스페이스 설정에 따라 위치가 다를 수 있습니다.

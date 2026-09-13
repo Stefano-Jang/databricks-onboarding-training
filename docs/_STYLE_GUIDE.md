@@ -16,8 +16,8 @@ Databricks를 **처음 접하는 완전 초심자**를 위한 한국어 실습 �
 - **UI 따라하기 중심**. `databricks` CLI 사용을 강요하지 않는다(초심자 대상). SQL/노트북 코드는 필요.
 
 ## 2. 워크스페이스 정보 (스크린샷/URL 기준)
-- 스크린샷 촬영 프로필/워크스페이스: **`coupang-appdemo`**
-- 워크스페이스 URL: `https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com`
+- 스크린샷 촬영 프로필/워크스페이스: 내부 FE 샌드박스
+- 워크스페이스 URL 형식: `https://<워크스페이스>.cloud.databricks.com` (학습자는 본인 워크스페이스 URL로 접속)
 - 클라우드: **AWS** (문서 링크도 AWS 기준: `https://docs.databricks.com/aws/en/...`)
 - 계정 콘솔(AWS): `https://accounts.cloud.databricks.com`
 

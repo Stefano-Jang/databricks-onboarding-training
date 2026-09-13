@@ -102,7 +102,7 @@ Databricks는 기업용 데이터 플랫폼입니다. 수십~수천 명의 사�
 
 ### 2단계: 워크스페이스 관리자 확인하기 (워크스페이스 콘솔)
 
-1. 워크스페이스(`https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com`)에 로그인합니다.
+1. 본인의 Databricks 워크스페이스(`https://<워크스페이스>.cloud.databricks.com`)에 로그인합니다.
 2. 오른쪽 상단 **사용자 아이콘** → **Settings(설정)**를 클릭합니다.
 3. 왼쪽 메뉴에서 **Identity and access** → **Users**를 클릭합니다.
 

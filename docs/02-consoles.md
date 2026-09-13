@@ -8,7 +8,7 @@
 |---|---|
 | 예상 소요 시간 | 약 15분 |
 | 난이도 | 입문 |
-| 사전 준비 | 워크스페이스 로그인 완료 (`https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com`) |
+| 사전 준비 | 본인의 Databricks 워크스페이스 로그인 완료 (`https://<워크스페이스>.cloud.databricks.com`) |
 | 필요 권한 | 없음 (일반 사용자) |
 
 ## 학습 목표
@@ -39,10 +39,11 @@ Databricks에는 두 가지 관리 화면이 있습니다.
 
 ### 1단계: 워크스페이스에 로그인합니다
 
-1. 브라우저에서 다음 URL을 엽니다.
+1. 브라우저에서 **본인(회사)의 Databricks 워크스페이스 URL**을 엽니다. 형식은 다음과 같습니다.
    ```
-   https://fe-sandbox-stefano-coupang-appdemo.cloud.databricks.com
+   https://<워크스페이스-이름>.cloud.databricks.com
    ```
+   > 💡 워크스페이스 URL을 모르면 계정 관리자에게 문의하거나, [계정 콘솔](https://accounts.cloud.databricks.com)에 로그인해 **워크스페이스(Workspaces)** 목록에서 확인할 수 있습니다.
 2. 이메일과 비밀번호(또는 SSO)를 입력하여 로그인합니다.
 
 ---

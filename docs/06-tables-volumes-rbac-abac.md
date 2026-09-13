@@ -385,6 +385,16 @@ CREATE OR REPLACE FUNCTION main.onboarding_training.filter_own_rows(owner_email 
       OR owner_email = session_user();               -- 그 외에는 본인 소유 행만
 ```
 
+> ⚠️ **역할을 "가정(assume)"하는 사용자는 `session_user()`로 비교하세요**: 어떤 그룹에 대해 **`assume_role`(Can assume) 권한만** 있고 그 그룹의 **멤버로는 추가되지 않은** 사용자가 해당 역할을 **가정(assume role)**하면, 쿼리의 활성 신원(active identity)이 그 역할로 바뀝니다. 그런데 **역할은 자기 자신의 멤버가 아니므로**(자기 자신을 명시적으로 중첩하지 않는 한) 이 경우 `is_account_group_member('그룹명')`은 `FALSE`를 반환합니다. 따라서 "가정한 역할"을 기준으로 행을 비교하려면, 그룹 멤버십 검사 대신 **`session_user()`**(가정한 역할 이름을 반환)로 직접 비교해야 합니다.
+
+```sql
+-- 'seoul_team' 역할을 가정(assume)한 사용자에게만 서울 데이터 허용
+-- (이 사용자는 seoul_team 의 '멤버'가 아니므로 is_account_group_member 로는 잡히지 않음)
+CREATE OR REPLACE FUNCTION main.onboarding_training.filter_by_assumed_role(region STRING)
+  RETURN session_user() = 'seoul_team'
+      AND region = '서울';
+```
+
 > 💡 위 함수들 외에도 필터·마스킹 로직에는 일반적인 **결정적(deterministic) 내장 SQL 함수**를 자유롭게 조합할 수 있습니다. 예를 들어 열 마스킹에서 이메일 앞부분만 가리려면 `CONCAT('***', SUBSTR(email, INSTR(email, '@')))`, 카드번호를 끝 4자리만 남기려면 `CONCAT('****-', RIGHT(card_no, 4))` 처럼 문자열 함수를 쓸 수 있습니다.
 
 ---

@@ -113,6 +113,18 @@ SHOW SCHEMAS IN main;
 
 > 💡 **카탈로그 탐색기(Catalog Explorer)에서도 확인할 수 있습니다.** 왼쪽 사이드바에서 카탈로그 아이콘을 클릭 → `main` 확장 → `onboarding_training` 스키마 확인.
 
+> 🧹 **정리(cleanup) 팁 — 비어 있지 않은 스키마·카탈로그 지우기**: 실습을 다시 하거나 뒷정리할 때, 그냥 `DROP SCHEMA main.onboarding_training` 을 실행하면 스키마 안에 테이블·볼륨이 남아 있을 경우 **오류가 납니다**(기본 동작이 `RESTRICT`라 비어 있어야만 삭제됨). 안에 든 객체까지 **한 번에** 지우려면 `CASCADE` 를 붙입니다. 카탈로그도 동일합니다.
+>
+> ```sql
+> -- 스키마 + 그 안의 모든 테이블·볼륨·함수를 한 번에 삭제
+> DROP SCHEMA IF EXISTS main.onboarding_training CASCADE;
+>
+> -- 카탈로그 + 그 안의 모든 스키마·객체를 한 번에 삭제 (본인이 만든 카탈로그에만!)
+> DROP CATALOG IF EXISTS <내가_만든_카탈로그> CASCADE;
+> ```
+>
+> ⚠️ **주의**: `CASCADE` 는 안에 든 **모든 객체와 관리형 테이블의 실제 데이터까지 영구 삭제**하며 되돌릴 수 없습니다. 실행 전 대상 이름을 반드시 확인하고, **`main`·`samples` 같은 공유 카탈로그에는 절대 `DROP CATALOG` 를 쓰지 마세요.** (`IF EXISTS` 는 대상이 없을 때 오류 없이 넘어가게 해 줍니다.)
+
 ---
 
 ### 2단계: 관리형 테이블 만들기

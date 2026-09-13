@@ -362,6 +362,31 @@ ALTER TABLE main.onboarding_training.sales_summary
   DROP ROW FILTER;
 ```
 
+**💡 `is_account_group_member` 외에 쓸 수 있는 사전 정의(내장) 함수**
+
+행 필터·열 마스킹 함수 본문에서는 "지금 쿼리를 실행하는 사용자가 **누구인지 / 어떤 그룹에 속하는지**"를 판단하는 아래 내장 함수를 사용할 수 있습니다. (아래 표는 열 마스킹(7-2)에도 그대로 적용됩니다.)
+
+| 함수 | 반환 | 설명 |
+|---|---|---|
+| `is_account_group_member('그룹명')` | `BOOLEAN` | 현재(세션) 사용자가 **계정 레벨 그룹**의 직접·간접 멤버이면 `TRUE`. **Unity Catalog에서 권장**되는 그룹 검사 방식. |
+| `is_member('그룹명')` | `BOOLEAN` | 현재 사용자가 **워크스페이스 레벨 그룹**(워크스페이스 로컬 그룹 또는 워크스페이스에 할당된 계정 그룹)의 멤버이면 `TRUE`. |
+| `session_user()` | `STRING` | 쿼리를 실행하는 **세션 사용자**의 이메일(사용자명). 서비스 프린시펄이 실행하면 해당 SP의 UUID를 반환. |
+| `current_user()` | `STRING` | `session_user()`의 **별칭**(같은 값을 반환). Databricks는 SQL 표준과의 혼동을 피하기 위해 `session_user()` 사용을 권장. |
+
+> ⚠️ **`is_member` vs `is_account_group_member`**: `is_member()`는 **워크스페이스 로컬 그룹**을 기준으로 하므로, [04. 그룹 관리](./04-groups.md)에서 만든 것 같은 **계정 레벨 그룹** 기반 거버넌스에는 반드시 **`is_account_group_member()`**를 사용하세요(Databricks 공식 권장).
+
+**활용 예 — "각자 본인 데이터만 보기"** (`session_user()` 사용)
+
+테이블에 소유자 이메일 열(예: `owner_email`)이 있다면, 관리자는 전체를 보고 그 외 사용자는 **자기 행만** 보도록 만들 수 있습니다.
+
+```sql
+CREATE OR REPLACE FUNCTION main.onboarding_training.filter_own_rows(owner_email STRING)
+  RETURN is_account_group_member('account admins')  -- 관리자는 모든 행
+      OR owner_email = session_user();               -- 그 외에는 본인 소유 행만
+```
+
+> 💡 위 함수들 외에도 필터·마스킹 로직에는 일반적인 **결정적(deterministic) 내장 SQL 함수**를 자유롭게 조합할 수 있습니다. 예를 들어 열 마스킹에서 이메일 앞부분만 가리려면 `CONCAT('***', SUBSTR(email, INSTR(email, '@')))`, 카드번호를 끝 4자리만 남기려면 `CONCAT('****-', RIGHT(card_no, 4))` 처럼 문자열 함수를 쓸 수 있습니다.
+
 ---
 
 #### 7-2. 열 마스킹(Column Mask) 만들기
